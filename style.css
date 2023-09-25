@@ -96,6 +96,7 @@ footer div{
 /* FORMULARIO LOGIN Y REGISTER */
 /* titulo de registrar y login*/
 .contenedor {
+
     background-color: rgba(255, 255, 255, 0.5);
     padding: 40px;
     border-radius: 10px;
@@ -104,8 +105,7 @@ footer div{
     color: #fff;
 }
 
-#main-title {
-    margin-top: 0;
+#main-title {margin-top: 2%;
     text-align: center;
     color: #ffffff;
 }
