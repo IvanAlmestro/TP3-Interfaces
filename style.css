@@ -1,7 +1,13 @@
 body{
-    height: 1080px;
+  
     background: linear-gradient(rgba(11, 0, 17, 1), rgba(25, 1, 38, 1), rgba(56, 15, 77, 1),rgba(81, 27, 110, 1));
     background-position: 0px, 200px;
+    margin: 0;
+    margin-bottom: 40px;
+}
+html{
+    min-height: 100%;
+    position: relative;
 }
 
 header{
@@ -9,16 +15,43 @@ header{
     justify-content: space-around;
     color:white;
     font-family: Koho;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   
 }
-
+footer{
+    background: linear-gradient(rgba(104, 24, 147, 1), rgba(59, 8, 87, 1), rgba(18, 0, 28, 1));
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    height: 30%;
+    
+}
+.title-footer{
+    text-align:center;
+  
+    text-transform: uppercase;
+    font-size: 1.5em;
+    
+}
+footer div{
+    height: 100%;
+    margin-left: 5%;
+}
+.about-div{
+    width: 50%;
+}
+.help-social{
+    width: 25%;
+    text-align: center;
+}
 #logo{
     height: 100px;
     width: 100px;
 }
 
-#titulo-header, #div-logo, #div-user-fav, header{
+#titulo-header, #div-logo, #div-user-fav, header, footer{
     display: flex;
     align-items: center;
 }
