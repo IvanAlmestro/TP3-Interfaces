@@ -4,6 +4,11 @@ body{
     background-position: 0px, 200px;
     margin: 0;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 html{
     min-height: 100%;
@@ -87,7 +92,59 @@ footer div{
 .input-icono input:focus {
     outline: none;
 }
+
+/* FORMULARIO LOGIN Y REGISTER */
 /* titulo de registrar y login*/
-#main-title{
+.contenedor {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+#main-title {
+    margin-top: 0;
     text-align: center;
+    color: #ffffff;
+}
+
+/* Estilos para los campos del formulario (puedes personalizarlos según tus necesidades) */
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #361B6E;
+    width: 100%;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.div-izquierdo {
+    display: inline-block; /* Hace que los divs sean elementos en línea */
+    
+    margin-right: 40px; /* Espacio entre los divs */
+}
+
+.div-derecho {
+    display: inline-block; /* Hace que los divs sean elementos en línea */
+}
+
+.img-login {
+    margin-left: 35%;
 }
