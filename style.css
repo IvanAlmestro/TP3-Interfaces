@@ -3,6 +3,7 @@ body{
     background: linear-gradient(rgba(11, 0, 17, 1), rgba(25, 1, 38, 1), rgba(56, 15, 77, 1),rgba(81, 27, 110, 1));
     background-position: 0px, 200px;
 }
+
 header{
     background: linear-gradient(rgba(81, 27, 110, 1), rgba(59, 8, 87, 1),rgba(12, 1, 18, 1) );
     justify-content: space-around;
@@ -53,4 +54,7 @@ header{
 .input-icono input:focus {
     outline: none;
 }
-
+/* titulo de registrar y login*/
+#main-title{
+    text-align: center;
+}
