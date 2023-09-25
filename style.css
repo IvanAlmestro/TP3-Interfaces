@@ -5,11 +5,9 @@ body{
 }
 header{
     background: linear-gradient(rgba(81, 27, 110, 1), rgba(59, 8, 87, 1),rgba(12, 1, 18, 1) );
-    display: flex;
-    align-items: center;
     justify-content: space-around;
     color:white;
-    font-family:Koho;
+    font-family: Koho;
     border-bottom: 1px solid white;
   
 }
@@ -19,20 +17,20 @@ header{
     width: 100px;
 }
 
-#titulo-header, #div-logo, #div-user-fav{
+#titulo-header, #div-logo, #div-user-fav, header{
     display: flex;
     align-items: center;
 }
 /*separacion entre iconos derecha header(user, fav, carrito)*/
 .user-fav-shop{
-    margin-left: 50px;
+    margin-left: 40px;
     height: 45px;
     width: 45px;
 }
 
 /*css para input con imagen lupita*/
 .input-icono {
-    background-image: url('imagenes/lupa.png');
+    background-image: url('images/lens.png');
     background-color: rgb(225, 214, 255);
     background-repeat: no-repeat;
     background-position: 4px center;
