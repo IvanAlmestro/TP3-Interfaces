@@ -1,14 +1,11 @@
+/*CSS PAGINA HOME */
+
 body{
     margin: 0px;
     background: linear-gradient(rgba(25, 1, 38, 1), rgba(81, 27, 110, 1));
+
 }
-.body-log{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;  
-}
+
 html{
     min-height: 100%;
     width: 100%;
@@ -20,29 +17,9 @@ html{
     color:white;
     font-family: Koho;
     display: flex;
-    position: absolute;
+    
     top: 0;
     width: 100%;
-}
-footer{
-    background: linear-gradient(rgba(81, 27, 110, 1), rgba(100, 6, 151, 1));
-    color: rgba(255, 255, 255, 0.7);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.7em;
-}
-.title-footer{
-    text-align:center;
-  
-    text-transform: uppercase;
-    font-size: 1.2em;
-    
-}
-/*contenedor de los 3 divs menos el del parrafo de copy*/
-#footer-container{
-    height: 100%;
-    margin-left: 4%;
 }
 
 .about-div{
@@ -61,16 +38,12 @@ footer{
     width: 30px;
 
 }
-/* centrando el texto de copyright footer*/
-#p-copyright{
-    text-align: center;
-    font-size: 0.6em;
-}
 
-#titulo-header{
-    font-size: 8px;
+#title-header{
+    font-size: 6px;
+    text-transform: uppercase;
 }
-#titulo-header, #div-logo, .div-user-fav-menu, #footer-container, .input-icono{
+#title-header, #div-logo, .div-user-fav-menu, #footer-container, .input-icono{
     display: flex;
     align-items: center;
 }
@@ -80,11 +53,39 @@ footer{
     height: 25px;
     width: 25px;
 }
+footer{
+    background: linear-gradient(rgba(81, 27, 110, 1), rgba(100, 6, 151, 1));
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.6em;
+    font-weight:lighter;
+}
+.title-footer{
+    text-align:center;
+  
+    text-transform: uppercase;
+    font-size: 1.2em;
+    
+}
+/* centrando el texto de copyright footer*/
+#p-copyright{
+    text-align: center;
+    font-size: 0.6em;
+}
 
-/*css para input con imagen lupita*/
+/*contenedor de los 3 divs menos el del parrafo de copy*/
+#footer-container{
+    height: 100%;
+    margin-left: 4%;
+}
+
+
+/*css para input con imagen lupita del header*/
 .input-icono {
     background-image: url('images/lens.png');
-    background-color: rgb(225, 214, 255);
+    background-color: rgba(210, 194, 255, 1);
     background-repeat: no-repeat;
     background-position: 4px center;
     background-size: 10px;
@@ -102,14 +103,84 @@ footer{
     width: 100%;
     font-size: 0.5em;
     border: none;
-    background-color: rgb(225, 214, 255);
+    background-color: rgba(210, 194, 255, 0.9);
 }
 .input-icono input:focus {
     outline: none;
 }
 
-/* FORMULARIO LOGIN Y REGISTER */
+
+
+/*CSS MENU HAMBURGUESA*/
+.menu-btn{
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    width: 30px;
+}
+
+nav{
+    width: 40%;
+}
+
+.nav-container{
+    display: none;
+
+}
+#nav-containers{
+    font-size: 13px;
+    background-color:rgba(44, 10, 62, 1) ;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 54px;
+    color: rgba(166, 166, 166, 1);
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+.title-nav{
+    font-size: 1.2em;
+}
+
+/*CSS MENU USUARIO*/
+.user-btn{
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    width: 30px;
+}
+
+nav{
+    width: 40%;
+}
+
+.user-container{
+    display: none;
+
+}
+#user-containers{
+    font-size: 13px;
+    background-color:rgba(44, 10, 62, 1) ;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 54px;
+    color: rgba(166, 166, 166, 1);
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+/* PAGINAS FORMULARIO LOGIN Y REGISTER */
 /* titulo de registrar y login*/
+.body-log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
 .contenedor {
 
     background-color: rgba(255, 255, 255, 0.5);
@@ -162,4 +233,17 @@ form input[type="submit"] {
 
 .img-login {
     margin-left: 35%;
+}
+
+
+
+
+/*CSS PAGINA DE JUEGO*/
+
+.game-container{
+    background-color:rgba(11, 2, 39, 1) ;
+    width: 1655px;
+    height: 966px;
+    border: 1px solid rgba(0, 0, 0, 1);
+
 }
