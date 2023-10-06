@@ -1,16 +1,20 @@
 /*CSS PAGINA HOME */
 
 body{
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(rgba(25, 1, 38, 1), rgba(81, 27, 110, 1));
-
-}
-
-html{
-    min-height: 100%;
     width: 100%;
+    height: 100%;
+
 
 }
+html{
+    width: 100%;
+    min-height: 100%;
+}
+
+
 #header-container{
     background: linear-gradient(rgba(38, 0, 58, 1),rgba(71, 1, 109, 1));
     justify-content: space-around;
@@ -58,9 +62,10 @@ footer{
     color: rgba(255, 255, 255, 0.7);
     position: absolute;
     bottom: 0;
-    width: 100%;
+   
     font-size: 0.6em;
     font-weight:lighter;
+    padding: 20px;
 }
 .title-footer{
     text-align:center;
@@ -245,5 +250,66 @@ form input[type="submit"] {
     width: 1655px;
     height: 966px;
     border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 20px;
 
+}
+p.p-margin ,h2.h-margin ,h4.h-margin{
+
+    margin-left: 132.5px;
+    margin-right: 132.5px;
+}
+h2, h4{
+    color:rgba(165, 143, 34, 1);
+    text-transform: uppercase;
+}
+p{
+    color: rgba(198, 198, 198, 1);
+}
+
+
+@media screen and (min-width: 780px){
+    body, html{
+
+        width: 1920px;
+   
+    }
+    .div-center{
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+
+    }
+    #header-container{
+        width: 100%;
+        height: 100px;
+    }
+    #title-header{
+        font-size: 15px;
+        font-weight: 100px;
+        font-family: KoHo;
+    }
+    .user-fav-shop{
+        margin-left: 50px;
+        height: 55px;
+        width: 55px;
+    }
+    
+    footer{
+        position: relative;
+        font-size: 1em;
+
+        width: 100%;
+    }
+
+    .title-footer{
+        text-align:center;
+      
+        text-transform: uppercase;
+        font-size: 1.5em;
+        
+    }
+
+
+    
 }
