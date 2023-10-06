@@ -1,0 +1,167 @@
+body {
+  background-color: rgb(161, 197, 122);
+}
+.slider {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  max-width: 95%;
+  margin-top: 2rem;
+
+}
+.slider .slider-container {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+.slider .slider-container .card {
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .slider .slider-container .card {
+    border: none;
+  }
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 999;
+
+}
+.next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.card img {
+width: 80%;
+height: auto;
+padding-bottom: 5%;
+}
+/* Rectangle 30 */
+
+.prev, .next {
+  font-size: 6rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.slider-indicators {
+  text-align: center; /* Centra los indicadores horizontalmente */
+  margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+}
+
+.indicator {
+  width: 15px; /* Tamaño del puntito */
+  height: 15px;
+  background-color: #ffffff; /* Color de los puntitos inactivos */
+  display: inline-block;
+  margin: 0 20px; /* Espacio entre los indicadores */
+  border-radius: 50%; /* Forma redonda para los puntitos */
+}
+.active {
+  background-color: rgb(0, 0, 0);
+}
+
+/*info juegos*/
+/* Estilos para el contenedor de la imagen y el rectángulo gris */
+.image-container {
+  position: relative; /* Para permitir la superposición de elementos */
+  display: inline-block; /* Hace que el contenedor se ajuste al tamaño de la imagen */
+}
+
+/* Estilos para la imagen */
+
+
+/* Estilos para el rectángulo gris debajo de la imagen */
+.my-rectangle {
+  position: absolute;
+  bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
+  left: 0;
+  width: 80%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
+  height: 10%; /* Ajusta la altura del rectángulo según tus necesidades */
+  background-color: #161616;; /* Color gris */
+  margin-left: 10%;
+  color: #fff;
+}
+
+/* Estilos para el texto arriba a la izquierda */
+.top-left {
+  position: absolute;
+  font-size: larger;
+  left: 1%;
+  bottom: 38%;
+}
+
+/* Estilos para el texto abajo a la izquierda */
+.bottom-left {
+    font-size: large;
+  position: absolute;
+  left: 1%;
+  top: 38%;
+}
+
+/* Estilos para el texto a la derecha */
+.right {
+  position: absolute;
+  top: 90%; /* Ajusta según tu preferencia */
+  right: 1%;
+  transform: translateY(-50%); /* Centra verticalmente el texto */
+}
+
+#img-jugar, #img-addCarrito{
+    width: 5%;
+    height: auto;
+}
+
+
+
+@media (max-width:778px) {
+  .prev, .next {
+    display: none;
+  }
+
+  .card img {
+    width: 90%;
+    height: auto;
+  }
+
+  .my-rectangle {
+    position: absolute;
+    bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
+    left: 0;
+    width: 90%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
+    height: 10%; /* Ajusta la altura del rectángulo según tus necesidades */
+    background-color: #161616; /* Color gris */
+    margin-left: 5%;
+    color: #fff;
+  }
+
+  .right {
+    font-size: small;
+  }
+  .top-left {
+    bottom: 16%;
+  }
+  .bottom-left {
+    top: 16%;
+  }
+  .bottom-left, .top-left {
+    font-size: xx-small;
+
+  }
+}

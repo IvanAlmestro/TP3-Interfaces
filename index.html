@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Juegamers</title>
         <link rel="stylesheet" href="style.css">
-        
+        <link rel="stylesheet" href="styleCarruseles.css">
+        <script src="https://kit.fontawesome.com/1a5164fcdb.js" crossorigin="anonymous"></script>
     </head>
     <body>
         
@@ -84,10 +85,49 @@
       
 
         <main>
-           
-        </main>
+            <div>
+                <div class="slider">
+                    <div class="slider-container">
+        
+                        <div class="card image-container">
+                            <img src="./imagenesCarruseles/boca-river.jpg">
+                            <div class="my-rectangle">
+                                <p class="top-left">4 En Linea - Boca vs river</p>
+                                <p class="bottom-left">En La Biblioteca</p>
+                                <img class="right" id="img-jugar" src="./images/Start.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card image-container">
+                            <img src="./imagenesCarruseles/crashBandicoot.jpg" alt="">
+                            <div class="my-rectangle">
+                                <p class="top-left">Boca vs river</p>
+                                <p class="bottom-left">Texto abajo a la izquierda</p>
+                                <img class="right" id="img-addCarrito" src="./images/Add Shopping Cart.png" alt="">
+                            </div>
+                        </div>
+        
+                        <div class="card image-container">
+                            <img src="./imagenesCarruseles/CS-2.png" alt="">
+                            <div class="my-rectangle">
+                                <p class="top-left">Boca vs river</p>
+                                <p class="bottom-left">Texto abajo a la izquierda</p>
+                                <img class="right" id="img-addCarrito" src="./images/Add Shopping Cart.png" alt="">
+                            </div>
+                        </div>
+                    </div>
 
-        <footer>
+                <i class="fa-solid fa-chevron-right a-2xl next" style="color: #949494;"></i>
+                <i class="fa-solid fa-chevron-left a-2xl prev" style="color: #949494;"></i>
+            </div>
+            <div class="slider-indicators">
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </main>
+    
+       <!----> <footer>
             <div id="footer-container">
                 <div class="about-div">
                     <h3 class="title-footer">sobre nosotros</h3>
@@ -114,5 +154,6 @@
                 <div id="div-copyright"><p id="p-copyright">Todos los derechos reservados Copyright © 2023 Juegamers</p></div>
         </footer>
         <script src="main.js"></script>
+        <script src="carruseles.js"></script>
     </body>
 </html>
