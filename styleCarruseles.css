@@ -1,14 +1,11 @@
-body {
-  background-color: rgb(161, 197, 122);
-}
+
 .slider {
   overflow: hidden;
   position: relative;
   margin: 0 auto;
   z-index: 1;
-  max-width: 95%;
+  max-width: 80%;
   margin-top: 2rem;
-
 }
 .slider .slider-container {
   display: flex;
@@ -66,11 +63,11 @@ padding-bottom: 5%;
 }
 
 .indicator {
-  width: 15px; /* Tamaño del puntito */
-  height: 15px;
+  width: 10px; /* Tamaño del puntito */
+  height: 10px;
   background-color: #ffffff; /* Color de los puntitos inactivos */
   display: inline-block;
-  margin: 0 20px; /* Espacio entre los indicadores */
+  margin: 0 5px; /* Espacio entre los indicadores */
   border-radius: 50%; /* Forma redonda para los puntitos */
 }
 .active {
@@ -118,7 +115,7 @@ padding-bottom: 5%;
 /* Estilos para el texto a la derecha */
 .right {
   position: absolute;
-  top: 90%; /* Ajusta según tu preferencia */
+  top: 50%; /* Ajusta según tu preferencia */
   right: 1%;
   transform: translateY(-50%); /* Centra verticalmente el texto */
 }
@@ -128,6 +125,25 @@ padding-bottom: 5%;
     height: auto;
 }
 
+/*ANIMACIONES*/
+@keyframes animacionImagen  {
+  0% {
+    transform: translateX(150%) rotate(20deg); /* Comienza desde la derecha y con un ligero giro */
+  }
+  100% {
+    transform: translateX(0%) rotate(0deg); /* Llega al centro sin giro */
+  }
+}
+
+@keyframes animacionInfo {
+  0% {
+    transform: translateY(-150%) rotate(20deg); /* Comienza desde la derecha y con un ligero giro */
+  }
+
+  100% {
+    transform: translateX(0%) rotate(0deg); /* Llega al centro sin giro */
+  }
+}
 
 
 @media (max-width:778px) {
@@ -154,14 +170,9 @@ padding-bottom: 5%;
   .right {
     font-size: small;
   }
-  .top-left {
-    bottom: 16%;
-  }
-  .bottom-left {
-    top: 16%;
-  }
   .bottom-left, .top-left {
-    font-size: xx-small;
+    font-size: 12px;
+    left: 4px;
 
   }
 }

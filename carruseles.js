@@ -60,6 +60,19 @@ slider.addEventListener("touchend", () => {
 
 function showSlide() {
     const translateX = -slideIndex * 100 + "%";
+    const images = document.querySelectorAll(".card img");
+    const rectangles = document.querySelectorAll(".my-rectangle");
+  
+    images.forEach((image, index) => {
+      if (index === slideIndex) {
+        image.style.animation = "animacionImagen  1.5s ease-out";
+        rectangles[index].style.animation = "animacionInfo 1.5s ease-out"; // Agrega la animación al rectángulo correspondiente
+      } else {
+        image.style.animation = "none"; // Elimina la animación en las otras imágenes
+        rectangles[index].style.animation = "none"; // Elimina la animación en los otros rectángulos grises
+      }
+    });
+  
     sliderContainer.style.transform = `translateX(${translateX})`;
     updateIndicators();
 }
