@@ -253,19 +253,95 @@ form input[type="submit"] {
     border-radius: 20px;
 
 }
-p.p-margin ,h2.h-margin ,h4.h-margin{
-
+main{
     margin-left: 132.5px;
     margin-right: 132.5px;
 }
-h2, h4{
+.title-info{
     color:rgba(165, 143, 34, 1);
     text-transform: uppercase;
 }
 p{
     color: rgba(198, 198, 198, 1);
 }
+.write-container{
+    background-color: rgba(10, 4, 28, 1);
+    width: 1652px;
+    height: 195.76px;
+    top: 47.24px;
+    border: solid black 1px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+}
+.p-ask{
+    padding-left: 30px;
+    padding-top: 69.5px;
+    padding-bottom: 69.5px;
+    color: rgba(134, 132, 132, 1);
+    font-size: 22px;
+    float: left;
+}
+#img-pencil{
+    padding-top: 85.5px;
 
+}
+#img-send{
+    position: absolute;
+    left: 1720px;
+    top: 1730px;
+    
+}
+
+
+.comments{
+    background-color: rgba(11, 2, 39, 1);
+    height: 88px;
+    width: 1655px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+    border-top-left-radius: 0px;
+    
+}
+.p-comments{
+    padding-top: 31px;
+    padding-bottom: 31px;
+    color: rgba(198, 198, 198, 0.8);
+    padding-left: 20px;
+
+}
+.container-user{
+  
+    background-color: rgba(22, 5, 75, 0.68);
+    width: 253.54px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 88px;
+
+
+}
+.container-addcomment{
+    display: flex;
+    align-items: center;
+    background-color: rgba(22, 5, 75, 0.68);
+    width: 253.54px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+.p-user{
+    margin-left: 80px;
+    font-size: 20px;
+    
+}
+#img-user{
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+    float: left;
+}
 
 @media screen and (min-width: 780px){
     body, html{
@@ -310,6 +386,6 @@ p{
         
     }
 
-
+    
     
 }
