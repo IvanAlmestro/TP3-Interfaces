@@ -6,13 +6,15 @@ body{
     background: linear-gradient(rgba(25, 1, 38, 1), rgba(81, 27, 110, 1));
     width: 100%;
     height: 100%;
+    
 
 }
+
 html{
-    width: 100%;
-    min-height: 100%;
+    position: absolute;
+    left: 0;
+    width: 1920px;
 }
-
 
 #header-container{
     background: linear-gradient(rgba(38, 0, 58, 1),rgba(71, 1, 109, 1));
@@ -27,15 +29,19 @@ html{
 
 .about-div{
     width: 50%;
+    text-align: center;
+    margin-right: 4%;
 }
+
 .help-social{
     width: 25%;
     text-align: center;
     
 }
+
 .help-social img{
     
-    height: 20%;
+    height: 10%;
     width: 20%;
 }
 #logo{
@@ -48,14 +54,32 @@ html{
 
 }
 
+
 #title-header{
     font-size: 6px;
     text-transform: uppercase;
 }
-#title-header, #div-logo, .div-user-fav-menu, #footer-container, .input-icono{
+#title-header, #div-logo, .div-user-fav-menu, .input-icono{
     display: flex;
     align-items: center;
 }
+#footer-container{
+    display: flex;
+
+}
+p.p-footer{
+    color: rgba(205, 202, 202, 0.8);
+
+
+}
+p.p-footer2{
+
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+
+
 /*separacion entre iconos derecha header(user, fav, carrito)*/
 .user-fav-shop{
     margin-left: 10px;
@@ -84,6 +108,8 @@ footer{
 #p-copyright{
     text-align: center;
     font-size: 0.6em;
+    margin: 0;
+    margin-top: 20px;
 }
 
 /*contenedor de los 3 divs menos el del parrafo de copy*/
@@ -313,7 +339,7 @@ p{
 #img-send{
     position: absolute;
     left: 1720px;
-    top: 2000px;
+    top: 2280px;
     
 }
 
@@ -334,7 +360,7 @@ p{
 .p-comments{
     padding-top: 31px;
     padding-bottom: 31px;
-    color: rgba(198, 198, 198, 0.8);
+    color: rgba(198, 198, 198, 0.7);
     padding-left: 20px;
     margin: 0;
     font-size: 22px;
@@ -352,13 +378,14 @@ p{
 }
 .p-user{
     margin-left: 30px;
-    font-size: 22px;
+    font-size: 25px;
+    font-weight: medium;
 
     
 }
 .p-margin{
-    
-    font-size: large;
+    color:rgb(175, 175, 175);
+    font-size: x-large;
 }
 #img-user{
     height: 45px;
@@ -376,10 +403,37 @@ p{
     width: 30%;
     margin-bottom: 50px;
 }
+.img-game{
+    height: 739px;
+    width: 1154px;
+}
+#playgame{
+    position: absolute;
+    top: 620px;
+}
+#img-share{
+    position: absolute;
+    right: 300px;
+    left: 1470px;
+    top: 1050px;
+}
+#instruction{
+    position: absolute;
 
+    left: 370px;
+    top: 1050px;
+}
+#p-link{
+    margin-left: 20%;
+    font-size: 19px;
+    color: rgb(175, 175, 175);
+}
 
+.help-social p.p-footer{
+    line-height:0.9 ;
+}
 @media screen and (min-width: 780px){
-    body, html{
+    body{
 
         width: 1920px;
    
@@ -409,7 +463,7 @@ p{
     
     footer{
         position: relative;
-        font-size: 1em;
+        font-size: 1.6em;
 
         width: 100%;
     }
@@ -423,10 +477,17 @@ p{
     }
     .help-social img{
     
-        height:7%;
-        width: 7%;
+        height:9%;
+        width: 9%;
+        margin: 0px;
+        border: 0px;
     }
 
     
-    
+    .about-div p{
+        line-height: 2.7;
+    }
+    .help-social p.p-footer{
+        line-height:1.5 ;
+    }
 }
