@@ -31,6 +31,12 @@ html{
 .help-social{
     width: 25%;
     text-align: center;
+    
+}
+.help-social img{
+    
+    height: 20%;
+    width: 20%;
 }
 #logo{
     height: 50px;
@@ -58,6 +64,7 @@ html{
 }
 footer{
     background: linear-gradient(rgba(81, 27, 110, 1), rgba(100, 6, 151, 1));
+    
     color: rgba(255, 255, 255, 0.7);
     position: absolute;
     bottom: 0;
@@ -243,13 +250,27 @@ form input[type="submit"] {
 
 
 /*CSS PAGINA DE JUEGO*/
+.play-ask, .title-comment{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+ 
+}
+.play-ask img, .title-comment img{
+    height: 50px;
+    margin-right: 10px;
+
+}
 
 .game-container{
+    display: flex;
+    flex-direction: column;
     background-color:rgba(11, 2, 39, 1) ;
     width: 1655px;
     height: 966px;
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 20px;
+    align-items: center;
 
 }
 main{
@@ -259,6 +280,11 @@ main{
 .title-info{
     color:rgba(165, 143, 34, 1);
     text-transform: uppercase;
+    font-size: 20px;
+}
+h2.title-info{
+    font-size: 30px;
+
 }
 p{
     color: rgba(198, 198, 198, 1);
@@ -274,20 +300,20 @@ p{
 }
 .p-ask{
     padding-left: 30px;
-    padding-top: 69.5px;
+    padding-top: 55.5px;
     padding-bottom: 69.5px;
     color: rgba(134, 132, 132, 1);
-    font-size: 22px;
+    font-size: 28px;
     float: left;
 }
 #img-pencil{
-    padding-top: 85.5px;
+    padding-top: 80.5px;
 
 }
 #img-send{
     position: absolute;
     left: 1720px;
-    top: 1730px;
+    top: 2000px;
     
 }
 
@@ -297,30 +323,24 @@ p{
     height: 88px;
     width: 1655px;
     border-radius: 10px;
-    margin-bottom: 50px;
-
+    margin-bottom: 40px;
+    
     border-top-left-radius: 0px;
     
+}
+.comments-container{
+    margin-top: 40px;
 }
 .p-comments{
     padding-top: 31px;
     padding-bottom: 31px;
     color: rgba(198, 198, 198, 0.8);
     padding-left: 20px;
-
+    margin: 0;
+    font-size: 22px;
 }
-.container-user{
-  
-    background-color: rgba(22, 5, 75, 0.68);
-    width: 253.54px;
-    border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    height: 88px;
 
-
-}
-.container-addcomment{
+.container-addcomment, .container-user{
     display: flex;
     align-items: center;
     background-color: rgba(22, 5, 75, 0.68);
@@ -331,16 +351,32 @@ p{
 
 }
 .p-user{
-    margin-left: 80px;
-    font-size: 20px;
+    margin-left: 30px;
+    font-size: 22px;
+
     
 }
+.p-margin{
+    
+    font-size: large;
+}
 #img-user{
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 50px;
     margin-left: 20px;
     float: left;
 }
+.img-how-play{
+    width: 30%;
+    padding-left: 78px;
+    margin-bottom: 40px;
+
+}
+.img-how-play2{
+    width: 30%;
+    margin-bottom: 50px;
+}
+
 
 @media screen and (min-width: 780px){
     body, html{
@@ -358,6 +394,7 @@ p{
     #header-container{
         width: 100%;
         height: 100px;
+        margin-bottom: 40px;
     }
     #title-header{
         font-size: 15px;
@@ -383,6 +420,11 @@ p{
         text-transform: uppercase;
         font-size: 1.5em;
         
+    }
+    .help-social img{
+    
+        height:7%;
+        width: 7%;
     }
 
     
