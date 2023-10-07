@@ -435,7 +435,7 @@ p{
 @media screen and (min-width: 780px){
     body{
 
-        width: 1920px;
+        width: 100%;
    
     }
     .div-center{
