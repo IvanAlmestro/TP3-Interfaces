@@ -4,7 +4,7 @@
   position: relative;
   margin: 0 auto;
   z-index: 1;
-  max-width: 80%;
+  max-width: 100%;
   margin-top: 2rem;
 }
 .slider .slider-container {
@@ -146,33 +146,40 @@ padding-bottom: 5%;
 }
 
 
-@media (max-width:778px) {
-  .prev, .next {
+/* For screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+  i, .prev, .next {
     display: none;
   }
-
-  .card img {
-    width: 90%;
-    height: auto;
-  }
-
-  .my-rectangle {
+  .super-contenedor{
+    left: 1px;
     position: absolute;
-    bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
-    left: 0;
-    width: 90%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
-    height: 10%; /* Ajusta la altura del rectángulo según tus necesidades */
-    background-color: #161616; /* Color gris */
-    margin-left: 5%;
-    color: #fff;
+    width: 400px;
   }
 
-  .right {
-    font-size: small;
+  .top-left, .bottom-left, .right {
+    font-size: 10px;
   }
-  .bottom-left, .top-left {
-    font-size: 12px;
-    left: 4px;
 
+  .top-left{
+    top: -50%;
+  }
+
+  .bottom-left {
+    top: 9%;
+  }
+
+
+  .slider {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+
+  .slider-indicators {
+    margin-top: 1px;
+    text-align: center;
+  }
+  .indicator {
+    width: 8px;
+    height: 8px;
   }
 }
