@@ -227,16 +227,17 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;  
+    height: 120vh;  
 }
 .contenedor {
-
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 75px;
+    padding-top: 35px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
+    width: 20%;
 }
 
 #main-title {margin-top: 2%;
@@ -250,19 +251,53 @@ form label {
     margin-bottom: 10px;
 }
 
+#ingresar{
+    width: 200px;
+}
+.container-abajo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.container-abajo p {
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.div-opcional {
+    display: flex;
+}
+#p-opcional{
+    font-size: 0.8em;
+    margin: 0;
+    margin-top: 2px;
+    margin-left: 5px;
+    opacity: 0.5;
+}
+
 form input[type="text"],
 form input[type="email"] {
     background-color: rgba(255, 255, 255, 0.5);
-    width: 90%;
+    width: 93%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+#captcha{
+    width: 200px;
+    display: block;
+    margin-top: -10px;
+    opacity: 0.7;
+}
+
 form input[type="submit"] {
     background-color: #361B6E;
-    width: 100%;
+    width: 70%;
+    height: 50px;
     color: #fff;
     padding: 10px 10px;
     border: none;
