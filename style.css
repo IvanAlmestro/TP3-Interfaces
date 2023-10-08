@@ -11,9 +11,10 @@ body{
 }
 
 html{
-    position: absolute;
+
     left: 0;
-    width: 1920px;
+
+    min-height: 100%;
 }
 
 #header-container{
@@ -435,9 +436,11 @@ p{
 @media screen and (min-width: 780px){
     body{
 
-        width: 100%;
+        width: 1920px;
+   
    
     }
+
     .div-center{
         display: flex;
         
@@ -446,7 +449,7 @@ p{
 
     }
     #header-container{
-        width: 100%;
+        width: 1920px;
         height: 100px;
         margin-bottom: 40px;
     }
@@ -465,7 +468,9 @@ p{
         position: relative;
         font-size: 1.6em;
 
-        width: 100%;
+        width: 1920px;
+        margin: 0px;
+        padding: 0px;
     }
 
     .title-footer{
