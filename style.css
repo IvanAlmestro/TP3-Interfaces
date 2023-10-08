@@ -6,14 +6,14 @@ body{
     background: linear-gradient(rgba(25, 1, 38, 1), rgba(81, 27, 110, 1));
     width: 100%;
     height: 100%;
-    
+    overflow-x: hidden; 
 
 }
 
 html{
+    width: 100%;
     position: absolute;
     left: 0;
-    width: 1920px;
 }
 
 #header-container{
