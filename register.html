@@ -32,14 +32,20 @@
 
             <label for="repitPassword">Repetir Contraseña*</label>
             <input type="text" class="input-form">
-
             <div class="container-abajo">
-                <img src="/images/recaptcha (1).png" id="captcha" alt="">
-                <input type="submit" value="Registrarse">
+                <img src="./images/recaptcha (1).png" id="captcha" alt="">
+                <div class="container">
+                    <div class="message hidden" id="success-message">
+                        <p>Registro exitoso. ¡Bienvenido!</p>
+                    </div>
+                </div>
+                <input type="submit" id="register-button" value="Registrarse"></input>
                 <p class="p-form">¿Ya registrado?</p>
-                <input type="submit" value="Ingresar" id="ingresar">
+                <input type="submit" value="Ingresar" id="ingresarR">
             </div>
         </form>
+            
     </div>
+    <script src="./js/animacionRegister.js"></script>
 </body>
 </html>
