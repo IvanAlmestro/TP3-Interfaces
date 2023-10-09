@@ -139,11 +139,11 @@
 
 @keyframes animacionInfo {
   0% {
-    transform: translateY(-150%) rotate(20deg); /* Comienza desde la derecha y con un ligero giro */
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0%) rotate(0deg); /* Llega al centro sin giro */
+    opacity: 1;
   }
 }
 
