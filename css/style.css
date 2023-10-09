@@ -52,11 +52,12 @@ html{
 #logo{
     height: 50px;
     width: 50px;
+    
 }
 #logo-menu{
     height: 25px;
     width: 25px;
-
+    
 }
 
 
@@ -64,6 +65,9 @@ h1{
     font-size: 35px;
     text-transform: uppercase;
     font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+       
+      
 }
 #title-header, #div-logo, .div-user-fav-menu, .input-icono{
     display: flex;
@@ -92,6 +96,7 @@ p.p-footer2{
     height: 20px;
     width: 20px;
 }
+
 footer{
     background: linear-gradient(rgba(81, 27, 110, 1), rgba(100, 6, 151, 1));
     
@@ -101,6 +106,7 @@ footer{
    
     font-size: 0.6em;
     font-weight:lighter;
+    box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
 .title-footer{
@@ -122,12 +128,14 @@ footer{
 #footer-container{
     height: 100%;
     margin-left: 4%;
+
+
 }
 
 
 /*css para input con imagen lupita del header*/
 .input-icono {
-    background-image: url('images/lens.png');
+    background-image: url('../images/lens.png');
     background-color: rgba(210, 194, 255, 1);
     background-repeat: no-repeat;
     background-position: 4px center;
@@ -318,7 +326,11 @@ form input[type="submit"] {
     margin-left: 35%;
 }
 
-
+#logout{
+    text-decoration: none;
+    
+    color: white;
+}
 
 
 /*CSS PAGINA DE JUEGO*/
@@ -343,6 +355,7 @@ form input[type="submit"] {
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 20px;
     align-items: center;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 
 }
 main{
@@ -370,6 +383,7 @@ p{
     border: solid black 1px;
     border-radius: 10px;
     border-top-left-radius: 0px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .p-ask{
     padding-left: 30px;
@@ -397,12 +411,14 @@ p{
     width: 1655px;
     border-radius: 10px;
     margin-bottom: 40px;
-    
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
     border-top-left-radius: 0px;
     
 }
 .comments-container{
     margin-top: 40px;
+   
+
 }
 .p-comments{
     padding-top: 31px;
@@ -421,6 +437,7 @@ p{
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 
 }
 .p-user{
@@ -443,13 +460,15 @@ p{
 }
 .img-how-play{
     width: 30%;
-    padding-left: 78px;
+    margin-left: 78px;
     margin-bottom: 40px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 
 }
 .img-how-play2{
     width: 30%;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .img-game{
     height: 739px;
@@ -488,7 +507,7 @@ p{
 }
 
 #btn-share{
-    background-image: url('./images/Share.png');
+    background-image: url('../images/Share.png');
 
     cursor: pointer;
     background-size:auto;
@@ -601,6 +620,63 @@ p{
     height: 5em;
   }
 }
+/* OVERLAY DE COMPARTIR */
+
+
+/* Estilo para el popup (inicialmente oculto) */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.popup-contenido {
+
+    background-color: rgba(44, 10, 62, 1);
+    width: 400px; /* Ancho de 500px */
+    height: 500px; /* Altura de 500px */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.popup-contenido p{
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 1.5;
+    width: 350px;
+    color: rgba(178, 176, 180, 1);
+}
+.popup-contenido h2{
+    color: rgba(198, 198, 198, 1);
+    margin: 0;
+}
+.popup-contenido img{
+    float: left;
+    left: 530px;
+    height:70%;
+    margin-top: 20px;
+}
+#cerrarPopup {
+    background-color: #522979;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 17px;
+}
+
+
 @media screen and (min-width: 780px){
     body{
         width: 1920px;
@@ -617,6 +693,7 @@ p{
         width: 1920px;
         height: 100px;
         margin-bottom: 40px;
+        box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
     }
     
     .user-fav-shop{
@@ -695,11 +772,11 @@ p{
     }
     
     #logo{
-        width: 100px;
-        height: 100px;
+        width: 110px;
+        height: 110px;
     }
     #title-header h1{
-        font-size: 35px;
+        font-size: 30px;
         margin-right: 10px;
     }
     #nav-containers, #user-containers{
@@ -726,10 +803,13 @@ p{
     }
     .input-icono input{
         margin-left: 25px;
+        
        
     }
     .input-icono{
    
         background-size: 25px;
+        box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
     }
 }

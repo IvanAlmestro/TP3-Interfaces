@@ -52,16 +52,27 @@ btnUser.addEventListener("click", function(){
 move();
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-      // Encuentra el div por su id
-      
-      let load = document.getElementById("load-container");
-      if(window.location.href.endsWith("index.html")){
-        // Establece un temporizador para ocultar el div después de 5 segundos (5000 milisegundos)
-        setTimeout(function() {
-          load.style.display = "none"; // Oculta el div
-        }, 1); // 5000 milisegundos (5 segundos)
-      }
+document.addEventListener("DOMContentLoaded", function() {
+    // Encuentra el div por su id
     
-  });
+    let load = document.getElementById("load-container");
+    if(window.location.href.endsWith("index.html")){
+      // Establece un temporizador para ocultar el div después de 5 segundos (5000 milisegundos)
+      setTimeout(function() {
+        load.style.display = "none"; // Oculta el div
+      }, 1); // 5000 milisegundos (5 segundos)
+    }
+  
+});
 
+const botonCompartir = document.getElementById("btn-share");
+const popup = document.getElementById("popup");
+const cerrarPopup = document.getElementById("cerrarPopup");
+
+botonCompartir.addEventListener("click", function() {
+  popup.style.display = "flex"; // Muestra el popup al hacer clic en el botón
+});
+
+cerrarPopup.addEventListener("click", function() {
+  popup.style.display = "none"; // Oculta el popup al hacer clic en el botón "Cerrar"
+});
