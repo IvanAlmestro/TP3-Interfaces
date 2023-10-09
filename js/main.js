@@ -29,7 +29,7 @@ btnUser.addEventListener("click", function(){
 
   var i = 0;
   function move() {
-    if(window.location.href.endsWith("index.html")){
+    if(window.location.href.includes("index.html")){
       if (i == 0) {
         i = 1;
         var elem = document.getElementById("myBar");
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Encuentra el div por su id
   
   let load = document.getElementById("load-container");
-  if(window.location.href.endsWith("index.html")){
+  if(window.location.href.includes("index.html")){
     // Establece un temporizador para ocultar el div después de 5 segundos (5000 milisegundos)
     setTimeout(function() {
       load.style.display = "none"; // Oculta el div
@@ -69,7 +69,7 @@ const botonCompartir = document.getElementById("btn-share");
 const popup = document.getElementById("popup");
 const cerrarPopup = document.getElementById("cerrarPopup");
 
-if(window.location.href.endsWith("game.html")){
+if(window.location.href.includes("game.html")){
   botonCompartir.addEventListener("click", function() {
     popup.style.display = "flex"; // Muestra el popup al hacer clic en el botón
   });
@@ -78,3 +78,24 @@ if(window.location.href.endsWith("game.html")){
     popup.style.display = "none"; // Oculta el popup al hacer clic en el botón "Cerrar"
   });
 }
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const headerHeight = 110; // Altura de tu encabezado (ajusta según sea necesario)
+      const offsetPosition = targetElement.offsetTop - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth' // Desplazamiento suave
+      });
+    }
+  });
+});
