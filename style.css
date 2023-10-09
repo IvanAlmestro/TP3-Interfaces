@@ -1,3 +1,4 @@
+
 /*CSS PAGINA HOME */
 *{
     font-family:'KoHo', sans-serif;
@@ -25,7 +26,6 @@ html{
     color:white;
     font-family: Koho;
     display: flex;
-    
     top: 0;
     width: 100%;
 }
@@ -404,6 +404,7 @@ p{
     width: 50px;
     margin-left: 20px;
     float: left;
+   
 }
 .img-how-play{
     width: 30%;
@@ -421,13 +422,18 @@ p{
 }
 #playgame{
     position: absolute;
-    top: 620px;
+    top: 640px;
+   
 }
 #img-share{
     position: absolute;
     right: 300px;
     left: 1470px;
     top: 1050px;
+    width: 40px;
+    padding: 3px 12px;
+    border-radius: 20px;
+    background-color: rgba(32, 14, 89, 1);
 }
 #instruction{
     position: absolute;
@@ -446,7 +452,42 @@ p{
     line-height:0.9 ;
 }
 
-@import url('//fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+#btn-share{
+    background-image: url('./images/Share.png');
+
+    cursor: pointer;
+    background-size:auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 44px;
+
+}
+#img-share:hover{
+    background-color: rgb(65, 50, 114);
+}
+#btn-play{
+    width: 200px;
+    font-weight: bolder;
+    height: 80px ;
+    background-color: rgba(32, 14, 89, 1);
+    z-index: 999;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 28px;
+    border: solid black 1px;
+}
+#btn-play:hover{
+    background-color: rgb(65, 50, 114);
+}
+
+
+
+
 
 
 .cargando{ 
@@ -547,6 +588,7 @@ p{
         margin-left: 50px;
         height: 55px;
         width: 55px;
+        cursor: pointer;
     }
     
     footer{
@@ -588,8 +630,11 @@ p{
     #logo-menu{
         width: 50px;
         height: 50px;
-        
-    }
+        cursor: pointer;
+     
+    }  
+ 
+
     .div-user-fav-menu{
         margin-top: 25px;
         height: 50px;
@@ -597,6 +642,8 @@ p{
     .menu-btn{
         width: 50px;
         height: 50px;
+        transition: transform 1s;
+        margin-left: 20px;
     }
 
     #logo-menu, .menu-btn{
