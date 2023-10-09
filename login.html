@@ -36,7 +36,14 @@
                 </div>
             </div>
         </div>
-        <script src="./js/animacionRegister.js"></script>
+        <script>
+            const ingresarL = document.getElementById('ingresar');
+
+            ingresarL.addEventListener('click', (e) => {
+                location.href = 'index.html';
+                e.preventDefault();
+            });
+        </script>
     </body>
     
 </html>
