@@ -69,10 +69,12 @@ const botonCompartir = document.getElementById("btn-share");
 const popup = document.getElementById("popup");
 const cerrarPopup = document.getElementById("cerrarPopup");
 
-botonCompartir.addEventListener("click", function() {
-  popup.style.display = "flex"; // Muestra el popup al hacer clic en el botón
-});
+if(window.location.href.endsWith("game.html")){
+  botonCompartir.addEventListener("click", function() {
+    popup.style.display = "flex"; // Muestra el popup al hacer clic en el botón
+  });
 
-cerrarPopup.addEventListener("click", function() {
-  popup.style.display = "none"; // Oculta el popup al hacer clic en el botón "Cerrar"
-});
+  cerrarPopup.addEventListener("click", function() {
+    popup.style.display = "none"; // Oculta el popup al hacer clic en el botón "Cerrar"
+  });
+}

@@ -5,7 +5,7 @@
   margin: 0 auto;
   z-index: 1;
   max-width: 100%;
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 .slider .slider-container {
   display: flex;
@@ -42,9 +42,9 @@
 }
 
 .card img {
-width: 80%;
-height: auto;
-padding-bottom: 5%;
+  width: 80%;
+  height: auto;
+  padding-bottom: 5%;
 
 }
 /* Rectangle 30 */
@@ -160,6 +160,7 @@ padding-bottom: 5%;
     position: absolute;
     width: 350px;
   }
+  
 
   .top-left, .bottom-left, .right {
     font-size: 10px;
@@ -175,6 +176,7 @@ padding-bottom: 5%;
 
 
   .slider {
+    
     max-width: 100%; /* Adjust the maximum width for smaller screens */
   }
 
@@ -186,4 +188,12 @@ padding-bottom: 5%;
     width: 8px;
     height: 8px;
   }
+  
+}
+/*mediaquery para desktop*/
+@media screen and (min-width: 768px) {
+  .slider {
+    margin-top: 200px;
+  }
+  
 }
