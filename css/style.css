@@ -108,6 +108,7 @@ footer{
     position: fixed;
     bottom: 0;
     z-index: 999;
+   
  
     font-size: 0.6em;
     font-weight:lighter;
@@ -273,7 +274,7 @@ nav{
     color: rgba(166, 166, 166, 1);
     text-align: center;
     border-radius: 0px 0px 10px 10px;
-    z-index: 999;
+    z-index: 9999;
 
 }
 #icons-user{
@@ -857,6 +858,7 @@ p{
         
         width: 1920px;
         margin: 0px;
+        margin-top: 100px;
         padding: 0px;
     }
 
@@ -885,7 +887,7 @@ p{
     
     #nav-containers{
         width: 299px;
-        z-index: 999;        
+        z-index: 9999;        
     }
     #logo-menu{
         width: 50px;

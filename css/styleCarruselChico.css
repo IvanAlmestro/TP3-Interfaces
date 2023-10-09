@@ -70,7 +70,7 @@ padding-bottom: 5%;
 .deslizador-indicador, .deslizador-indicador2 {
   text-align: center; /* Centra los indicadores horizontalmente */
   margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .indicador, indicador2 {
@@ -286,7 +286,7 @@ padding-bottom: 5%;
 .deslizador-indicador2 {
   text-align: center; /* Centra los indicadores horizontalmente */
   margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .indicador2 {
