@@ -70,6 +70,7 @@ padding-bottom: 5%;
 .deslizador-indicador, .deslizador-indicador2 {
   text-align: center; /* Centra los indicadores horizontalmente */
   margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+  margin-bottom: 50px;
 }
 
 .indicador, indicador2 {
@@ -112,15 +113,15 @@ padding-bottom: 5%;
   position: relative;
   text-align: left;
   left: 1%;
-  top:8%;
 }
 .arri-izq {
   margin: 0;
   font-size: 10%;
   position: relative;
   text-align: left;
-  left: 0;
+  left: 1%;
   font-size:larger;
+  margin-bottom: -5px;
 }
 .dere {
   position: absolute;
@@ -137,8 +138,10 @@ padding-bottom: 5%;
 
 /* For screens with a maximum width of 768px (typical for mobile devices) */
 @media screen and (max-width: 768px) {
-
-  .deslizador-container, .deslizador-container2 {
+  #flecha{
+    display: none;
+  }
+  .deslizador-container{
     overflow: show;
     position: relative;
     margin: 0;
@@ -146,9 +149,7 @@ padding-bottom: 5%;
     max-width: 50%;
     margin-top: 3rem;
   }
-
-
-  i, .anterior, .siguiente {
+  .anterior, .siguiente {
     display: none;
   }
   .super-contenedor-chico{
@@ -156,16 +157,7 @@ padding-bottom: 5%;
     left: 1px;
     position: absolute;
     width: 100%;
-  }
-
-  .txt-arri-der, .txt-abaj-izq, .right {
-    font-size: 10px;
-
-  }
-
-  .txt-arri-der, .txt-abaj-izq{
-    left: 3px;
-    top: -10%;
+    margin-top: 60%;
   }
 
   .deslizador {
@@ -181,15 +173,20 @@ padding-bottom: 5%;
     width: 8px;
     height: 8px;
   }
-}
 
+  #fontawesome{
+    font-size: 18px;
+  }
+  .abaj-izq{
+    font-size: 8px;
+  }
 
-body {
-  overflow-x: hidden;
+  .arri-izq{
+    font-size: 10px;
+    margin-bottom: -3px;
+  }
 }
-main {
-  overflow: hidden;
-}
+/*CARRUSELES ESTATICOS------------------------------------------------------------------------------------------------------------*/
 .super-contenedor2 {
   width: 100%;
   display: inline;
@@ -256,6 +253,7 @@ padding-bottom: 5%;
 .deslizador-indicador2 {
   text-align: center; /* Centra los indicadores horizontalmente */
   margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+  margin-bottom: 50px;
 }
 
 .indicador2 {
@@ -292,33 +290,6 @@ padding-bottom: 5%;
   color: #fff;
 }
 
-/* Estilos para el texto arriba a la izquierda */
-.txt-abaj-der2 {
-  margin: 0;
-  font-size: 10%;
-  position: relative;
-  text-align: left;
-  left: 1%;
-  font-size: larger;
-}
-
-/* Estilos para el texto abajo a la izquierda */
-.txt-abaj-izq2 {
-  margin: 0;
-  font-size: small;
-  position: relative;
-  text-align: left;
-  left: 1%;
-  top:10%;
-}
-
-/* Estilos para el texto a la derecha */
-.txt-derecha2 {
-  position: absolute;
-  top: 50%; /* Ajusta según tu preferencia */
-  right: 1%;
-  transform: translateY(-50%); /* Centra verticalmente el texto */
-}
 
 #img-jugar, #img-addCarrito{
     width: 5%;
@@ -339,30 +310,18 @@ padding-bottom: 5%;
   }
 
 
-  i, .anterior2, .siguiente2 {
-    display: none;
-  }
   .super-contenedor-chico2{
     overflow: hidden;
     left: 1px;
     position: absolute;
     width: 100%;
+    margin-top: 420px;
   }
-
-  .txt-abaj-der2, .txt-abaj-izq2, .right2 {
-    font-size: 10px;
-
-  }
-
-  .txt-abaj-der2, .txt-abaj-izq2{
-    left: 3px;
-    top: -10%;
-  }
-
+  
   .deslizador2 {
     max-width: 100%;
   }
-
+  
   .deslizador-indicador2 {
     margin-top: 2px;
     text-align: center;
