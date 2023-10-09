@@ -29,6 +29,9 @@ html{
     display: flex;
     top: 0;
     width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
 }
 #title-header h1{
     font-size: 10px;
@@ -186,12 +189,14 @@ nav{
     font-size: 13px;
     background-color:rgba(44, 10, 62, 1) ;
     padding: 10px;
-    position: absolute;
+    position: fixed;
+    z-index: 999;
+  
     left: 0;
     top: 54px;
     color: rgba(166, 166, 166, 1);
     border-radius: 0px 0px 10px 10px;
-    z-index: 999;
+
 }
 
 
@@ -214,6 +219,9 @@ nav{
 .user-btn img:hover{
     transform: scale(1.3);
     transition: transform ease-out 1s;
+
+    border: 1px white solid;
+    border-radius: 10px;
 }
 
 nav{
@@ -228,7 +236,7 @@ nav{
     font-size: 13px;
     background-color:rgba(44, 10, 62, 1) ;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 54px;
     color: rgba(166, 166, 166, 1);
@@ -237,7 +245,13 @@ nav{
     z-index: 999;
 
 }
-
+#icons-user{
+    position: fixed;
+    right: 0;
+    top: 220px;
+    height: 280px;
+    z-index: 9999;
+}
 
 /* PAGINAS FORMULARIO LOGIN Y REGISTER */
 /* titulo de registrar y login*/
@@ -369,6 +383,9 @@ form input[type="submit"] {
     margin-right: 10px;
 
 }
+#container-info-help .p-margin{
+    margin-top: 10px;
+}
 
 .game-container{
     display: flex;
@@ -478,7 +495,7 @@ p{
 .p-margin{
     color:rgb(175, 175, 175);
     font-size: x-large;
-    margin-top: 120px;
+    margin-top: 140px;
 }
 .p-margin a{
     text-decoration: none;
@@ -489,11 +506,16 @@ p{
     color: blueviolet;
 }
 #img-user{
-    height: 35px;
+    height: 45px;
     width: 50px;
     margin-left: 20px;
     float: left;
    
+}
+#img-bocavsriver{
+    height: 70px;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 .img-how-play{
     width: 30%;
@@ -575,10 +597,9 @@ p{
  
 }
 #btn-play:hover{
-    background-color: rgb(65, 50, 114);
+    animation: pija 1s linear 2s infinite alternate;
+
 }
-
-
 
 
 
