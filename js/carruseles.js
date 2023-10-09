@@ -89,3 +89,92 @@ function updateIndicators() {
 
 // Inicializa los indicadores al cargar la página
 updateIndicators();
+
+
+
+//CARRUSEL CHICO 1----------------------------------------------------------------------------------------------------------------------------------
+
+const deslizador = document.querySelector(".deslizador");
+const anteriorButton = document.querySelector(".anterior");
+const siguienteButton = document.querySelector(".siguiente");
+const deslizadorContainer = document.querySelector(".deslizador-container");
+const indicador = document.querySelectorAll(".indicador");
+
+let deslizadorIndex = 0;
+let touchInicioX = 0;
+let touchFinalX = 0;
+
+anteriorButton.addEventListener("click", () => {
+    deslizadorIndex--;
+    if (deslizadorIndex < 0) {
+        deslizadorIndex = indicador.length - 1;
+    }
+    mostrarSlide();
+});
+
+siguienteButton.addEventListener("click", () => {
+    deslizadorIndex++;
+    if (deslizadorIndex >= indicador.length) {
+        deslizadorIndex = 0;
+    }
+    mostrarSlide();
+});
+
+indicador.forEach((indicador, index) => {
+    indicador.addEventListener("click", () => {
+        deslizadorIndex = index;
+        mostrarSlide();
+    });
+});
+
+deslizador.addEventListener("touchstart", (e) => {
+    touchInicioX = e.touches[0].clientX;
+});
+
+deslizador.addEventListener("touchmove", (e) => {
+    touchFinalX = e.touches[0].clientX;
+});
+
+deslizador.addEventListener("touchend", () => {
+    const swipeThreshold = 50; // Umbral de desplazamiento mínimo para cambiar de diapositiva
+    const deltaX = touchFinalX - touchInicioX;
+
+    if (deltaX > swipeThreshold) {
+        deslizadorIndex--;
+        if (deslizadorIndex < 0) {
+            deslizadorIndex = indicador.length - 1;
+        }
+        mostrarSlide();
+    } else if (deltaX < -swipeThreshold) {
+        deslizadorIndex++;
+        if (deslizadorIndex >= indicador.length) {
+            deslizadorIndex = 0;
+        }
+        mostrarSlide();
+    }
+});
+
+function mostrarSlide() {
+    const translateX = -deslizadorIndex * 100 + "%";
+    const images = document.querySelectorAll(".tarjeta img");
+    const rectangles = document.querySelectorAll(".info-juegos");
+    const contenedor = document.querySelectorAll("super-contenedor");
+
+  
+    deslizadorContainer.style.transform = `translateX(${translateX})`;
+    updateIndicador();
+}
+
+function updateIndicador() {
+    indicador.forEach((indicador, index) => {
+        if (index === deslizadorIndex) {
+            indicador.classList.add("active");
+        } else {
+            indicador.classList.remove("active");
+        }
+    });
+}
+
+// Inicializa los indicadores al cargar la página
+updateIndicador();
+
