@@ -107,6 +107,33 @@ padding-bottom: 5%;
   color: #fff;
 }
 
+.corazon {
+  margin-right: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+}
+
+.txt-arriba-carruselG{
+  font-size: 36px;
+  padding-left: 170px;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 10px;
+}
+.txt-arriba-carrusel{
+  bottom: 100px;
+  padding-left: 50px;
+  color: #ffffff;
+  margin-bottom: -30px;
+}
+.txt-arriba-carrusel2{
+  padding-left: 50px;
+  color: #ffffff;
+  margin-top: 0;
+}
+
 .abaj-izq {
   margin: 0;
   font-size:medium;
@@ -141,6 +168,12 @@ padding-bottom: 5%;
   #flecha{
     display: none;
   }
+  .txt-arriba-carrusel{
+    padding-left: 20px;
+    padding-top: 30px;
+    color: #ffffff;
+    margin-bottom: -50px;
+  }
   .deslizador-container{
     overflow: show;
     position: relative;
@@ -157,7 +190,7 @@ padding-bottom: 5%;
     left: 1px;
     position: absolute;
     width: 100%;
-    margin-top: 60%;
+    margin-top: 65%;
   }
 
   .deslizador {
@@ -299,7 +332,31 @@ padding-bottom: 5%;
 
 /* For screens with a maximum width of 768px (typical for mobile devices) */
 @media screen and (max-width: 768px) {
+  .txt-arriba-carrusel{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-top: 30px;
+    color: #ffffff;
+    margin-bottom: -50px;
+  }
+  .corazon{
+    font-size: 20px;
+    margin-top: 3px;
+    margin-right: 25px;
+  }
 
+  .txt-arriba-carruselG {
+    padding-left: 40px;
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  .txt-arriba-carrusel2{
+    font-size: 15px;
+    padding-left: 20px;
+    color: #ffffff;
+    margin-bottom: 2px;
+  }
   .deslizador-container2 {
     overflow: show;
     position: relative;
@@ -315,9 +372,17 @@ padding-bottom: 5%;
     left: 1px;
     position: absolute;
     width: 100%;
-    margin-top: 420px;
+    margin-top: 118%;
   }
-  
+  #contenedor3{
+    margin-top: 158%;
+  } 
+  #contenedor4{
+    margin-top: 198%;
+  }
+  #contenedor5{
+    margin-top: 238%;
+  }
   .deslizador2 {
     max-width: 100%;
   }
