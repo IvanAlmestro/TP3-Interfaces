@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Establece un temporizador para ocultar el div después de 5 segundos (5000 milisegundos)
     setTimeout(function() {
       load.style.display = "none"; // Oculta el div
-    }, 1); // 5000 milisegundos (5 segundos)
+    }, 5000); // 5000 milisegundos (5 segundos)
   }
 
 });

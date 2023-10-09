@@ -987,4 +987,12 @@ p{
 
         border-radius: 10px;
     }
+    #p-copyright{
+        text-align: center;
+        font-size: 0.6em;
+        margin: 0;
+        margin-top: 10px;
+        padding-bottom: 30px;
+    }
+    
 }
