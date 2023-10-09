@@ -339,7 +339,6 @@ form input[type="submit"] {
 .div-izquierdo {
     display: inline-block; /* Hace que los divs sean elementos en línea */
     
-    margin-right: 40px; /* Espacio entre los divs */
 }
 
 .div-derecho {
@@ -347,7 +346,7 @@ form input[type="submit"] {
 }
 
 .img-login {
-    margin-left: 35%;
+    margin-left: 0;
 }
 
 #logout{
