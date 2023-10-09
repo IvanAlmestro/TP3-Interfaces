@@ -53,16 +53,16 @@ move();
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Encuentra el div por su id
-    
-    let load = document.getElementById("load-container");
-    if(window.location.href.endsWith("index.html")){
-      // Establece un temporizador para ocultar el div después de 5 segundos (5000 milisegundos)
-      setTimeout(function() {
-        load.style.display = "none"; // Oculta el div
-      }, 1); // 5000 milisegundos (5 segundos)
-    }
+  // Encuentra el div por su id
   
+  let load = document.getElementById("load-container");
+  if(window.location.href.endsWith("index.html")){
+    // Establece un temporizador para ocultar el div después de 5 segundos (5000 milisegundos)
+    setTimeout(function() {
+      load.style.display = "none"; // Oculta el div
+    }, 1); // 5000 milisegundos (5 segundos)
+  }
+
 });
 
 const botonCompartir = document.getElementById("btn-share");

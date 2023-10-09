@@ -1,185 +1,334 @@
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
+}
+main {
+  overflow: hidden;
+}
+.super-contenedor, .super-contenedor2 {
+  width: 100%;
+  display: inline;
+  margin-right: 1000px;
+}
+.deslizador, .deslizador2{
+  margin: 0%;
+  display: inline;
+  overflow: hidden;
+
+}
+.deslizador-container, .deslizador-container2 {
+  overflow: show;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+  max-width: 25%;
+  margin-top: 3rem;
+}
+.deslizador .deslizador-container, .deslizador-container2 .deslizador2{
+  display: flex;
+  transition: transform 0.7s ease;
+}
+.deslizador .deslizador-container .tarjeta, .deslizador2 .deslizador-container2{
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.anterior, .anterior2 {
+  position: absolute;
+  left: 100px;
+  z-index: 100;
+}
+
+.siguiente, .siguiente2 {
+  position: absolute;
+  right: 100px;
+  z-index: 100;
+}
+
+/* Estilos para las flechas "siguiente" y "anterior" en pantallas grandes */
+.siguiente,
+.anterior, .anterior2,.siguiente2  {
+  margin-top: -135px;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.tarjeta img, .tarjeta2 {
+width: 79%;
+height: auto;
+padding-bottom: 5%;
+}
+/* Rectangle 30 */
+
+
+.deslizador-indicador, .deslizador-indicador2 {
+  text-align: center; /* Centra los indicadores horizontalmente */
+  margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+  margin-bottom: 50px;
+}
+
+.indicador, indicador2 {
+  width: 10px; /* Tamaño del puntito */
+  height: 10px;
+  background-color: #ffffff; /* Color de los puntitos inactivos */
+  display: inline-block;
+  margin: 0 5px; /* Espacio entre los indicadores */
+  border-radius: 50%; /* Forma redonda para los puntitos */
+}
+.active, .active2 {
+  background-color: rgb(0, 0, 0);
+}
+
+/*info juegos*/
+/* Estilos para el contenedor de la imagen y el rectángulo gris */
+.imagen-container, .imagen-container2 {
+  position: relative; /* Para permitir la superposición de elementos */
+  display: inline-block; /* Hace que el contenedor se ajuste al tamaño de la imagen */
+}
+
+/* Estilos para la imagen */
+
+
+/* Estilos para el rectángulo gris debajo de la imagen */
+.info-juegos, .info-juegos2 {
+  position: absolute;
+  bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
+  left: 0;
+  width: 80%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
+  height: 20%; /* Ajusta la altura del rectángulo según tus necesidades */
+  background-color: #161616;; /* Color gris */
+  margin-left: 10%;
+  color: #fff;
+}
+
+.abaj-izq {
+  margin: 0;
+  font-size:medium;
+  position: relative;
+  text-align: left;
+  left: 1%;
+}
+.arri-izq {
+  margin: 0;
+  font-size: 10%;
+  position: relative;
+  text-align: left;
+  left: 1%;
+  font-size:larger;
+  margin-bottom: -5px;
+}
+.dere {
+  position: absolute;
+  top: 50%; /* Ajusta según tu preferencia */
+  right: 1%;
+  transform: translateY(-50%); /* Centra verticalmente el texto */
+}
+
+#img-jugar, #img-addCarrito{
+    width: 5%;
+    height: auto;
+}
+
+
+/* For screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+  #flecha{
+    display: none;
   }
-  main {
-    overflow: hidden;
-  }
-  .super-contenedor {
-    width: 100%;
-    display: inline;
-    margin-right: 1000px;
-  }
-  .deslizador{
-    margin: 0%;
-    display: inline;
-    overflow: hidden;
-  
-  }
-  .deslizador-container {
+  .deslizador-container{
     overflow: show;
     position: relative;
     margin: 0;
     z-index: 1;
-    max-width: 25%;
+    max-width: 50%;
     margin-top: 3rem;
   }
-  .deslizador .deslizador-container {
-    display: flex;
-    transition: transform 0.7s ease;
+  .anterior, .siguiente {
+    display: none;
   }
-  .deslizador .deslizador-container .tarjeta {
-    flex: 0 0 100%;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .anterior {
+  .super-contenedor-chico{
+    overflow: hidden;
+    left: 1px;
     position: absolute;
-    left: 100px;
-    z-index: 100;
+    width: 100%;
+    margin-top: 60%;
   }
-  
-  .siguiente {
-    position: absolute;
-    right: 100px;
-    z-index: 100;
+
+  .deslizador {
+    max-width: 100%;
   }
-  
-  /* Estilos para las flechas "siguiente" y "anterior" en pantallas grandes */
-  .siguiente,
-  .anterior {
-    margin-top: -135px;
-    font-size: 3rem;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-  }
-  
-  .tarjeta img {
-  width: 79%;
-  height: auto;
-  padding-bottom: 5%;
-  }
-  /* Rectangle 30 */
-  
-  
+
   .deslizador-indicador {
-    text-align: center; /* Centra los indicadores horizontalmente */
-    margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+    margin-top: 2px;
+    text-align: center;
+    margin-right: 0px;
   }
-  
   .indicador {
-    width: 10px; /* Tamaño del puntito */
-    height: 10px;
-    background-color: #ffffff; /* Color de los puntitos inactivos */
-    display: inline-block;
-    margin: 0 5px; /* Espacio entre los indicadores */
-    border-radius: 50%; /* Forma redonda para los puntitos */
+    width: 8px;
+    height: 8px;
   }
-  .active {
-    background-color: rgb(0, 0, 0);
+
+  #fontawesome{
+    font-size: 18px;
   }
-  
-  /*info juegos*/
-  /* Estilos para el contenedor de la imagen y el rectángulo gris */
-  .imagen-container {
-    position: relative; /* Para permitir la superposición de elementos */
-    display: inline-block; /* Hace que el contenedor se ajuste al tamaño de la imagen */
+  .abaj-izq{
+    font-size: 8px;
   }
-  
-  /* Estilos para la imagen */
-  
-  
-  /* Estilos para el rectángulo gris debajo de la imagen */
-  .info-juegos {
-    position: absolute;
-    bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
-    left: 0;
-    width: 80%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
-    height: 20%; /* Ajusta la altura del rectángulo según tus necesidades */
-    background-color: #161616;; /* Color gris */
-    margin-left: 10%;
-    color: #fff;
+
+  .arri-izq{
+    font-size: 10px;
+    margin-bottom: -3px;
   }
-  
-  .abaj-izq {
-    margin: 0;
-    font-size:medium;
+}
+/*CARRUSELES ESTATICOS------------------------------------------------------------------------------------------------------------*/
+.super-contenedor2 {
+  width: 100%;
+  display: inline;
+  margin-right: 1000px;
+}
+.deslizador2{
+  margin: 0%;
+  display: inline;
+  overflow: hidden;
+
+}
+.deslizador-container2 {
+  overflow: show;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+  max-width: 25%;
+  margin-top: 3rem;
+}
+.deslizador2 .deslizador-container2 {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+.deslizador2 .deslizador-container2 .tarjeta2 {
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.anterior2 {
+  position: absolute;
+  left: 100px;
+  z-index: 100;
+}
+
+.siguiente2 {
+  position: absolute;
+  right: 100px;
+  z-index: 100;
+}
+
+/* Estilos para las flechas "siguiente" y "anterior" en pantallas grandes */
+.siguiente2,
+.anterior2 {
+  margin-top: -135px;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.tarjeta2 img {
+width: 79%;
+height: auto;
+padding-bottom: 5%;
+}
+/* Rectangle 30 */
+
+
+.deslizador-indicador2 {
+  text-align: center; /* Centra los indicadores horizontalmente */
+  margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+  margin-bottom: 50px;
+}
+
+.indicador2 {
+  width: 10px; /* Tamaño del puntito */
+  height: 10px;
+  background-color: #ffffff; /* Color de los puntitos inactivos */
+  display: inline-block;
+  margin: 0 5px; /* Espacio entre los indicadores */
+  border-radius: 50%; /* Forma redonda para los puntitos */
+}
+.active2 {
+  background-color: rgb(0, 0, 0);
+}
+
+/*info juegos*/
+/* Estilos para el contenedor de la imagen y el rectángulo gris */
+.imagen-container2 {
+  position: relative; /* Para permitir la superposición de elementos */
+  display: inline-block; /* Hace que el contenedor se ajuste al tamaño de la imagen */
+}
+
+/* Estilos para la imagen */
+
+
+/* Estilos para el rectángulo gris debajo de la imagen */
+.info-juegos2 {
+  position: absolute;
+  bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
+  left: 0;
+  width: 80%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
+  height: 20%; /* Ajusta la altura del rectángulo según tus necesidades */
+  background-color: #161616;; /* Color gris */
+  margin-left: 10%;
+  color: #fff;
+}
+
+
+#img-jugar, #img-addCarrito{
+    width: 5%;
+    height: auto;
+}
+
+
+/* For screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+
+  .deslizador-container2 {
+    overflow: show;
     position: relative;
-    text-align: left;
-    left: 1%;
-    top:8%;
-  }
-  .arri-izq {
     margin: 0;
-    font-size: 10%;
-    position: relative;
-    text-align: left;
-    left: 0;
-    font-size:larger;
+    z-index: 1;
+    max-width: 50%;
+    margin-top: 3rem;
   }
-  .dere {
+
+
+  .super-contenedor-chico2{
+    overflow: hidden;
+    left: 1px;
     position: absolute;
-    top: 50%; /* Ajusta según tu preferencia */
-    right: 1%;
-    transform: translateY(-50%); /* Centra verticalmente el texto */
+    width: 100%;
+    margin-top: 420px;
   }
   
-  #img-jugar, #img-addCarrito{
-      width: 5%;
-      height: auto;
+  .deslizador2 {
+    max-width: 100%;
   }
   
-  
-  /* For screens with a maximum width of 768px (typical for mobile devices) */
-  @media screen and (max-width: 768px) {
-  
-    .deslizador-container {
-      overflow: show;
-      position: relative;
-      margin: 0;
-      z-index: 1;
-      max-width: 50%;
-      margin-top: 3rem;
-    }
-  
-  
-    i, .anterior, .siguiente {
-      display: none;
-    }
-    .super-contenedor-chico{
-      overflow: hidden;
-      left: 1px;
-      position: absolute;
-      width: 100%;
-    }
-  
-    .txt-arri-der, .txt-abaj-izq, .right {
-      font-size: 10px;
-  
-    }
-  
-    .txt-arri-der, .txt-abaj-izq{
-      left: 3px;
-      top: -10%;
-    }
-  
-    .deslizador {
-      max-width: 100%;
-    }
-  
-    .deslizador-indicador {
-      margin-top: 2px;
-      text-align: center;
-      margin-right: 0px;
-    }
-    .indicador {
-      width: 8px;
-      height: 8px;
-    }
+  .deslizador-indicador2 {
+    margin-top: 2px;
+    text-align: center;
+    margin-right: 0px;
   }
-  
+  .indicador2 {
+    width: 8px;
+    height: 8px;
+  }
+}

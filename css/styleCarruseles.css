@@ -100,17 +100,17 @@ padding-bottom: 5%;
 /* Estilos para el texto arriba a la izquierda */
 .top-left {
   position: absolute;
-  font-size: larger;
+  font-size: 30px;
   left: 1%;
-  bottom: 38%;
+  bottom: 18%;
 }
 
 /* Estilos para el texto abajo a la izquierda */
 .bottom-left {
-    font-size: large;
+  font-size: 25px;
   position: absolute;
   left: 1%;
-  top: 38%;
+  top: 27%;
 }
 
 /* Estilos para el texto a la derecha */
@@ -149,6 +149,9 @@ padding-bottom: 5%;
 
 /* For screens with a maximum width of 768px (typical for mobile devices) */
 @media screen and (max-width: 768px) {
+  #fontawesomeG {
+    font-size: 18px;
+  }
   i, .prev, .next {
     display: none;
   }
