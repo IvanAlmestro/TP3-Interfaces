@@ -253,6 +253,7 @@ form label {
 
 #ingresar{
     width: 200px;
+    border-radius: 10px;
 }
 .container-abajo{
     display: flex;
@@ -294,6 +295,18 @@ form input[type="email"] {
     opacity: 0.7;
 }
 
+#ingresar{
+    margin-left: 23%;
+}
+.div-botones {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 30px;
+}
+
+
 form input[type="submit"] {
     background-color: #361B6E;
     width: 70%;
@@ -306,16 +319,10 @@ form input[type="submit"] {
 }
 .div-izquierdo {
     display: inline-block; /* Hace que los divs sean elementos en línea */
-    
-    margin-right: 40px; /* Espacio entre los divs */
 }
 
 .div-derecho {
     display: inline-block; /* Hace que los divs sean elementos en línea */
-}
-
-.img-login {
-    margin-left: 35%;
 }
 
 
