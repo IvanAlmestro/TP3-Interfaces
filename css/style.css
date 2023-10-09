@@ -13,6 +13,11 @@ body{
 
 
 }
+p.title-nav, p.title-user{ 
+    font-size: 1em;
+    line-height: 1.2;
+    margin-right: 15px;
+}
 
 html{
 
@@ -253,7 +258,7 @@ nav{
     transition: transform ease-out 1s;
 
     border: 1px white solid;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 nav{
@@ -279,9 +284,9 @@ nav{
 }
 #icons-user{
     position: fixed;
-    right: 0;
-    top: 220px;
-    height: 280px;
+    right: 0px;
+    top: 110px;
+    height: 100px;
     z-index: 9999;
 }
 
@@ -398,8 +403,11 @@ form input[type="submit"] {
 
 #logout{
     text-decoration: none;
-    
+    font-weight: bolder;
     color: white;
+}
+#logout:hover{
+    color: rgb(185, 52, 145);
 }
 
 
@@ -660,7 +668,7 @@ p{
   height: 100%;
   width: 100%;
   color: #000;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .loader,
@@ -790,7 +798,15 @@ p{
     cursor: pointer;
     margin-top: 17px;
 }
-
+#cerrarPopup:hover{
+    background-color: rgb(136, 71, 189);
+}
+.menu-btn{
+    width: 50px;
+    height: 50px;
+    transition: transform 1s;
+    margin-left: 4px;
+}
 
 @media screen and (min-width: 780px){
     body{
@@ -874,18 +890,15 @@ p{
         margin-top: 25px;
         height: 50px;
     }
-    .menu-btn{
-        width: 50px;
-        height: 50px;
-        transition: transform 1s;
-        margin-left: 20px;
-    }
+  
 
     #logo-menu, .menu-btn{
         position: absolute;
         left: 10px;
         top: 12.5px;
+        
     }
+  
     #div-logo{
         position: absolute;
         left: 139px;
@@ -917,8 +930,9 @@ p{
         margin-right: 50px;
     }
     p.title-nav, p.title-user{ 
-        font-size: 2em;
-        line-height: 2;
+        font-size: 1.8em;
+        line-height: 1.8;
+        margin-right: 50px;
     }
     ul li{
         font-size: 1.5em;
@@ -934,5 +948,16 @@ p{
         background-size: 25px;
         box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.3);
 
+    }
+    #icons-user{
+        position: fixed;
+        right: 20px;
+        top: 202px;
+        height: 240px;
+        z-index: 9999;
+    }
+    .user-btn img:hover{
+
+        border-radius: 10px;
     }
 }
