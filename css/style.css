@@ -204,6 +204,37 @@ nav{
     border:none;
     background-color: transparent;
 }
+/*ANIMACION REGISTER*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+
+}
+
+#success-message {
+    font-size: 20px;
+    align-items: center;
+    opacity: 0; /* Moverlo arriba del botón inicialmente */
+    transition: opacity 0.3s, transform 0.3s;
+    background-color: #361B6E; /* Color de fondo verde (puedes personalizarlo) */
+    color: white; /* Color del texto (puedes personalizarlo) */
+    margin: 0;
+    border-radius: 5px;
+    position: absolute; /* Posición absoluta para superponerlo sobre el botón */
+    z-index: 999;
+    text-align:start;
+    padding-bottom: 70px;
+    padding-left: 120px;
+    width: 400px;
+    height: 50px;
+}
 /*CSS MENU USUARIO*/
 .user-btn img{
 
@@ -271,6 +302,7 @@ form label {
 }
 
 #ingresar{
+    margin-left: 23%;
     width: 200px;
     border-radius: 10px;
 }
@@ -314,9 +346,6 @@ form input[type="email"] {
     opacity: 0.7;
 }
 
-#ingresar{
-    margin-left: 23%;
-}
 .div-botones {
     display: flex;
     justify-content: space-between;
@@ -328,7 +357,7 @@ form input[type="email"] {
 
 form input[type="submit"] {
     background-color: #361B6E;
-    width: 70%;
+    width: 60%;
     height: 50px;
     color: #fff;
     padding: 10px 10px;
@@ -338,11 +367,14 @@ form input[type="submit"] {
 }
 .div-izquierdo {
     display: inline-block; /* Hace que los divs sean elementos en línea */
-    
+    width: 128px;
 }
-
+.div-medio{
+    width: 128px;
+}
 .div-derecho {
     display: inline-block; /* Hace que los divs sean elementos en línea */
+    width: 128px;
 }
 
 .img-login {
@@ -646,6 +678,29 @@ p{
     line-height: 30px; /* To center it vertically */
     color: white;
   }
+#ingresar:hover{
+    animation: hoverLogin 1s forwards linear;
+}
+@keyframes hoverLogin{
+    0%{
+        border-top: #ffffff solid 1px;
+        letter-spacing: 0;
+    }
+    33%{
+        border-right: #ffffff solid  1px;
+
+    }
+    66%{
+        border-bottom: #ffffff solid  1px;
+    }
+    100%{
+        letter-spacing: 4px;
+        border-top: #ffffff solid 1px;
+        border-right: #ffffff solid 1px;
+        border-bottom: #ffffff solid 1px;
+        border-left: #ffffff solid 1px;
+    }
+}
 @keyframes cargando {
   0%,
   80%,
