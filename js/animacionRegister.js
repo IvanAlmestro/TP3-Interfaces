@@ -1,17 +1,13 @@
 const successMessage = document.getElementById('success-message');
 const registerButton = document.getElementById('register-button');
-const ingresar = document.getElementById('ingresar');
-
-ingresar.addEventListener('click',function(e){
-    location.href = 'index.html';
-    e.preventDefault();
-})
+const ingresar = document.getElementById('ingresarR');
+const ingresarL = document.getElementById('ingresar');
 
 
 registerButton.addEventListener('click', (e) => {
     e.preventDefault();
     successMessage.classList.remove('hidden');
-
+    
     // Agregar una animación de desvanecimiento
     setTimeout(() => {
         successMessage.style.opacity = '1';
@@ -30,4 +26,14 @@ registerButton.addEventListener('click', (e) => {
             }, 0); // Espera 1 segundo antes de redirigir
         }, { once: true });
     }, 3000); // 3 segundos
+});
+
+ingresar.addEventListener('click', (e) => {
+    location.href = 'login.html';
+    e.preventDefault();
+});
+
+ingresarL.addEventListener('click', (e) => {
+    location.href = 'index.html';
+    e.preventDefault();
 });
