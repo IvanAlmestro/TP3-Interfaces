@@ -32,8 +32,3 @@ ingresar.addEventListener('click', (e) => {
     location.href = 'login.html';
     e.preventDefault();
 });
-
-ingresarL.addEventListener('click', (e) => {
-    location.href = 'index.html';
-    e.preventDefault();
-});
