@@ -152,12 +152,13 @@ class Board {
 
     connectDiagonal(connect) {
         const connectedCells = [];
+    
+        // Diagonal de izquierda a derecha
         for (let row = 0; row <= this.rows - connect; row++) {
             for (let col = 0; col <= this.cols - connect; col++) {
                 if (this.matrix[row][col] !== null) {
                     const firstCircle = this.matrix[row][col];
                     const inLineCellsAsc = [firstCircle];
-                    const inLineCellsDesc = [firstCircle];
                     for (let i = 1; i < connect; i++) {
                         if (this.matrix[row + i][col + i] !== null) {
                             if (firstCircle.compareTo(this.matrix[row + i][col + i])) {
@@ -167,6 +168,19 @@ class Board {
                             }
                         }
                     }
+                    if (inLineCellsAsc.length === connect) {
+                        connectedCells.push(...inLineCellsAsc);
+                    }
+                }
+            }
+        }
+    
+        // Diagonal de derecha a izquierda
+        for (let row = 0; row <= this.rows - connect; row++) {
+            for (let col = connect - 1; col < this.cols; col++) {
+                if (this.matrix[row][col] !== null) {
+                    const firstCircle = this.matrix[row][col];
+                    const inLineCellsDesc = [firstCircle];
                     for (let i = 1; i < connect; i++) {
                         if (this.matrix[row + i][col - i] !== null) {
                             if (firstCircle.compareTo(this.matrix[row + i][col - i])) {
@@ -176,15 +190,13 @@ class Board {
                             }
                         }
                     }
-                    if (inLineCellsAsc.length === connect) {
-                        connectedCells.push(...inLineCellsAsc);
-                    }
                     if (inLineCellsDesc.length === connect) {
                         connectedCells.push(...inLineCellsDesc);
                     }
                 }
             }
         }
+    
         return connectedCells;
     }
     
