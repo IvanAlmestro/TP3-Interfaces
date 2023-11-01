@@ -1,4 +1,15 @@
+document.getElementById("btn-play").addEventListener("click", function () {
 
+  // Oculta el formulario
+  document.getElementById("miFormulario").style.display = "none";
+  
+  // Muestra el contenido adicional
+  document.getElementById("turn").style.display = "block";
+  document.getElementById("winner").style.display = "block";
+  document.getElementById("canvas").style.display = "block";
+  document.getElementById("instruction").style.display = "block";
+  document.getElementById("img-share").style.display = "block";
+});
 
 let btnMenu = document.querySelector(".menu-btn");
 btnMenu.addEventListener("click", function(){
@@ -27,6 +38,7 @@ btnUser.addEventListener("click", function(){
 });
 
 
+
   var i = 0;
   function move() {
     if(window.location.href.includes("index.html")){
@@ -50,6 +62,7 @@ btnUser.addEventListener("click", function(){
   }
 
 move();
+
 
 
 document.addEventListener("DOMContentLoaded", function() {

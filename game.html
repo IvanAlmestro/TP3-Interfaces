@@ -45,36 +45,18 @@
                 <p class="title-nav">Mas Populares</p>
                 <p class="title-nav">En Tendencia</p>
                 <p class="title-nav">Categorias:</p>
-
                 <ul id="category-list">
-                    <li ><a href="#contenedor1">Favoritos</a></li>
-               
-                    <li ><a href="#contenedor2">Deportes</a></li>
-                    <li ><a href="#contenedor3">Carreras</a></li>
-                    <li ><a href="#contenedor4">Deportes</a></li>
-                    <li ><a href="#contenedor5">Shooters</a></li>
-                    <li ><a href="#contenedor6">Estrategia</a></li>
+                    <li ><a href="index.html#contenedor1">Favoritos</a></li>
+                    <li ><a href="index.html#contenedor2">Deportes</li>
+                    <li ><a href="index.html#contenedor3">Carreras</li>
+                    <li ><a href="index.html#contenedor4">Estrategia</li>
+                    <li ><a href="index.html#contenedor5">Supervivencia</li>
+                
                 </ul>
             </div>
         </nav>
-        <nav>
-            <div class="nav-container" id="nav-containers">
-                <p class="title-nav">Recien Actualizados</p>
-                <p class="title-nav">Juegos Nuevos</p>
-                <p class="title-nav">Mas Populares</p>
-                <p class="title-nav">En Tendencia</p>
-                <p class="title-nav">Categorias:</p>
-                <ul>
-                    <li>Carreras</li>
-                    <li>Multijugador</li>
-                    <li>Supervivencia</li>
-                    <li>Aventura</li>
-                    <li>Deportes</li>
-                    <li>Shooters</li>
-                    <li>Estrategia</li>
-                </ul>
-            </div>
-        </nav>
+
+        
 
         <nav>
             <div class="user-container" id="user-containers">
@@ -101,9 +83,11 @@
             <div class="div-center">
                 
                 <div class="game-container">
+
                     <form id="miFormulario">
+                        <h2>Elija una de las opciones para empezar a jugar:</h2>
                         <label>Jugador 1:</label>
-                        <input type="text" id="player1" required>
+                        <input type="text" id="player1" ></input>
                         <label>Jugador 2:</label>
                         <input type="text" id="player2" required>
                         
@@ -115,28 +99,33 @@
                             <option value="7">7 en Linea</option>
                         </select>
                 
-                        <div id= "playgame"><button type="submit" id="btn-play">JUGAR</button></div>
-                    
+                        <div id="playgame">
+                            <button type="button" id="btn-play">JUGAR</button>
+                        </div>
                     </form>
-
-                    <div id="turn">
-                        
+                
+                    <div id="turn" style="display: none;">
+                        <!-- Contenido del turno -->
                     </div>
-
-                    <div id="winner">
-    
+                
+                    <div id="winner" style="display: none;">
+                        <!-- Contenido del ganador -->
                     </div>
-
-                    <canvas id="canvas" width="1602" height="800"></canvas>
-
-                    <div>
+                
+                    <canvas id="canvas" width="1602" height="800" style="display: none;">
+                        <!-- Contenido del juego -->
+                    </canvas>
+                
+                    <div style="display: none;">
                         <!--<img id="img-bocavsriver" src="images/bocavsriver.png" alt="bocariver">!-->
                     </div>
-               
-                    <img id="instruction" src="images/instruction.png" alt="game">
-                    <div id="img-share">
+                
+                    <img id="instruction" src="images/instruction.png" alt="game" style="display: none;">
+                    
+                    <div id="img-share" style="display: none;">
                         <button id="btn-share"></button>
                     </div>
+                </div>
                     
 
                 </div>

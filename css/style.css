@@ -469,7 +469,9 @@ form input[type="submit"] {
 .game-container{
     display: flex;
     flex-direction: column;
-    background-color:rgba(11, 2, 39, 1) ;
+    background-image: url(../images/game.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     width: 1655px;
     height: 966px;
@@ -483,16 +485,35 @@ form input[type="submit"] {
     font-size: 2em;
 }
 #miFormulario{
-    margin-top: 60px;
+    margin-top: 250px;
     margin-bottom: 60px;
-    background-color:rgb(41, 16, 114) ;
-    width: 300px;
-    border-radius: 20px;
+    background-image: url(../images/futbol.jpg);
+    color: white;
+    background-size: cover;
+    width: 600px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: inherit;
+    padding: 50px;
+
+ 
+}
+
+#opciones{
+        height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+        width: 100%; /* Ajusta el ancho según tus preferencias */
+    
+}
+#miFormulario h2, #playgame{
     text-align: center;
-    padding: 30px;
 }
 #miFormulario input{
-   width: 40%;
+    width:96%;
+    
+   color: white;
 }
 main{
     margin-left: 132.5px;
