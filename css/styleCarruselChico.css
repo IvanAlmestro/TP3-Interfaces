@@ -1,0 +1,399 @@
+body {
+  overflow-x: hidden;
+}
+main {
+  overflow: hidden;
+}
+.super-contenedor, .super-contenedor2 {
+  width: 100%;
+  display: inline;
+  margin-right: 1000px;
+}
+.deslizador, .deslizador2{
+  margin: 0%;
+  display: inline;
+  overflow: hidden;
+
+}
+.deslizador-container, .deslizador-container2 {
+  overflow: show;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+  max-width: 25%;
+  margin-top: 3rem;
+}
+.deslizador .deslizador-container, .deslizador-container2 .deslizador2{
+  display: flex;
+  transition: transform 0.7s ease;
+}
+.deslizador .deslizador-container .tarjeta, .deslizador2 .deslizador-container2{
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.anterior, .anterior2 {
+  position: absolute;
+  left: 100px;
+  z-index: 100;
+}
+
+.siguiente, .siguiente2 {
+  position: absolute;
+  right: 100px;
+  z-index: 100;
+}
+
+/* Estilos para las flechas "siguiente" y "anterior" en pantallas grandes */
+.siguiente,
+.anterior, .anterior2,.siguiente2  {
+  margin-top: -135px;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.tarjeta img, .tarjeta2 {
+width: 79%;
+height: auto;
+padding-bottom: 5%;
+}
+/* Rectangle 30 */
+
+
+.deslizador-indicador, .deslizador-indicador2 {
+  text-align: center; /* Centra los indicadores horizontalmente */
+  margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+  margin-bottom: 10px;
+}
+
+.indicador, indicador2 {
+  width: 10px; /* Tamaño del puntito */
+  height: 10px;
+  background-color: #ffffff; /* Color de los puntitos inactivos */
+  display: inline-block;
+  margin: 0 5px; /* Espacio entre los indicadores */
+  border-radius: 50%; /* Forma redonda para los puntitos */
+}
+.active, .active2 {
+  background-color: rgb(0, 0, 0);
+}
+
+/*info juegos*/
+/* Estilos para el contenedor de la imagen y el rectángulo gris */
+.imagen-container, .imagen-container2 {
+  position: relative; /* Para permitir la superposición de elementos */
+  display: inline-block; /* Hace que el contenedor se ajuste al tamaño de la imagen */
+}
+
+/* Estilos para la imagen */
+
+
+/* Estilos para el rectángulo gris debajo de la imagen */
+.info-juegos, .info-juegos2 {
+  position: absolute;
+  bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
+  left: 0;
+  width: 80%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
+  height: 20%; /* Ajusta la altura del rectángulo según tus necesidades */
+  background-color: #161616;; /* Color gris */
+  margin-left: 10%;
+  color: #fff;
+}
+
+.corazon {
+  margin-right: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+}
+
+.txt-arriba-carruselG{
+  font-size: 36px;
+  padding-left: 170px;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 10px;
+}
+.txt-arriba-carrusel{
+  bottom: 100px;
+  padding-left: 50px;
+  color: #ffffff;
+  margin-bottom: -30px;
+}
+.txt-arriba-carrusel2{
+  padding-left: 50px;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.abaj-izq {
+  margin: 0;
+  font-size:medium;
+  position: relative;
+  text-align: left;
+  left: 1%;
+}
+.arri-izq {
+  margin: 0;
+  font-size: 10%;
+  position: relative;
+  text-align: left;
+  left: 1%;
+  font-size:larger;
+  margin-bottom: -5px;
+}
+.dere {
+  position: absolute;
+  top: 50%; /* Ajusta según tu preferencia */
+  right: 1%;
+  transform: translateY(-50%); /* Centra verticalmente el texto */
+}
+
+#img-jugar, #img-addCarrito{
+    width: 5%;
+    height: auto;
+}
+
+
+/* For screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+  #flecha{
+    display: none;
+  }
+  .txt-arriba-carrusel{
+    padding-left: 20px;
+    padding-top: 30px;
+    color: #ffffff;
+    margin-bottom: -50px;
+  }
+  .deslizador-container{
+    overflow: show;
+    position: relative;
+    margin: 0;
+    z-index: 1;
+    max-width: 50%;
+    margin-top: 3rem;
+  }
+  .anterior, .siguiente {
+    display: none;
+  }
+  .super-contenedor-chico{
+    overflow: hidden;
+    left: 1px;
+    position: absolute;
+    width: 100%;
+    margin-top: 65%;
+  }
+
+  .deslizador {
+    max-width: 100%;
+  }
+
+  .deslizador-indicador {
+    margin-top: 2px;
+    text-align: center;
+    margin-right: 0px;
+  }
+  .indicador {
+    width: 8px;
+    height: 8px;
+  }
+
+  #fontawesome{
+    font-size: 18px;
+  }
+  .abaj-izq{
+    font-size: 8px;
+  }
+
+  .arri-izq{
+    font-size: 10px;
+    margin-bottom: -3px;
+  }
+}
+/*CARRUSELES ESTATICOS------------------------------------------------------------------------------------------------------------*/
+.super-contenedor2 {
+  width: 100%;
+  display: inline;
+  margin-right: 1000px;
+}
+.deslizador2{
+  margin: 0%;
+  display: inline;
+  overflow: hidden;
+
+}
+.deslizador-container2 {
+  overflow: show;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+  max-width: 25%;
+  margin-top: 3rem;
+}
+.deslizador2 .deslizador-container2 {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+.deslizador2 .deslizador-container2 .tarjeta2 {
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.anterior2 {
+  position: absolute;
+  left: 100px;
+  z-index: 100;
+}
+
+.siguiente2 {
+  position: absolute;
+  right: 100px;
+  z-index: 100;
+}
+
+/* Estilos para las flechas "siguiente" y "anterior" en pantallas grandes */
+.siguiente2,
+.anterior2 {
+  margin-top: -135px;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.tarjeta2 img {
+width: 79%;
+height: auto;
+padding-bottom: 5%;
+}
+/* Rectangle 30 */
+
+
+.deslizador-indicador2 {
+  text-align: center; /* Centra los indicadores horizontalmente */
+  margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+  margin-bottom: 10px;
+}
+
+.indicador2 {
+  width: 10px; /* Tamaño del puntito */
+  height: 10px;
+  background-color: #ffffff; /* Color de los puntitos inactivos */
+  display: inline-block;
+  margin: 0 5px; /* Espacio entre los indicadores */
+  border-radius: 50%; /* Forma redonda para los puntitos */
+}
+.active2 {
+  background-color: rgb(0, 0, 0);
+}
+
+/*info juegos*/
+/* Estilos para el contenedor de la imagen y el rectángulo gris */
+.imagen-container2 {
+  position: relative; /* Para permitir la superposición de elementos */
+  display: inline-block; /* Hace que el contenedor se ajuste al tamaño de la imagen */
+}
+
+/* Estilos para la imagen */
+
+
+/* Estilos para el rectángulo gris debajo de la imagen */
+.info-juegos2 {
+  position: absolute;
+  bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
+  left: 0;
+  width: 80%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
+  height: 20%; /* Ajusta la altura del rectángulo según tus necesidades */
+  background-color: #161616;; /* Color gris */
+  margin-left: 10%;
+  color: #fff;
+}
+
+
+#img-jugar, #img-addCarrito{
+    width: 5%;
+    height: auto;
+}
+
+
+/* For screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+  .txt-arriba-carrusel{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-top: 30px;
+    color: #ffffff;
+    margin-bottom: -50px;
+  }
+  .corazon{
+    font-size: 20px;
+    margin-top: 3px;
+    margin-right: 25px;
+  }
+
+  .txt-arriba-carruselG {
+    padding-left: 40px;
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  .txt-arriba-carrusel2{
+    font-size: 15px;
+    padding-left: 20px;
+    color: #ffffff;
+    margin-bottom: 2px;
+  }
+  .deslizador-container2 {
+    overflow: show;
+    position: relative;
+    margin: 0;
+    z-index: 1;
+    max-width: 50%;
+    margin-top: 3rem;
+  }
+
+
+  .super-contenedor-chico2{
+    overflow: hidden;
+    left: 1px;
+    position: absolute;
+    width: 100%;
+    margin-top: 118%;
+  }
+  #contenedor3{
+    margin-top: 158%;
+  } 
+  #contenedor4{
+    margin-top: 198%;
+  }
+  #contenedor5{
+    margin-top: 238%;
+  }
+  .deslizador2 {
+    max-width: 100%;
+  }
+  
+  .deslizador-indicador2 {
+    margin-top: 2px;
+    text-align: center;
+    margin-right: 0px;
+  }
+  .indicador2 {
+    width: 8px;
+    height: 8px;
+  }
+}

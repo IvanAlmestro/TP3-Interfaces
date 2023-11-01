@@ -1,0 +1,200 @@
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  max-width: 100%;
+  margin-top: 20px;
+}
+.slider .slider-container {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+.slider .slider-container .card {
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .slider .slider-container .card {
+    border: none;
+  }
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 999;
+
+}
+.next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+  padding-bottom: 5%;
+
+}
+/* Rectangle 30 */
+
+.prev, .next {
+  font-size: 6rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.slider-indicators {
+  text-align: center; /* Centra los indicadores horizontalmente */
+  margin-top: 10px; /* Espacio entre las imágenes y los indicadores */
+}
+
+.indicator {
+  width: 10px; /* Tamaño del puntito */
+  height: 10px;
+  background-color: #ffffff; /* Color de los puntitos inactivos */
+  display: inline-block;
+  margin: 0 5px; /* Espacio entre los indicadores */
+  border-radius: 50%; /* Forma redonda para los puntitos */
+}
+.active {
+  background-color: rgb(0, 0, 0);
+}
+
+/*info juegos*/
+/* Estilos para el contenedor de la imagen y el rectángulo gris */
+.image-container {
+  position: relative; /* Para permitir la superposición de elementos */
+  display: inline-block; /* Hace que el contenedor se ajuste al tamaño de la imagen */
+}
+
+/* Estilos para la imagen */
+
+
+/* Estilos para el rectángulo gris debajo de la imagen */
+.my-rectangle {
+  position: absolute;
+  bottom: 1%; /* Coloca el rectángulo en la parte inferior del contenedor */
+  left: 0;
+  width: 80%; /* Ajusta el ancho del rectángulo al contenedor de la imagen */
+  height: 10%; /* Ajusta la altura del rectángulo según tus necesidades */
+  background-color: #161616;; /* Color gris */
+  margin-left: 10%;
+  color: #fff;
+}
+
+/* Estilos para el texto arriba a la izquierda */
+.top-left {
+  position: absolute;
+  font-size: 30px;
+  left: 1%;
+  bottom: 18%;
+}
+
+/* Estilos para el texto abajo a la izquierda */
+.bottom-left {
+  font-size: 25px;
+  position: absolute;
+  left: 1%;
+  top: 27%;
+}
+
+
+/* Estilos para el texto a la derecha */
+.right {
+  position: absolute;
+  top: 50%; /* Ajusta según tu preferencia */
+  right: 1%;
+  transform: translateY(-50%); /* Centra verticalmente el texto */
+}
+
+#img-jugar, #img-addCarrito{
+    width: 5%;
+    height: auto;
+}
+
+/*ANIMACIONES*/
+@keyframes animacionImagen  {
+  0% {
+    transform: translateX(150%) rotate(20deg); /* Comienza desde la derecha y con un ligero giro */
+  }
+  100% {
+    transform: translateX(0%) rotate(0deg); /* Llega al centro sin giro */
+  }
+}
+
+@keyframes animacionInfo {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* For screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+  #fontawesomeG {
+    font-size: 18px;
+  }
+  i, .prev, .next {
+    display: none;
+  }
+  .super-contenedor{
+    left: 1px;
+    position: absolute;
+    width: 350px;
+  }
+  
+
+  .top-left, .bottom-left, .right {
+    font-size: 10px;
+  }
+
+  .top-left{
+    top: -50%;
+  }
+
+  .bottom-left {
+    top: 9%;
+  }
+
+
+  .slider {
+    
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+
+  .slider-indicators {
+    margin-top: 1px;
+    text-align: center;
+  }
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+  
+}
+/*mediaquery para desktop*/
+@media screen and (min-width: 768px) {
+  .slider {
+    margin-top: 100px;
+  }
+  
+}

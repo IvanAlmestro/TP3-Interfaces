@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juegamers</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/styleCarruseles.css">
+        <link rel="stylesheet" href="./css/styleCarruselChico.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/1a5164fcdb.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <header>
+            <div id="header-container">
+                <div class="div-user-fav-menu">
+                    <button class="menu-btn"><img src="images/menu.png" alt="menu" id="logo-menu"></button>
+                </div>
+                <div id="div-logo" onclick="location.href = 'index.html'" style="cursor: pointer;">
+                    
+                    <div id="title-header"><h1>Juegamers</h1></div>
+                    <div><img src="images/logo.png" alt="logo" id="logo"></div>
+                </div>
+                
+                <div class="input-icono">
+                    <input type="text" name="input" placeholder="Buscar Juegos">
+                </div>
+
+                <div class="div-user-fav-menu">
+                    <div>
+                        <a href="#contenedor1"><img src="images/fav.png" alt="fav" class="user-fav-shop"></a>
+                    </div>
+                    <div><img src="images/shop.png" alt="shop" class="user-fav-shop"></div>
+                    <div>
+                        <button class="user-btn"><img src="images/user/user.png" alt="user" class="user-fav-shop"></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="nav-container" id="nav-containers">
+                <p class="title-nav">Recien Actualizados</p>
+                <p class="title-nav">Juegos Nuevos</p>
+                <p class="title-nav">Mas Populares</p>
+                <p class="title-nav">En Tendencia</p>
+                <p class="title-nav">Categorias:</p>
+                <ul>
+                    <li>Carreras</li>
+                    <li>Multijugador</li>
+                    <li>Supervivencia</li>
+                    <li>Aventura</li>
+                    <li>Deportes</li>
+                    <li>Shooters</li>
+                    <li>Estrategia</li>
+                </ul>
+            </div>
+        </nav>
+        <nav>
+            <div class="nav-container" id="nav-containers">
+                <p class="title-nav">Recien Actualizados</p>
+                <p class="title-nav">Juegos Nuevos</p>
+                <p class="title-nav">Mas Populares</p>
+                <p class="title-nav">En Tendencia</p>
+                <p class="title-nav">Categorias:</p>
+                <ul>
+                    <li>Carreras</li>
+                    <li>Multijugador</li>
+                    <li>Supervivencia</li>
+                    <li>Aventura</li>
+                    <li>Deportes</li>
+                    <li>Shooters</li>
+                    <li>Estrategia</li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav>
+            <div class="user-container" id="user-containers">
+                <p class="title-user">Mi Perfil</p>
+                <p class="title-user">Metodos de Pago</p>
+                <p class="title-user">Ajustes</p>
+                <p class="title-user">Logros</p>
+                <p class="title-user"><a id="logout" href="register.html">Cerrar Sesion</a></p>
+                <img id="icons-user" src="images/usericons.png" alt="iconsuser">
+      
+            </div>
+        </nav>
+
+      
+
+        <main>
+            <div id="load-container">
+                <div class="contenedor-loader">
+                  <div class="loader"></div>
+                </div>
+                <div class="cargando">Cargando...</div>
+                <div id="myProgress">
+                    <div id="myBar">10%</div>
+                  </div>
+
+              </div>
+
+            <div class="super-contenedor">
+                <div class="slider">
+                    <h2 class="txt-arriba-carruselG">Recomendados Para Ti:</h2>
+                    <div class="slider-container">
+    
+                        
+                        <div class="card image-container">
+                            <img src="./imagenesCarruseles/ghostrunner2.jpg" alt="">
+                            <div class="my-rectangle">
+                                <p class="top-left">Ghostrunner 2</p>
+                                <p class="bottom-left">$12000</p>
+                                <i class="right fa-solid fa-cart-plus fa-2xl" id="fontawesomeG" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+                        <div class="card image-container">
+                            <img src="./imagenesCarruseles/boca-river.jpg" onclick="location.href = 'game.html'">
+                            <div class="my-rectangle">
+                                <p class="top-left">4 En Linea - Boca vs river</p>
+                                <p class="bottom-left">En La Biblioteca</p>
+                                <i class="right fa-solid fa-play fa-2xl" id="fontawesomeG" style="color: #8a8a8a;" onclick="location.href = 'game.html'"></i>
+    
+                            </div>
+                        </div>
+    
+    
+                        <div class="card image-container">
+                            <img src="./imagenesCarruseles/minecraftLegends.jpg" alt="">
+                            <div class="my-rectangle">
+                                <p class="top-left">Minecraft Legends</p>
+                                <p class="bottom-left">$8000</p>
+                                <i class="right fa-solid fa-cart-plus fa-2xl" id="fontawesomeG" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="next fa-solid fa-chevron-right a-2xl" id="flecha" style="color: #949494;"></i>
+                    <i class="prev fa-solid fa-chevron-left a-2xl" id="flecha" style="color: #949494;"></i>
+                </div>
+                
+                <div class="slider-indicators">
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
+
+            <div class="super-contenedor-chico" id="contenedor1">
+                <h2 class="txt-arriba-carrusel">Tus Favoritos:</h2>
+                <div class="deslizador">
+                        <div class="deslizador-container">
+            
+                            <div class="tarjeta imagen-container">
+                                <img src="./imagenesCarruseles/warzone.jpg">
+                                <div class="info-juegos">
+                                    <p class="arri-izq">Warzone</p>
+                                    <p class="abaj-izq">En La Biblioteca</p>
+                                    <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+    
+                                </div>
+                            </div>
+                            
+                            <div class="tarjeta imagen-container">
+                                <img src="./imagenesCarruseles/rocketLeague.jpg" alt="">
+                                <div class="info-juegos">
+                                    <p class="arri-izq">Rocket League</p>
+                                    <p class="abaj-izq">Gratis</p>
+                                    <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+                                </div>
+                            </div>
+            
+                            <div class="tarjeta imagen-container">
+                                <img src="./imagenesCarruseles/fortnite.jpg" alt="">
+                                <div class="info-juegos">
+                                    <p class="arri-izq">Fortnite</p>
+                                    <p class="abaj-izq">$2017</p>
+                                    <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                                </div>
+                            </div>
+    
+                            <div class="tarjeta imagen-container">
+                                <img src="./imagenesCarruseles/gtaV.jpg" alt="">
+                                <div class="info-juegos">
+                                    <p class="arri-izq">Grand Thef Auto V</p>
+                                    <p class="abaj-izq">En la Biblioteca</p>
+                                    <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+                                </div>
+                            </div>
+    
+                            <div class="tarjeta imagen-container">
+                                <img src="./imagenesCarruseles/codbo3.jpg" alt="">
+                                <div class="info-juegos">
+                                    <p class="arri-izq">Cod Black Ops 3</p>
+                                    <p class="abaj-izq">$3000</p>
+                                    <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                                </div>
+                            </div>
+    
+                            <div class="tarjeta imagen-container">
+                                <img src="./imagenesCarruseles/dbd.jpeg" alt="">
+                                <div class="info-juegos">
+                                    <p class="arri-izq">Dead By Daylight</p>
+                                    <p class="abaj-izq">$̶7̶0̶0̶0 -> $100</p>
+                                    <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                                </div>
+                            </div>
+    
+                            <div class="tarjeta imagen-container">
+                                <img src="./imagenesCarruseles/minecraft.jpg" alt="">
+                                <div class="info-juegos">
+                                    <p class="arri-izq">Minecraft</p>
+                                    <p class="abaj-izq">Gratis</p>
+                                    <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    <i class="siguiente fa-solid fa-chevron-right a-2xl" id="flecha" style="color: #949494;"></i>
+                    <i class="anterior fa-solid fa-chevron-left a-2xl" id="flecha" style="color: #949494;"></i>
+                    <div class="deslizador-indicador">
+                        <span class="indicador"></span>
+                        <span class="indicador"></span>
+                        <span class="indicador"></span>
+                        <span class="indicador"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="super-contenedor-chico2">
+                <h2 class="txt-arriba-carrusel2">Deportes</h2>
+                <div class="deslizador2">
+                    <div class="deslizador-container2">
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #828282;"></i>
+                            <img src="./imagenesCarruseles/fifia23.jpg">
+                            <div class="info-juegos2">
+                                <p class="arri-izq">Fifa 23</p>
+                                <p class="abaj-izq">$2023</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/fc24.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">FC 24</p>
+                                <p class="abaj-izq">$̶3̶6̶0̶0 -> $3000</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/soccermanager.jpg"
+                                alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Soccer Manager</p>
+                                <p class="abaj-izq">Gratis</p>
+                                <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+                            </div>
+                        </div>
+
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/nba2k23.jpg"
+                                alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">NBA 2K23</p>
+                                <p class="abaj-izq">$300</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #828282;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="anterior fa-solid fa-chevron-left a-2xl" id="flecha" style="color: #949494;"></i>
+                    <i class="siguiente fa-solid fa-chevron-right a-2xl" id="flecha" style="color: #949494;"></i>
+                </div>
+                <div class="deslizador-indicador2">
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                </div>
+            </div>
+
+            <div class="super-contenedor-chico2" id="contenedor3">
+                <h2 class="txt-arriba-carrusel2">Carreras</h2>
+                <div class="deslizador2">
+                    <div class="deslizador-container2">
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #828282;"></i>
+                            <img src="./imagenesCarruseles/citycar.jpg">
+                            <div class="info-juegos2">
+                                <p class="arri-izq">City Car Driving</p>
+                                <p class="abaj-izq">$̶4̶0̶0 -> $300</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+
+                            </div>
+                        </div>
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/snowrunner.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Snow Runner</p>
+                                <p class="abaj-izq">En la Biblioteca</p>
+                                <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/needforspeed.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Need For Speed</p>
+                                <p class="abaj-izq">$̶2̶5̶0̶0 -> $1000</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #828282;"></i>
+                            <img src="./imagenesCarruseles/forzahorizon.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Forza Horizon 5</p>
+                                <p class="abaj-izq">Gratis</p>
+                                <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="anterior fa-solid fa-chevron-left a-2xl" id="flecha" style="color: #949494;"></i>
+                    <i class="siguiente fa-solid fa-chevron-right a-2xl" id="flecha" style="color: #949494;"></i>
+                </div>
+                <div class="deslizador-indicador2">
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                </div>
+            </div>
+
+            <div class="super-contenedor-chico2" id="contenedor4">
+                <h2 class="txt-arriba-carrusel2">Estrategia</h2>
+                <div class="deslizador2">
+                    <div class="deslizador-container2">
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/risk.jpg">
+                            <div class="info-juegos2">
+                                <p class="arri-izq">Risk</p>
+                                <p class="abaj-izq">Gratis</p>
+                                <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+
+                            </div>
+                        </div>
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/civilization.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Civilization VI</p>
+                                <p class="abaj-izq">$3500</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #828282;"></i>
+                            <img src="./imagenesCarruseles/cityesskyline.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Cities Skyline</p>
+                                <p class="abaj-izq">En la Biblioteca</p>
+                                <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+                            </div>
+                        </div>
+
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #828282;"></i>
+                            <img src="./imagenesCarruseles/planetcoaster.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Planet Coaster</p>
+                                <p class="abaj-izq">$̶1̶6̶0̶0 -> $1599</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="anterior fa-solid fa-chevron-left a-2xl" id="flecha" style="color: #949494;"></i>
+                    <i class="siguiente fa-solid fa-chevron-right a-2xl" id="flecha" style="color: #949494;"></i>
+                </div>
+                <div class="deslizador-indicador2">
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                </div>
+            </div>
+
+            <div class="super-contenedor-chico2" id="contenedor5">
+                <h2 class="txt-arriba-carrusel2">Supervivencia</h2>
+                <div class="deslizador2">
+                    <div class="deslizador-container2">
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/theforest.jpg">
+                            <div class="info-juegos2">
+                                <p class="arri-izq">The Forest</p>
+                                <p class="abaj-izq">$900</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+
+                            </div>
+                        </div>
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/subnauitca.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">SubNautica</p>
+                                <p class="abaj-izq">$̶7̶0̶0̶0 -> $6500</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #ff0000;"></i>
+                            <img src="./imagenesCarruseles/proyectzomboid.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Proyect Zomboid</p>
+                                <p class="abaj-izq">En la Biblioteca</p>
+                                <i class="dere fa-solid fa-play fa-2xl" id="fontawesome" style="color: #8a8a8a;"></i>
+                            </div>
+                        </div>
+
+                        <div class="tarjeta2 imagen-container2">
+                            <i class="fa-solid fa-heart corazon" style="color: #828282;"></i>
+                            <img src="./imagenesCarruseles/farcry4.jpg" alt="">
+                            <div class="info-juegos">
+                                <p class="arri-izq">Far Cry 4</p>
+                                <p class="abaj-izq">$1250</p>
+                                <i class="dere fa-solid fa-cart-plus fa-2xl" id="fontawesome" style="color: #9ec851;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="anterior fa-solid fa-chevron-left a-2xl" id="flecha" style="color: #949494;"></i>
+                    <i class="siguiente fa-solid fa-chevron-right a-2xl" id="flecha" style="color: #949494;"></i>
+                </div>
+                <div class="deslizador-indicador2">
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                    <span class="indicador2"></span>
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+       
+            <div id="footer-container">
+                <div class="about-div">
+                    <h3 class="title-footer">sobre nosotros</h3>
+                    <p class="p-footer">¡Olvídate del aburrimiento con Juegamers! 
+                        La mayor selección de juegos está aquí,  Contamos con juegos de todo tipo:  competirás con grandes pilotos en nuestros juegos de carreras; podrás ponerte a prueba sobreviviendo en juegos de supervivencia, y para los fanaticos del deporte podras jugar a juegos como futbol, basquetball y mas. </p>
+                </div>
+                <div class="help-social">
+          
+                    <h3 class="title-footer">ayuda:</h3>
+                    <p class="p-footer">Preguntas frecuentes</p>
+                    <p class="p-footer">Politicas de privacidad</p>
+                    <p class="p-footer">Terminos y Condiciones</p>
+                    <p class="p-footer">Contactanos</p>
+                    <p class="p-footer">Documentacion</p>
+                </div>
+                <div class="help-social">
+                    <h3 class="title-footer">redes</h3>
+                    <p class="p-footer2">Instagram</p> <img src="images/footer/Instagram.png" alt="instagram">
+                    <p class="p-footer2">Facebook</p><img src="images/footer/Facebook.png" alt="facebook">
+                    <p class="p-footer2">X</p><img src="images/footer/TwitterX.png" alt="twitter">
+             
+                </div>
+            </div>
+                <div id="div-copyright"><p id="p-copyright">Todos los derechos reservados Copyright © 2023 Juegamers</p></div>
+        </footer>
+        <script src="./js/main.js"></script>
+        <script src="./js/carruseles.js"></script>
+
+    </body>
+</html>

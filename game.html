@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juegamers</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        
+        <header>
+            <div id="header-container">
+                <div class="div-user-fav-menu">
+                    <button class="menu-btn"><img src="images/menu.png" alt="menu" id="logo-menu"></button>
+                </div>
+                <div id="div-logo" onclick="location.href = 'index.html'" style="cursor: pointer;">
+                    
+                    <div id="title-header"><h1>Juegamers</h1></div>
+                    <div><img src="images/logo.png" alt="logo" id="logo"></div>
+                </div>
+                
+                <div class="input-icono">
+                    <input type="text" name="input" placeholder="Buscar Juegos">
+                </div>
+
+                <div class="div-user-fav-menu">
+                    <div>
+                        <a href="index.html#contenedor1"><img src="images/fav.png" alt="fav" class="user-fav-shop"></a>
+                    </div>
+                    <div><img src="images/shop.png" alt="shop" class="user-fav-shop"></div>
+                    <div>
+                        <button class="user-btn"><img src="images/user/user.png" alt="user" class="user-fav-shop"></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="nav-container" id="nav-containers">
+                <p class="title-nav">Recien Actualizados</p>
+                <p class="title-nav">Juegos Nuevos</p>
+                <p class="title-nav">Mas Populares</p>
+                <p class="title-nav">En Tendencia</p>
+                <p class="title-nav">Categorias:</p>
+                <ul>
+                    <li>Carreras</li>
+                    <li>Multijugador</li>
+                    <li>Supervivencia</li>
+                    <li>Aventura</li>
+                    <li>Deportes</li>
+                    <li>Shooters</li>
+                    <li>Estrategia</li>
+                </ul>
+            </div>
+        </nav>
+        <nav>
+            <div class="nav-container" id="nav-containers">
+                <p class="title-nav">Recien Actualizados</p>
+                <p class="title-nav">Juegos Nuevos</p>
+                <p class="title-nav">Mas Populares</p>
+                <p class="title-nav">En Tendencia</p>
+                <p class="title-nav">Categorias:</p>
+                <ul>
+                    <li>Carreras</li>
+                    <li>Multijugador</li>
+                    <li>Supervivencia</li>
+                    <li>Aventura</li>
+                    <li>Deportes</li>
+                    <li>Shooters</li>
+                    <li>Estrategia</li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav>
+            <div class="user-container" id="user-containers">
+                <p class="title-user">Mi Perfil</p>
+                <p class="title-user">Metodos de Pago</p>
+                <p class="title-user">Ajustes</p>
+                <p class="title-user">Logros</p>
+                <p class="title-user"><a id="logout" href="login.html">Cerrar Sesion</a></p>
+                <img id="icons-user" src="images/usericons.png" alt="iconsuser">
+      
+            </div>
+        </nav>
+
+      
+
+        <main>
+
+            
+        
+            <p class="p-margin" ><a href="index.html">Juegamers</a>/<a href="index.html#contenedor3">Estrategia</a>/4 En Linea</p>
+
+
+            
+            <div class="div-center">
+                
+                <div class="game-container">
+                    <form id="miFormulario">
+                        <label>Jugador 1:</label>
+                        <input type="text" id="player1" required>
+                        <label>Jugador 2:</label>
+                        <input type="text" id="player2" required>
+                        
+                        <label for="opciones">Selecciona un tipo de juego:</label>
+                        <select id="opciones">
+                            <option value="4">4 en Linea</option>
+                            <option value="5">5 en Linea</option>
+                            <option value="6">6 en Linea</option>
+                            <option value="7">7 en Linea</option>
+                        </select>
+                
+                        <div id= "playgame"><button type="submit" id="btn-play">JUGAR</button></div>
+                    
+                    </form>
+
+                    <div id="turn">
+                        
+                    </div>
+
+                    <div id="winner">
+    
+                    </div>
+
+                    <canvas id="canvas" width="1602" height="800"></canvas>
+
+                    <div>
+                        <!--<img id="img-bocavsriver" src="images/bocavsriver.png" alt="bocariver">!-->
+                    </div>
+               
+                    <img id="instruction" src="images/instruction.png" alt="game">
+                    <div id="img-share">
+                        <button id="btn-share"></button>
+                    </div>
+                    
+
+                </div>
+            </div>
+    
+            
+            
+            <p id="p-link">Link de interés sobre la historia de este enfrentamiento: <a href="https://www.promiedos.com.ar/historial.php?equipo1=6&equipo2=18">https://www.promiedos.com.ar/historial.php?equipo1=6&equipo2=18</a></p>
+            <div class="how-play" >
+
+                <div class="play-ask">
+                    <img src="images/Help.png" alt="help">
+                    <h2 class="title-info">¿Como jugar?</h2>
+                </div>
+                <div id="container-info-help">
+               
+                    <h4 class="title-info">Objetivo:</h4>
+                    <p class="p-margin">4 en línea de equipos: ganas al conectar cuatro fichas de tu equipo (ya sea Boca o River) en línea, ya sea vertical, horizontal o diagonal en el tablero.</p>
+            
+                    <h4 class="title-info">Turnos:</h4>
+                    <p class="p-margin">Juegas contra otro jugador. Seleccionas una columna y tu ficha cae en el espacio más bajo disponible en esa columna.</p>
+      
+                    <h4 class="title-info">Ganar:</h4>
+                    <p class="p-margin">El primer jugador en formar una línea de cuatro fichas de su equipo gana. Puede ser vertical, horizontal o diagonal.</p>
+     
+                </div>
+                <div>
+                    <img  class="img-how-play2" src="images/Juego.png" alt="juego">
+                    <img  class="img-how-play"src="images/Juego2.png" alt="juego2">
+                    <img  class="img-how-play"src="images/Juego3.png" alt="juego3">
+                </div>
+
+            </div>
+
+            <div>
+                <div class="title-comment">
+                    <img src="images/comments.png" alt="comments">
+                    <h2  class="title-info">Comentarios</h2>
+
+                </div>
+                
+                <div class="add-comment">
+
+                    <div class="container-addcomment">
+                        <img id="img-user" src="images/user/user.png" alt="user">
+                        <p class="p-user">Tú</p> 
+                    </div>
+
+                    <div class="write-container" >
+                        <p class="p-ask">¿Que te parecio el juego?...</p>
+                        <img id ="img-pencil" src="images/Pencil.png" alt="pencil">
+                        <img id="img-send"src="images/Send.png" alt="send">
+                    </div>   
+
+                </div>
+
+
+                <div class="comments-container">
+                        
+                        <div class="container-user">
+                            <img id="img-user" src="images/user/Mixwell.png" alt="user">
+                            <p class="p-user">Mixwell</p> 
+                        </div>
+                        
+                        <div class="comments">
+                            <p class="p-comments">Le gane a mi amigo bostero 2 a 0, para colmo jugo de local !!!</p>
+                        </div>
+              
+
+                    <div>
+                        <div class="container-user">
+                            <img id="img-user" src="images/user/Martingamer.png" alt="user">
+                            <p class="p-user">Martingamer</p> 
+                        </div>
+                        
+                        <div class="comments">
+                            <p class="p-comments">Jugue 300 horas, recomendadisimo, lo peor de este juego es cuando termina.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="container-user">
+                            <img id="img-user" src="images/user/Darzek.png" alt="user">
+                            <p class="p-user">Darzek82</p> 
+                        </div>
+                        
+                        <div class="comments">
+                            <p class="p-comments">Esta bueno para jugarlo una vez contra algun amigo, un excelente juego de un rato.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="container-user">
+                            <img id="img-user" src="images/user/MiriamS2.png" alt="user">
+                            <p class="p-user">MiriamS2</p> 
+                        </div>
+                        
+                        <div class="comments">
+                            <p class="p-comments" id="p-last">Un juego que tiene la escencia de un juego de toda la vida, quien no conoce el 4 en linea?</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="popup" class="popup">
+                <div class="popup-contenido">
+                    <h2>COMPARTIR</h2>
+                    <img src="./images/redes.png" alt="redes">
+                    <p class="p-facebook">Whatsapp</p>
+                    <p class="p-twitter">Facebook</p>
+                    <p class="p-X">X</p>
+                    <p class="p-X">Mensaje</p>
+                    <p class="p-X">Mail</p>
+                    
+                    <button id="cerrarPopup">CERRAR</button>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+       
+            <div id="footer-container">
+                <div class="about-div">
+                    <h3 class="title-footer">sobre nosotros</h3>
+                    <p class="p-footer">¡Olvídate del aburrimiento con Juegamers! 
+                        La mayor selección de juegos está aquí,  Contamos con juegos de todo tipo:  competirás con grandes pilotos en nuestros juegos de carreras; podrás ponerte a prueba sobreviviendo en juegos de supervivencia, y para los fanaticos del deporte podras jugar a juegos como futbol, basquetball y mas. </p>
+                </div>
+                <div class="help-social">
+          
+                    <h3 class="title-footer">ayuda:</h3>
+                    <p class="p-footer">Preguntas frecuentes</p>
+                    <p class="p-footer">Politicas de privacidad</p>
+                    <p class="p-footer">Terminos y Condiciones</p>
+                    <p class="p-footer">Contactanos</p>
+                    <p class="p-footer">Documentacion</p>
+                </div>
+                <div class="help-social">
+                    <h3 class="title-footer">redes</h3>
+                    <p class="p-footer2">Instagram</p> <img src="images/footer/Instagram.png" alt="instagram">
+                    <p class="p-footer2">Facebook</p><img src="images/footer/Facebook.png" alt="facebook">
+                    <p class="p-footer2">X</p><img src="images/footer/TwitterX.png" alt="twitter">
+             
+                </div>
+            </div>
+                <div id="div-copyright"><p id="p-copyright">Todos los derechos reservados Copyright © 2023 Juegamers</p></div>
+        </footer>
+
+                        
+        <script src="./js/Board.js"></script>
+        <script src="./js/Player.js"></script>
+        <script src="./js/Game.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/Circle.js"></script>
+    </body>
+</html>
