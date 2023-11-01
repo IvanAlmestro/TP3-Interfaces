@@ -96,24 +96,51 @@
             <p class="p-margin" ><a href="index.html">Juegamers</a>/<a href="index.html#contenedor3">Estrategia</a>/4 En Linea</p>
 
 
-
+            
             <div class="div-center">
-
+                
                 <div class="game-container">
-                    <div>
-                        <img id="img-bocavsriver" src="images/bocavsriver.png" alt="bocariver">
+                    <form id="miFormulario">
+                        <label>Jugador 1:</label>
+                        <input type="text" id="player1" required>
+                        <label>Jugador 2:</label>
+                        <input type="text" id="player2" required>
+                        
+                        <label for="opciones">Selecciona un tipo de juego:</label>
+                        <select id="opciones">
+                            <option value="4">4 en Linea</option>
+                            <option value="5">5 en Linea</option>
+                            <option value="6">6 en Linea</option>
+                            <option value="7">7 en Linea</option>
+                        </select>
+                
+                        <div id= "playgame"><button type="submit" id="btn-play">JUGAR</button></div>
+                    
+                    </form>
+
+                    <div id="turn">
+                        
                     </div>
-                    <img class="img-game" src="images/game.png" alt="game">
+
+                    <div id="winner">
+    
+                    </div>
+
+                    <canvas id="canvas" width="1602" height="800"></canvas>
+
+                    <div>
+                        <!--<img id="img-bocavsriver" src="images/bocavsriver.png" alt="bocariver">!-->
+                    </div>
+               
                     <img id="instruction" src="images/instruction.png" alt="game">
                     <div id="img-share">
                         <button id="btn-share"></button>
                     </div>
                     
-                    
-                    <div id= "playgame"><button id="btn-play">Jugar</button></div>
+
                 </div>
             </div>
-
+    
             
             
             <p id="p-link">Link de interés sobre la historia de este enfrentamiento: <a href="https://www.promiedos.com.ar/historial.php?equipo1=6&equipo2=18">https://www.promiedos.com.ar/historial.php?equipo1=6&equipo2=18</a></p>
@@ -256,6 +283,12 @@
             </div>
                 <div id="div-copyright"><p id="p-copyright">Todos los derechos reservados Copyright © 2023 Juegamers</p></div>
         </footer>
+
+                        
+        <script src="./js/Board.js"></script>
+        <script src="./js/Player.js"></script>
+        <script src="./js/Game.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/Circle.js"></script>
     </body>
 </html>

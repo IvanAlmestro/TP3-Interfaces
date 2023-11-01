@@ -26,6 +26,7 @@ html{
     min-height: 100%;
 }
 
+
 #header-container{
     background: linear-gradient(rgba(38, 0, 58, 1),rgba(71, 1, 109, 1));
     justify-content: space-around;
@@ -431,14 +432,29 @@ form input[type="submit"] {
     display: flex;
     flex-direction: column;
     background-color:rgba(11, 2, 39, 1) ;
-
+    color: white;
     width: 1655px;
-    height: 966px;
+    height: 1400px;
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 20px;
     align-items: center;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 
+}
+#turn{
+    font-size: 2em;
+}
+#miFormulario{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color:rgb(41, 16, 114) ;
+    width: 300px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+}
+#miFormulario input{
+   width: 40%;
 }
 main{
     margin-left: 132.5px;
@@ -573,16 +589,12 @@ p{
     height: 739px;
     width: 1154px;
 }
-#playgame{
-    position: absolute;
-    top: 640px;
-   
-}
+
 #img-share{
     position: absolute;
     right: 300px;
     left: 1470px;
-    top: 1050px;
+    top: 1500px;
     width: 40px;
     padding: 3px 12px;
     border-radius: 20px;
@@ -592,7 +604,7 @@ p{
     position: absolute;
 
     left: 373px;
-    top: 1050px;
+    top: 1500px;
     width: 600px;
 }
 #p-link{
@@ -622,9 +634,10 @@ p{
     background-color: rgb(65, 50, 114);
 }
 #btn-play{
-    width: 200px;
+    
+    width: 180px;
     font-weight: bolder;
-    height: 80px ;
+    height: 60px ;
     background-color: rgba(32, 14, 89, 1);
     z-index: 999;
     border-radius: 10px;
