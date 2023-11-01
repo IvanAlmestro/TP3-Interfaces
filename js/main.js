@@ -120,7 +120,7 @@ let ctx = canvas.getContext('2d');
 
 let turn = document.getElementById('turn');
 const tipoJuego = document.getElementById('opciones');
-const play = document.getElementById('play');
+const play = document.getElementById('btn-play');
 const formulario = document.getElementById('miFormulario');
 
 let canvasWidth = canvas.width;
