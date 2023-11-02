@@ -85,11 +85,20 @@
                 <div class="game-container">
 
                     <form id="miFormulario">
-                        <h2>Elija una de las opciones para empezar a jugar:</h2>
-                        <label>Jugador 1:</label>
-                        <input type="text" id="player1" ></input>
-                        <label>Jugador 2:</label>
-                        <input type="text" id="player2" required>
+                        <label for="opciones">Selecciona los equipos</label>
+                        <select name="club1" id="club1">
+                            <option value="boca">Boca</option>
+                            <option value="racing">Racing</option>
+                            <option value="barcelona">Barcelona</option>
+                            <option value="brasil">Brasil</option>
+                        </select>
+                
+                        <select name="club2" id="club2">
+                            <option value="river">River</option>
+                            <option value="independiente">Independiente</option>
+                            <option value="real madrid">Real Madrid</option>
+                            <option value="argentina">Argentina</option>
+                        </select>
                         
                         <label for="opciones">Selecciona un tipo de juego:</label>
                         <select id="opciones">

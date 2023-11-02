@@ -9,7 +9,6 @@ class Game {
 
     winGame(){
         let cellsConnect = this.board.cellsConnect(this.connect);
-        console.log("si")
         if(cellsConnect.length > 0){
             this.showWinnerDisks(cellsConnect);
             this.switchTurn();

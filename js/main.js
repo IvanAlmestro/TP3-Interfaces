@@ -165,11 +165,20 @@ function createGame() {//TO DO: crear players, con nombres, crear array figures,
 formulario.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    name1 = document.getElementById('player1').value;
-    name2 = document.getElementById('player2').value;
+    club1 = document.getElementById('club1').value;
+    club2 = document.getElementById('club2').value;
 
-    player1.setName(name1);
-    player2.setName(name2);
+    player1.setName(club1);
+    player2.setName(club2);
+
+    imgClub1 = new Image();
+    imgClub2 = new Image();
+
+    //diskRiver = new Image();
+    //diskRiver.src = 'river.png';
+
+    //diskBoca = new Image();
+    //diskBoca.src = 'boca.png';
 
     createGame();
 
@@ -206,25 +215,26 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function addCircle(color) {
-    let circleRadius = 30;
-    let posX, posY;
-    let numRandom = getRandomNumber(5, 100);
-    if (color === 'blue') {
-        posX = Math.round(Math.random() * canvasWidth / 2);
-        posY = canvasHeight - circleRadius - numRandom;
-        let circle = new Circle(posX, posY, circleRadius, color, ctx);
-        disksA.push(circle);
-    } else if (color === 'red') {
-        posX = Math.round(Math.random() * canvasWidth / 2) + canvasWidth / 2;
-        posY = canvasHeight - circleRadius - numRandom;
-        let circle = new Circle(posX, posY, circleRadius, color, ctx);
-        disksB.push(circle);
+function addCircle(team) {
+  let circleRadius = 20;
+  let posX, posY;
+  let numRandom = getRandomNumber(5, 200);
+  if (team === 'blue') {
+      var club = club1;
+      posX = Math.round(Math.random() * canvasWidth / 2);
+      posY = canvasHeight - circleRadius - numRandom;
+      let circle = new Circle(posX, posY, circleRadius, team, ctx, club1);
+      disksA.push(circle);
+  } else if (team === 'red') {
+      var club = club2;
+      posX = Math.round(Math.random() * canvasWidth / 2) + canvasWidth / 2;
+      posY = canvasHeight - circleRadius - numRandom;
+      let circle = new Circle(posX, posY, circleRadius, team, ctx, club2);
+      disksB.push(circle);
+  }
 
-    }
-
-    let circle = new Circle(posX, posY, circleRadius, color, ctx);
-    figures.push(circle);
+  let circle = new Circle(posX, posY, circleRadius, team, ctx,club);
+  figures.push(circle);
 }
 
 function onMouseDown(e) {

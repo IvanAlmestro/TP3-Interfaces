@@ -1,26 +1,34 @@
 class Circle {
 
-    constructor(posX, posY, radius, fill, context) {
+    constructor(posX, posY, radius, team, context, club) {
         this.posX = posX;
         this.posY = posY;
         this.radius = radius;
-        
-        //this.image = new Image();
-        this.fill = fill;
+        this.club = club;
+        console.log(club);
+
+        //setClub(club);
+        var src = this.setSrc();
+
+        this.image = new Image();
+        this.image.src = src;
+        this.team = team;
 
         this.ctx = context;
         this.resaltadoEstilo = 'black';
         this.movido = false;
 
         this.posOriginalX = posX;
-        this.posOriginalY =  posY;
+        this.posOriginalY = posY;
     }
 
     draw() {
-        this.ctx.fillStyle = this.fill;
+        //this.ctx.drawImage(this.image, this.posX - this.radius, this.posY - this.radius, this.radius * 2, this.radius * 2);
+
+        this.ctx.fillStyle = this.team;
         this.ctx.beginPath()
         this.ctx.arc(this.posX, this.posY, this.radius, 0, 2 * Math.PI);
-        this.ctx.fill()
+        //this.ctx.fill()
 
         if (this.resaltado === true) {
             this.ctx.strokeStyle = this.resaltadoEstilo;
@@ -28,27 +36,68 @@ class Circle {
             this.ctx.stroke();
         }
         this.ctx.closePath();
+        this.drawImageAboveCircle();
     }
 
-    posOriginal(){
+    setSrc() {
+        if (this.club === 'boca') {
+            return 'boca.png';
+        }
+        if (this.club === 'racing') {
+            return 'racing.png';
+        }
+        if (this.club === 'barcelona') {
+            return 'barcelona.png';
+        }
+        if (this.club === 'brasil') {
+            return 'brasil.png';
+        }
+        if (this.club === 'river') {
+            return 'river.png';
+        }
+        if (this.club === 'independiente') {
+            return 'independiente.png';
+        }
+        if (this.club === 'real madrid') {
+            return 'real madrid.png';
+        }
+        if (this.club === 'argentina') {
+            return 'argentina.png';
+        }
+    }
+
+    drawImageAboveCircle() {
+        if (this.image) {
+            // Calcula la posición de la imagen en relación al círculo
+            const imageX = this.posX - this.radius; // Alinea la imagen con el borde izquierdo del círculo
+            const imageY = this.posY - this.radius; // Alinea la imagen con la parte superior del círculo
+            const imageWidth = this.radius * 2; // El ancho de la imagen es igual al diámetro del círculo
+            const imageHeight = this.radius * 2; // La altura de la imagen es igual al diámetro del círculo
+
+            // Dibuja la imagen encima del círculo
+            this.ctx.drawImage(this.image, imageX, imageY, imageWidth, imageHeight);
+        }
+    }
+
+    posOriginal() {
         const cord = { x: this.posOriginalX, y: this.posOriginalY };
         this.returnTo(cord);
 
     }
 
-    compareTo(c2){
-        return this.getFill() === c2.getFill();
+    compareTo(c2) {
+        return this.getTeam() === c2.getTeam();
     }
 
-    returnTo(cord){
-        if(!this.movido){
+    returnTo(cord) {
+        if (!this.movido) {
             const targetX = cord.x;
             const targetY = cord.y;
-    
+
             // Calcula las diferencias en las coordenadas X e Y
             const dx = (targetX - this.posX) / 60;
             const dy = (targetY - this.posY) / 60;
-    
+
             const animate = () => {
                 update();
                 this.ctx.beginPath()
@@ -58,11 +107,11 @@ class Circle {
                     this.draw();
                     return;
                 }
-    
+
                 // Mueve el círculo gradualmente
                 this.setPositionAnimacion(this.posX + dx, this.posY + dy);
                 this.draw();
-    
+
                 requestAnimationFrame(animate);
                 this.ctx.closePath();
             };
@@ -126,7 +175,7 @@ class Circle {
         return Math.sqrt(_x * _x + _y * _y) < this.radius;
     }
 
-    isWinner(){
+    isWinner() {
         this.resaltadoEstilo = 'yellow';
         this.resaltado = true;
     }
@@ -139,12 +188,12 @@ class Circle {
         }
     }
 
-    getResaltado(){
+    getResaltado() {
         return this.resaltadoEstilo;
     }
 
-    setFill(fill) {
-        this.fill = fill;
+    setTeam(team) {
+        this.team = team;
     }
 
     setPositionAnimacion(x, y) {
@@ -159,7 +208,7 @@ class Circle {
         }
     }
 
-    getMovido(){
+    getMovido() {
         return this.movido;
     }
 
@@ -177,7 +226,7 @@ class Circle {
         return this.posY;
     }
 
-    getFill() {
-        return this.fill;
+    getTeam() {
+        return this.team;
     }
 }
