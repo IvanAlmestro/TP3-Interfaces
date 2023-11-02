@@ -149,7 +149,6 @@ class Circle {
         this.movido = true;
     }
 
-
     getPosition() {
         return {
             x: this.getPosX(),
@@ -160,10 +159,10 @@ class Circle {
     getPosX() {
         return this.posX;
     }
+
     getPosY() {
         return this.posY;
     }
-
 
     getRadius() {
         return this.radius;
@@ -181,6 +180,9 @@ class Circle {
     }
 
     setResaltado(resaltado) {
+        if(this.resaltadoEstilo === 'yellow'){
+            return;
+        } 
         if (!this.movido) {
             this.resaltado = resaltado;
         } else {
@@ -210,6 +212,10 @@ class Circle {
 
     getMovido() {
         return this.movido;
+    }
+
+    setMovido(param) {
+        this.movido = param;
     }
 
     getPosition() {

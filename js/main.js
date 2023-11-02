@@ -122,6 +122,7 @@ let turn = document.getElementById('turn');
 const tipoJuego = document.getElementById('opciones');
 const play = document.getElementById('btn-play');
 const formulario = document.getElementById('miFormulario');
+const playAgainButton = document.getElementById("play-again");
 
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
@@ -285,13 +286,6 @@ function clearCanvas() {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 }
 
-function randomRGBA() {
-    let r = Math.round(Math.random() * 255);
-    let g = Math.round(Math.random() * 255);
-    let b = Math.round(Math.random() * 255);
-    let a = 255;
-    return `rgba(${r}, ${g}, ${b}, ${a})`;
-}
 
 function addFigures() {
     addFigure();
@@ -300,7 +294,51 @@ function addFigures() {
     }
 }
 
+playAgainButton.addEventListener('click', function(){
+  resetGame();
+});
 
+function showButtonReset(){
+  console.log("llegue");
+  playAgainButton.style.display = "block";
+}
+
+function resetGame() {
+  // Restablece los valores iniciales del juego
+  players = [];
+  figures = [];
+  disksA = [];
+  disksB = [];
+  
+  board = new Board(6, 7, 90, 485, 50); // Tablero por defecto
+  CANT_FIG = board.getSize();
+  board.draw(ctx);
+
+  player1 = new Player("azul", disksA);
+  player2 = new Player("rojo", disksB);
+  players.push(player1, player2);
+
+  game = new Game(players, board, figures, 4); // Capaz el 4 está de más
+
+  lastClickedFigure = null;
+  isMouseDown = false;
+  currentColor = 'blue';
+
+  // Limpia el canvas
+  clearCanvas();
+  update();
+
+  // Oculta el botón "Jugar de Nuevo"
+  playAgainButton.style.display = "none";
+  document.getElementById("miFormulario").style.display = "block";
+}
+
+playAgainButton.addEventListener('click', resetGame);
+
+function showButtonReset() {
+  console.log("Llegué");
+  playAgainButton.style.display = "block";
+}
 
 function findClickedFigure(x, y) {
     for (let i = 0; i < figures.length; i++) {

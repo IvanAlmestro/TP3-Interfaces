@@ -5,6 +5,7 @@ class Game {
         this.disks = disks;
         this.players = players.slice(0, 2);//solo puedo tener 2 players
         this.currentTurn = 0; // Comienza con el primer jugador
+        
     }
 
     winGame(){
@@ -13,12 +14,16 @@ class Game {
             this.showWinnerDisks(cellsConnect);
             this.switchTurn();
             console.log("Gano", this.getCurrentPlayer().getName());
-            console.log(cellsConnect);
+            this.endGame();
+            showButtonReset();
         }
     }
 
     endGame(){
-        
+        for(let i = 0; i < this.disks.length; i++){
+            const disk = this.disks[i];
+            disk.setMovido(true);
+        }
     }
 
     showWinnerDisks(disks) {
