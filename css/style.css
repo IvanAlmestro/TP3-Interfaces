@@ -498,15 +498,65 @@ form input[type="submit"] {
 
  
 }
-
-#opciones{
-        height: 40px;
-    background-color: rgba(255, 255, 255, 0.5);
-        padding: 5px;
-        border-radius: 5px;
-        width: 100%; /* Ajusta el ancho según tus preferencias */
-    
+.img-form-game{
+    width: 35px;
+    height: 40px;
 }
+.opciones{
+    margin-bottom: 25px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccccb;
+    border-radius: 5px;
+
+
+}
+.custom-dropdown {
+    display: inline-block;
+    width: 297px;
+    margin-bottom: 30px;
+  }
+  
+  .selected-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .selected-option img {
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: 10px;
+  }
+  
+  .options-list {
+    display: none;
+    position: absolute;
+    background-color: #adadad;
+    color: black;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .options-list li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .options-list li:hover {
+    background-color: #f0f0f0;
+  }
+  
 #miFormulario h2, #playgame{
     text-align: center;
 }

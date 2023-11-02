@@ -1,15 +1,3 @@
-document.getElementById("btn-play").addEventListener("click", function () {
-
-  // Oculta el formulario
-  document.getElementById("miFormulario").style.display = "none";
-  
-  // Muestra el contenido adicional
-  document.getElementById("turn").style.display = "block";
-  document.getElementById("winner").style.display = "block";
-  document.getElementById("canvas").style.display = "block";
-  document.getElementById("instruction").style.display = "block";
-  document.getElementById("img-share").style.display = "block";
-});
 
 let btnMenu = document.querySelector(".menu-btn");
 btnMenu.addEventListener("click", function(){
@@ -115,6 +103,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 //CODIGO PARA 4 en linea
+function setupCustomDropdown(selectedOptionId, optionsListId) {
+  const selectedOption = document.getElementById(selectedOptionId);
+  const optionsList = document.getElementById(optionsListId);
+
+  selectedOption.addEventListener("click", () => {
+    optionsList.style.display = optionsList.style.display === "block" ? "none" : "block";
+  });
+
+  optionsList.addEventListener("click", (e) => {
+    if (e.target.tagName === "LI") {
+      const selectedValue = e.target.getAttribute("data-value");
+      selectedOption.innerHTML = e.target.innerHTML;
+      optionsList.style.display = "none";
+      // Realiza acciones adicionales según la opción seleccionada si es necesario.
+    }
+  });
+}
+
+setupCustomDropdown("selectedOption", "optionsList");
+setupCustomDropdown("selectedOption2", "optionsList2");
+
+document.getElementById("btn-play").addEventListener("click", function () {
+
+  // Oculta el formulario
+  document.getElementById("miFormulario").style.display = "none";
+  
+  // Muestra el contenido adicional
+  document.getElementById("turn").style.display = "block";
+  document.getElementById("winner").style.display = "block";
+  document.getElementById("canvas").style.display = "block";
+  document.getElementById("instruction").style.display = "block";
+  document.getElementById("img-share").style.display = "block";
+});
+
 let canvas = document.querySelector('#canvas');
 let ctx = canvas.getContext('2d');
 
@@ -166,8 +188,8 @@ function createGame() {//TO DO: crear players, con nombres, crear array figures,
 formulario.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    club1 = document.getElementById('club1').value;
-    club2 = document.getElementById('club2').value;
+    club1 = document.getElementById('selectedOption').value;
+    club2 = document.getElementById('selectedOption2').value;
 
     player1.setName(club1);
     player2.setName(club2);
@@ -217,9 +239,9 @@ function getRandomNumber(min, max) {
 }
 
 function addCircle(team) {
-  let circleRadius = 20;
+  let circleRadius = 30;
   let posX, posY;
-  let numRandom = getRandomNumber(5, 200);
+  let numRandom = getRandomNumber(5, 0);
   if (team === 'blue') {
       var club = club1;
       posX = Math.round(Math.random() * canvasWidth / 2);
@@ -296,6 +318,8 @@ function addFigures() {
 
 playAgainButton.addEventListener('click', function(){
   resetGame();
+  document.getElementById("canvas").style.display = "none";
+  document.getElementById("turn").style.display = "none";
 });
 
 function showButtonReset(){
@@ -331,6 +355,7 @@ function resetGame() {
   // Oculta el botón "Jugar de Nuevo"
   playAgainButton.style.display = "none";
   document.getElementById("miFormulario").style.display = "block";
+  
 }
 
 playAgainButton.addEventListener('click', resetGame);

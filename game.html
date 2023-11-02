@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
         
+        
     </head>
     <body>
         
@@ -85,23 +86,61 @@
                 <div class="game-container">
 
                     <form id="miFormulario">
+
                         <label for="opciones">Selecciona los equipos</label>
-                        <select name="club1" id="club1">
-                            <option value="boca">Boca</option>
-                            <option value="racing">Racing</option>
-                            <option value="barcelona">Barcelona</option>
-                            <option value="brasil">Brasil</option>
-                        </select>
-                
-                        <select name="club2" id="club2">
-                            <option value="river">River</option>
-                            <option value="independiente">Independiente</option>
-                            <option value="real madrid">Real Madrid</option>
-                            <option value="argentina">Argentina</option>
-                        </select>
-                        
+
+                        <div class="custom-dropdown">
+                            <div class="selected-option" id="selectedOption">
+                                <img src="game.png" alt="Selecciona una opción">
+                                <span>Selecciona una opción</span>
+                            </div>
+                            <ul class="options-list" id="optionsList" >
+                              <li data-value="boca">
+                                <img src="boca.png" alt="Boca" class="img-form-game">
+                                Boca
+                              </li>
+                              <li data-value="racing">
+                                <img src="racing.png" alt="Racing"  class="img-form-game">
+                                Racing
+                              </li>
+                              <li data-value="barcelona">
+                                <img src="barcelona.png" alt="Barcelona"  class="img-form-game">
+                                Barcelona
+                              </li>
+                              <li data-value="brasil">
+                                <img src="brasil.png" alt="Brasil"  class="img-form-game">
+                                Brasil
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="custom-dropdown">
+                            <div class="selected-option" id="selectedOption2">
+                              <img src="game.png" alt="Selecciona una opción">
+                              <span>Selecciona una opción</span>
+                            </div>
+                            <ul class="options-list" id="optionsList2" >
+                              <li data-value="river">
+                                <img src="river.png" alt="River" class="img-form-game">
+                                River
+                              </li>
+                              <li data-value="independiente">
+                                <img src="independiente.png" alt="Independiente" class="img-form-game">
+                                Independiente
+                              </li>
+                              <li data-value="real madrid">
+                                <img src="real madrid.png" alt="Real Madrid" class="img-form-game">
+                                Real Madrid
+                              </li>
+                              <li data-value="argentina">
+                                <img src="argentina.png" alt="Argentina" class="img-form-game">
+                                Argentina
+                              </li>
+                            </ul>
+                          </div>
+
                         <label for="opciones">Selecciona un tipo de juego:</label>
-                        <select id="opciones">
+                        <select id="opciones" class="opciones">
                             <option value="4">4 en Linea</option>
                             <option value="5">5 en Linea</option>
                             <option value="6">6 en Linea</option>
@@ -290,5 +329,6 @@
         <script src="./js/Game.js"></script>
         <script src="./js/main.js"></script>
         <script src="./js/Circle.js"></script>
+        
     </body>
 </html>
