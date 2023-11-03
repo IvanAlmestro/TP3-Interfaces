@@ -103,56 +103,8 @@
                             <option value="argentina">Argentina</option>
                         </select>
                         <br>
-
-                        <!-- <div class="custom-dropdown">
-                            <div class="selected-option" id="selectedOption">
-                                <img src="game.png" alt="Selecciona una opción">
-                                <span>Selecciona una opción</span>
-                            </div>
-                            <ul class="options-list" id="optionsList" >
-                              <li data-value="boca">
-                                <img src="boca.png" alt="Boca" class="img-form-game">
-                                Boca
-                              </li>
-                              <li data-value="racing">
-                                <img src="racing.png" alt="Racing"  class="img-form-game">
-                                Racing
-                              </li>
-                              <li data-value="barcelona">
-                                <img src="barcelona.png" alt="Barcelona"  class="img-form-game">
-                                Barcelona
-                              </li>
-                              <li data-value="brasil">
-                                <img src="brasil.png" alt="Brasil"  class="img-form-game">
-                                Brasil
-                              </li>
-                            </ul>
-                          </div>
-
-                          <div class="custom-dropdown">
-                            <div class="selected-option" id="selectedOption2">
-                              <img src="game.png" alt="Selecciona una opción">
-                              <span>Selecciona una opción</span>
-                            </div>
-                            <ul class="options-list" id="optionsList2" >
-                              <li data-value="river">
-                                <img src="river.png" alt="River" class="img-form-game">
-                                River
-                              </li>
-                              <li data-value="independiente">
-                                <img src="independiente.png" alt="Independiente" class="img-form-game">
-                                Independiente
-                              </li>
-                              <li data-value="real madrid">
-                                <img src="real madrid.png" alt="Real Madrid" class="img-form-game">
-                                Real Madrid
-                              </li>
-                              <li data-value="argentina">
-                                <img src="argentina.png" alt="Argentina" class="img-form-game">
-                                Argentina
-                              </li>
-                            </ul>
-                          </div> -->
+                        <img src="boca.png" id="img-club1" width="150" height="150">
+                        <img src="river.png" id="img-club2" width="150" height="150">
 
                         <label for="opciones">Selecciona el tamaño del tablero:</label>
                         <select id="opciones" class="opciones">
@@ -166,22 +118,17 @@
                             <button type="submit" id="btn-play">JUGAR</button>
                         </div>
                     </form>
-                
+                    <p id="timer" style="display: none;">01:00</p>
                     <div id="turn" style="display: none;">
                         <!-- Contenido del turno -->
                     </div>
                     
-                    <div id="winner" style="display: none;">
-                        <!-- Contenido del ganador -->
+                    <div id="winner" style="display: none">
                     </div>
                     
                     <canvas id="canvas" width="1602" height="900" style="display: none;">
                         <!-- Contenido del juego -->
                     </canvas>
-                    
-                    <div style="display: none;">
-                        <!--<img id="img-bocavsriver" src="images/bocavsriver.png" alt="bocariver">!-->
-                    </div>
                     
                     <img id="instruction" src="images/instruction.png" alt="game" style="display: none;">
                     
