@@ -466,10 +466,34 @@ form input[type="submit"] {
     margin-top: 10px;
 }
 
+#winner{
+    position: absolute;
+    top: 500px;
+    z-index: 99999;
+}
+#play-again{
+    position: absolute;
+    top: 500px;
+    width: 180px;
+    font-weight: bolder;
+    height: 100px ;
+    background-color: rgba(32, 14, 89, 1);
+    z-index: 999;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 28px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+#play-again:hover{
+    background-color: cadetblue;
+}
 .game-container{
     display: flex;
     flex-direction: column;
-    background-image: url(../images/game.png);
+    background-image: url(../estadio.avif);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -482,7 +506,16 @@ form input[type="submit"] {
 
 }
 #turn{
-    font-size: 2em;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.788);
+    background-color:rgba(23, 119, 39, 0.849);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
 }
 #miFormulario{
     margin-top: 250px;
@@ -490,11 +523,13 @@ form input[type="submit"] {
     background-image: url(../images/futbol.jpg);
     color: white;
     background-size: cover;
+    background-position-x: 750px;
     width: 600px;
     border-radius: 10px;
     font-size: 20px;
     text-align: inherit;
     padding: 50px;
+    box-shadow: 6px  6px 10px rgba(0, 0, 0, 0.671);
 
  
 }
@@ -502,14 +537,22 @@ form input[type="submit"] {
     width: 35px;
     height: 40px;
 }
-.opciones{
+.opciones, #club1, #club2{
+    width: 49.5%;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    border-radius: 5px;
     margin-bottom: 25px;
     width: 100%;
     padding: 10px;
-    border: 1px solid #cccccccb;
+    border: 1px solid #2e2c2ccb;
     border-radius: 5px;
-
-
+    background-color: rgba(168, 168, 168, 0.9);
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+#club1, #club2{
+    width: 49.5%;
 }
 .custom-dropdown {
     display: inline-block;
@@ -702,8 +745,9 @@ p{
 #img-share{
     position: absolute;
     right: 300px;
-    left: 1470px;
-    top: 1500px;
+    left: 1670px;
+    top: 1080px;
+    z-index: 9999;
     width: 40px;
     padding: 3px 12px;
     border-radius: 20px;
@@ -712,9 +756,10 @@ p{
 #instruction{
     position: absolute;
 
-    left: 373px;
-    top: 1500px;
+    left: 185px;
+    top: 1080px;
     width: 600px;
+    border-radius: 10px;
 }
 #p-link{
     margin-left: 20%;

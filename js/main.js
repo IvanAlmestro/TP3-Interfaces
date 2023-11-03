@@ -124,6 +124,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //setupCustomDropdown("selectedOption", "optionsList");
 //setupCustomDropdown("selectedOption2", "optionsList2");
 
+
 document.getElementById("btn-play").addEventListener("click", function () {
 
   // Oculta el formulario
@@ -141,6 +142,7 @@ let canvas = document.querySelector('#canvas');
 let ctx = canvas.getContext('2d');
 
 turn = document.getElementById('turn');
+
 const tipoJuego = document.getElementById('opciones');
 const play = document.getElementById('btn-play');
 const formulario = document.getElementById('miFormulario');
@@ -227,7 +229,7 @@ function update(c) {
     clearCanvas();
     board.draw(ctx,c);
     let player = game.getCurrentPlayer();
-    turn.textContent = 'Es el turno de: ' + player.getName();
+    turn.textContent = 'Es el turno de:    ' + player.getName();
 
     for (let i = 0; i < figures.length; i++) {
         figures[i].draw();
@@ -294,6 +296,7 @@ function onMouseUp(e) {
         //console.log(board.matrix);
     } else if(disk != null && col === null) {
         disk.posOriginal();
+        
     }
     update();
 
@@ -326,6 +329,7 @@ playAgainButton.addEventListener('click', function(){
 });
 
 function showButtonReset(){
+
   console.log("llegue");
   playAgainButton.style.display = "block";
 }

@@ -146,6 +146,7 @@ class Circle {
         animate();
         this.setResaltado(false);
         this.movido = true;
+
         setTimeout(function () {
             update();
         }, 370);

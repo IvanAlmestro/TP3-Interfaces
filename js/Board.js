@@ -22,7 +22,7 @@ class Board {
                 const y = this.startY + row * this.cellSize; // Ajusta la posición en Y
 
                 if (row % 2 === 0) {
-                    ctx.fillStyle = 'green'; // Define el color de relleno
+                    ctx.fillStyle = 'rgb(23, 119, 39)'; // Define el color de relleno
                     ctx.fillRect(x, y, this.cellSize, this.cellSize); // Dibuja un rectángulo en cada celda
                 } else {
                     ctx.fillStyle = 'lightgreen'; // Define el color de relleno
@@ -33,7 +33,7 @@ class Board {
 
         // Dibuja líneas horizontales y verticales para marcar el tablero teniendo en cuenta las coordenadas iniciales
         ctx.strokeStyle = 'black'; // Color de las líneas
-        ctx.lineWidth = 2; // Ancho de las líneas
+        ctx.lineWidth = 1.5; // Ancho de las líneas
 
         for (let row = 0; row <= this.rows; row++) {
             ctx.beginPath();
