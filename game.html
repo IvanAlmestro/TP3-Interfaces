@@ -89,7 +89,22 @@
 
                         <label for="opciones">Selecciona los equipos</label>
 
-                        <div class="custom-dropdown">
+                        <select name="club1" id="club1">
+                            <option value="boca">Boca</option>
+                            <option value="racing">Racing</option>
+                            <option value="barcelona">Barcelona</option>
+                            <option value="brasil">Brasil</option>
+                        </select>
+                
+                        <select name="club2" id="club2">
+                            <option value="river">River</option>
+                            <option value="independiente">Independiente</option>
+                            <option value="real madrid">Real Madrid</option>
+                            <option value="argentina">Argentina</option>
+                        </select>
+                        <br>
+
+                        <!-- <div class="custom-dropdown">
                             <div class="selected-option" id="selectedOption">
                                 <img src="game.png" alt="Selecciona una opción">
                                 <span>Selecciona una opción</span>
@@ -137,7 +152,7 @@
                                 Argentina
                               </li>
                             </ul>
-                          </div>
+                          </div> -->
 
                         <label for="opciones">Selecciona un tipo de juego:</label>
                         <select id="opciones" class="opciones">
@@ -160,7 +175,7 @@
                         <!-- Contenido del ganador -->
                     </div>
                     
-                    <canvas id="canvas" width="1602" height="800" style="display: none;">
+                    <canvas id="canvas" width="1602" height="900" style="display: none;">
                         <!-- Contenido del juego -->
                     </canvas>
                     

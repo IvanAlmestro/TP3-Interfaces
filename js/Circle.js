@@ -5,7 +5,6 @@ class Circle {
         this.posY = posY;
         this.radius = radius;
         this.club = club;
-        console.log(club);
 
         //setClub(club);
         var src = this.setSrc();
@@ -147,6 +146,9 @@ class Circle {
         animate();
         this.setResaltado(false);
         this.movido = true;
+        setTimeout(function () {
+            update();
+        }, 370);
     }
 
     getPosition() {

@@ -103,26 +103,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 //CODIGO PARA 4 en linea
-function setupCustomDropdown(selectedOptionId, optionsListId) {
-  const selectedOption = document.getElementById(selectedOptionId);
-  const optionsList = document.getElementById(optionsListId);
+// function setupCustomDropdown(selectedOptionId, optionsListId) {
+//   const selectedOption = document.getElementById(selectedOptionId);
+//   const optionsList = document.getElementById(optionsListId);
 
-  selectedOption.addEventListener("click", () => {
-    optionsList.style.display = optionsList.style.display === "block" ? "none" : "block";
-  });
+//   selectedOption.addEventListener("click", () => {
+//     optionsList.style.display = optionsList.style.display === "block" ? "none" : "block";
+//   });
 
-  optionsList.addEventListener("click", (e) => {
-    if (e.target.tagName === "LI") {
-      const selectedValue = e.target.getAttribute("data-value");
-      selectedOption.innerHTML = e.target.innerHTML;
-      optionsList.style.display = "none";
-      // Realiza acciones adicionales según la opción seleccionada si es necesario.
-    }
-  });
-}
+//   optionsList.addEventListener("click", (e) => {
+//     if (e.target.tagName === "LI") {
+//       const selectedValue = e.target.getAttribute("data-value");
+//       selectedOption.innerHTML = e.target.innerHTML;
+//       optionsList.style.display = "none";
+//       // Realiza acciones adicionales según la opción seleccionada si es necesario.
+//     }
+//   });
+// }
 
-setupCustomDropdown("selectedOption", "optionsList");
-setupCustomDropdown("selectedOption2", "optionsList2");
+//setupCustomDropdown("selectedOption", "optionsList");
+//setupCustomDropdown("selectedOption2", "optionsList2");
 
 document.getElementById("btn-play").addEventListener("click", function () {
 
@@ -140,7 +140,7 @@ document.getElementById("btn-play").addEventListener("click", function () {
 let canvas = document.querySelector('#canvas');
 let ctx = canvas.getContext('2d');
 
-let turn = document.getElementById('turn');
+turn = document.getElementById('turn');
 const tipoJuego = document.getElementById('opciones');
 const play = document.getElementById('btn-play');
 const formulario = document.getElementById('miFormulario');
@@ -188,8 +188,8 @@ function createGame() {//TO DO: crear players, con nombres, crear array figures,
 formulario.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    club1 = document.getElementById('selectedOption').value;
-    club2 = document.getElementById('selectedOption2').value;
+    club1 = document.getElementById('club1').value;
+    club2 = document.getElementById('club2').value;
 
     player1.setName(club1);
     player2.setName(club2);
@@ -241,16 +241,19 @@ function getRandomNumber(min, max) {
 function addCircle(team) {
   let circleRadius = 30;
   let posX, posY;
-  let numRandom = getRandomNumber(5, 0);
+  let boardYmax = canvasHeight - board.getStartY() - circleRadius - 10;
+  let boardYmin = canvasHeight - board.getHeight() + board.getStartY();
+  let numRandom = getRandomNumber(boardYmax, boardYmin);
   if (team === 'blue') {
       var club = club1;
-      posX = Math.round(Math.random() * canvasWidth / 2);
+      posX = Math.round(Math.random() * (board.getStartX() - circleRadius - circleRadius) + circleRadius);
       posY = canvasHeight - circleRadius - numRandom;
       let circle = new Circle(posX, posY, circleRadius, team, ctx, club1);
       disksA.push(circle);
   } else if (team === 'red') {
       var club = club2;
-      posX = Math.round(Math.random() * canvasWidth / 2) + canvasWidth / 2;
+      const maxX = (canvasWidth - circleRadius) - board.getStartX() - board.getWidth() - circleRadius;
+      posX = Math.round(Math.random() * maxX + board.getStartX() + board.getWidth() + circleRadius);
       posY = canvasHeight - circleRadius - numRandom;
       let circle = new Circle(posX, posY, circleRadius, team, ctx, club2);
       disksB.push(circle);
@@ -361,7 +364,6 @@ function resetGame() {
 playAgainButton.addEventListener('click', resetGame);
 
 function showButtonReset() {
-  console.log("Llegué");
   playAgainButton.style.display = "block";
 }
 

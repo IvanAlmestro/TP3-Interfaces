@@ -16,6 +16,7 @@ class Game {
             console.log("Gano", this.getCurrentPlayer().getName());
             this.endGame();
             showButtonReset();
+            turn.textContent = 'GANO: ' +this.getCurrentPlayer().getName();
         }
     }
 

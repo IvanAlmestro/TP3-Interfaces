@@ -15,6 +15,7 @@ class Board {
     // Dibuja la matriz en el canvas
 
     draw(ctx, column) {
+        this.drawContainer(ctx);
         for (let row = 0; row < this.rows; row++) {
             for (let col = 0; col < this.cols; col++) {
                 const x = this.startX + col * this.cellSize; // Ajusta la posición en X
@@ -55,6 +56,18 @@ class Board {
 
         }
 
+    }
+
+    drawContainer(ctx) {
+        // Dibuja un rectángulo vacío a la izquierda del tablero
+        ctx.strokeStyle = 'violet'; // Color del borde
+        ctx.lineWidth = 4; // Ancho del borde
+        const containerWidth = this.startX;
+        ctx.strokeRect(0, 0, containerWidth - 10, this.getHeight());
+
+        // Dibuja un segundo rectángulo vacío a la derecha del tablero
+        const containerX = this.startX + this.getWidth() + 10;
+        ctx.strokeRect(containerX, 0, ctx.canvas.width - containerX, this.getHeight());
     }
 
 
@@ -201,7 +214,6 @@ class Board {
     }
     
     
-
     //getters y setters
     
     getCol(circulo) {//recorro las columnas y me fijo en cual la puedo dropear
