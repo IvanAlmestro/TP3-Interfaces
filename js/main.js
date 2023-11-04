@@ -270,15 +270,17 @@ function onMouseUp(e) {
     var col = board.getCol(disk);
   }
 
-  if (disk != null && col != null) {
-    let player = game.getCurrentPlayer();
 
-    player.dropDisk(col, disk, board, game);
-    game.winGame();
-    //console.log(board.matrix);
-  } else if (disk != null && col === null) {
+  if (disk != null && col != null) {//si hay un disk seleccionado y una columna lo dropeo
+    if(!board.isColumnFull(col)){
+      let player = game.getCurrentPlayer();
+      player.dropDisk(col, disk, board, game);
+      game.winGame();
+    }else{//si la columna esta llena lo devuelvo a la pos original
+      disk.posOriginal();
+    }
+  } if (disk != null && col === null) {//si no lo dropea en nunguna columna lo devuelvo a la pos original
     disk.posOriginal();
-
   }
   update();
 

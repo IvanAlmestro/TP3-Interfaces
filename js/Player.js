@@ -26,8 +26,10 @@ class Player{
 
     dropDisk(col, disk, board,game){
         let cord = board.fillCol(col,disk);
-        disk.moveTo(cord);
-        game.switchTurn();
+        if(cord !== null){
+            disk.moveTo(cord);
+            game.switchTurn();
+        }
     }
 
     moveDisc(cord, disk) {

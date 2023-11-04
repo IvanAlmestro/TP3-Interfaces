@@ -43,7 +43,7 @@ class Board {
         }
 
         for (let col = 0; col <= this.cols; col++) {
-            if (column != null && (col === column ||col === column + 1)) {
+            if (column != null && (col === column ||col === column + 1) && (!this.isColumnFull(column))) {
                 ctx.strokeStyle = 'yellow';
                 ctx.lineWidth = 2.5;
             } else{
@@ -58,14 +58,12 @@ class Board {
 
     }
 
-    drawContainer(ctx) {
-        // Dibuja un rectángulo vacío a la izquierda del tablero
-        ctx.strokeStyle = 'violet'; // Color del borde
-        ctx.lineWidth = 4; // Ancho del borde
+    drawContainer(ctx) {//dibula los contenedores al lado del tablero
+        ctx.strokeStyle = 'violet'; 
+        ctx.lineWidth = 4;
         const containerWidth = this.startX;
         ctx.strokeRect(0, 0, containerWidth - 10, this.getHeight());
 
-        // Dibuja un segundo rectángulo vacío a la derecha del tablero
         const containerX = this.startX + this.getWidth() + 10;
         ctx.strokeRect(containerX, 0, ctx.canvas.width - containerX, this.getHeight());
     }
@@ -82,9 +80,10 @@ class Board {
         for (let row = this.rows - 1; row >= 0; row--) {
             if (!this.matrix[row][col]) {
                 this.matrix[row][col] = circle;
-                return this.coordCell(row, col);// puedo retornar la pos de esa celda mejor
+                return this.coordCell(row, col);
             }
         }
+        return null;
         //si esta llena hacer otra cosa;
     }
 
@@ -99,6 +98,18 @@ class Board {
 
         return distance < circulo.getRadius();
 
+    }
+
+    
+    isColumnFull(col) {//me fijo si esa columna esta llena
+        if(col != undefined){
+            for (let row = 0; row < this.rows; row++) {
+                if (this.matrix[row][col] === null) {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 
     //metodos para chekear ganador
@@ -212,6 +223,8 @@ class Board {
     
         return connectedCells;
     }
+
+    
     
     
     //getters y setters
@@ -231,9 +244,6 @@ class Board {
         } else {
             return null;
         }
-        //TO-DO:
-        // metodo para hace que caiga la ficha en col
-        //revisar con true o false si ya hay una ficha en una celda
     }
 
     getSize() {
