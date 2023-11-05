@@ -84,9 +84,15 @@
             <div class="div-center">
                 
                 <div class="game-container">
-
+                    
+                    <div id="container-clubs">
+                        <img src="boca.png" id="img-club1" width="120" height="120" class="img-select">
+                        <p>VS</p>
+                        <img src="river.png" id="img-club2" width="120" height="120" class="img-select">
+                    </div>
+                    <p id="timer" style="display: none;">01:00</p>
                     <form id="miFormulario">
-
+                 
                         <label for="opciones">Selecciona tu equipo:</label>
 
                         <select name="club1" id="club1">
@@ -102,9 +108,7 @@
                             <option value="real madrid">Real Madrid</option>
                             <option value="argentina">Argentina</option>
                         </select>
-                        <br>
-                        <img src="boca.png" id="img-club1" width="150" height="150">
-                        <img src="river.png" id="img-club2" width="150" height="150">
+                 
 
                         <label for="opciones">Selecciona el tamaño del tablero:</label>
                         <select id="opciones" class="opciones">
@@ -118,7 +122,7 @@
                             <button type="submit" id="btn-play">JUGAR</button>
                         </div>
                     </form>
-                    <p id="timer" style="display: none;">01:00</p>
+                    
                     <div id="turn" style="display: none;">
                         <!-- Contenido del turno -->
                     </div>

@@ -154,14 +154,14 @@ let lastClickedFigure = null;
 let isMouseDown = false;
 
 function createGame() {
-  let cellSize = 90;
+  let cellSize = 85;
   let valor = tipoJuego.value;
   let rows = parseInt(valor) + 2;
   let cols = parseInt(valor) + 3;
   let boardWidth = cols * cellSize;
   let boardHeight = rows * cellSize;
   let startX = (canvasWidth - boardWidth) / 2;
-  let startY = 20;
+  let startY = 0;
   board = new Board(rows, cols, cellSize, startX, startY);
   game = new Game(players, board, figures, parseInt(valor));
   addFigures();
@@ -225,20 +225,20 @@ function getRandomNumber(min, max) {
 function addCircle(team) {//agrego el circle dependiendo el equipo
   let circleRadius = 30;
   let posX, posY;
-  let boardYmax = canvasHeight - board.getStartY() - circleRadius - 10;
-  let boardYmin = canvasHeight - board.getHeight() + board.getStartY();
+  let boardYmax = canvasHeight - board.getStartY() - circleRadius - 50;
+  let boardYmin = canvasHeight - board.getHeight() + board.getStartY() +10;
   let numRandom = getRandomNumber(boardYmax, boardYmin);
   if (team === 'blue') {
     var club = club1;
     posX = Math.round(Math.random() * (board.getStartX() - circleRadius - circleRadius) + circleRadius);//que aparezca en los containers
-    posY = canvasHeight - circleRadius - numRandom;
+    posY = canvasHeight - circleRadius - numRandom ;
     let circle = new Circle(posX, posY, circleRadius, team, ctx, club1);
     disksA.push(circle);
   } else if (team === 'red') {
     var club = club2;
     const maxX = (canvasWidth - circleRadius) - board.getStartX() - board.getWidth() - circleRadius;
     posX = Math.round(Math.random() * maxX + board.getStartX() + board.getWidth() + circleRadius);//que aparezca en los containers
-    posY = canvasHeight - circleRadius - numRandom;
+    posY = canvasHeight - circleRadius - numRandom ;
     let circle = new Circle(posX, posY, circleRadius, team, ctx, club2);
     disksB.push(circle);
   }

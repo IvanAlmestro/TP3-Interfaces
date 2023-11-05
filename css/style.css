@@ -471,6 +471,18 @@ form input[type="submit"] {
     top: 500px;
     z-index: 99999;
 }
+
+#container-clubs{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    font-size: 2em;
+    width: 30%;
+
+    margin-top: 10px;
+    border-radius: 20px;
+
+}
 #play-again{
     position: absolute;
     top: 500px;
@@ -498,7 +510,7 @@ form input[type="submit"] {
     background-size: cover;
 
     width: 1655px;
-    height: 966px;
+    height: 1080px;
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 20px;
     align-items: center;
@@ -508,17 +520,18 @@ form input[type="submit"] {
 #turn{
     font-size: 1em;
     color: rgba(255, 255, 255, 0.788);
-    background-color:rgba(23, 119, 39, 0.849);
+    background-color:#333;
+    margin-bottom: 1px;
     border-radius: 5px;
     padding: 10px;
     font-weight: bolder;
     text-transform: uppercase;
-    margin: 0px;
+    margin: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 3px;
 }
 #miFormulario{
-    margin-top: 250px;
+    margin-top: 160px;
     margin-bottom: 60px;
     background-image: url(../images/futbol.jpg);
     color: white;
@@ -533,6 +546,17 @@ form input[type="submit"] {
 
  
 }
+#timer{
+    position: absolute;
+    top: 270px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* Color de fuente que desees */
+    background-color: #333; /* Color de fondo que desees */
+    padding: 10px 20px;
+    border-radius:  10px 10px 0 0;
+    display: inline-block;
+}
 .img-form-game{
     width: 35px;
     height: 40px;
@@ -540,16 +564,17 @@ form input[type="submit"] {
 .opciones, #club1, #club2{
     width: 49.5%;
     font-weight: bolder;
-    letter-spacing: 1px;
-    border-radius: 5px;
+
+    border-radius: 10px;
     margin-bottom: 25px;
     width: 100%;
     padding: 10px;
     border: 1px solid #2e2c2ccb;
     border-radius: 5px;
     background-color: rgba(168, 168, 168, 0.9);
-    font-size: 0.9em;
-    text-transform: uppercase;
+    font-size: 1.2em;
+
+
 }
 #club1, #club2{
     width: 49.5%;
@@ -746,7 +771,7 @@ p{
     position: absolute;
     right: 300px;
     left: 1670px;
-    top: 1080px;
+    top: 1180px;
     z-index: 9999;
     width: 40px;
     padding: 3px 12px;
@@ -757,7 +782,7 @@ p{
     position: absolute;
 
     left: 185px;
-    top: 1080px;
+    top: 1180px;
     width: 600px;
     border-radius: 10px;
 }
