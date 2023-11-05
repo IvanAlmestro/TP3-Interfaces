@@ -59,8 +59,10 @@ class Board {
     }
 
     drawContainer(ctx) {//dibula los contenedores al lado del tablero
-        ctx.strokeStyle = 'violet'; 
-        ctx.lineWidth = 4;
+        const containerColor = 'rgb(34,5,50)';
+        ctx.strokeStyle = containerColor;
+        const grosorLinea = 5;
+        ctx.lineWidth = grosorLinea;
         const containerWidth = this.startX;
         ctx.strokeRect(0, 0, containerWidth - 10, this.getHeight());
 

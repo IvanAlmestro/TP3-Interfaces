@@ -27,6 +27,7 @@ class Game {
     }
 
     updateTimer() {
+        console.log("reinicia");
         const minutes = Math.floor(this.time / 60);
         const seconds = this.time % 60;
         this.countDown.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
