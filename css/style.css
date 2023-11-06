@@ -468,8 +468,15 @@ form input[type="submit"] {
 
 #winner{
     position: absolute;
-    top: 500px;
-    z-index: 99999;
+    top: 270px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 3em;
+    text-shadow: 4px 4px 6px #000;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px; /* Espaciado alrededor del párrafo */
+    text-align: center; /* Texto centrado */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 #container-clubs{

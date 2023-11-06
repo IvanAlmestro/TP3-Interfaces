@@ -111,10 +111,12 @@ document.getElementById("btn-play").addEventListener("click", function () {
 
   // Muestra el contenido adicional
   document.getElementById("turn").style.display = "block";
-  document.getElementById("winner").style.display = "block";
+
   document.getElementById("canvas").style.display = "block";
   document.getElementById("instruction").style.display = "block";
   document.getElementById("img-share").style.display = "block";
+  document.getElementById("container-clubs").style.marginBottom = "8px";
+
 });
 
 let canvas = document.querySelector('#canvas');
@@ -310,13 +312,12 @@ playAgainButton.addEventListener('click', function () {
   resetGame();
   document.getElementById("canvas").style.display = "none";
   document.getElementById("turn").style.display = "none";
+  document.getElementById("winner").style.display ="none";
+  document.getElementById("timer").style.display = "none";
+  
+  
 });
 
-function showButtonReset() {
-
-  console.log("llegue");
-  playAgainButton.style.display = "block";
-}
 
 function resetGame() {
   // Restablece los valores iniciales del juego
@@ -345,14 +346,26 @@ function resetGame() {
 
   // Oculta el botón "Jugar de Nuevo"
   playAgainButton.style.display = "none";
+  document.getElementById("turn").style.display = "none";
+  document.getElementById("timer").style.display = "none";
   document.getElementById("miFormulario").style.display = "block";
+
 
 }
 
 playAgainButton.addEventListener('click', resetGame);
 
-function showButtonReset() {
+function showWinner() {
+  
   playAgainButton.style.display = "block";
+  let winner =document.getElementById("winner");
+  let player = game.getCurrentPlayer().getName();
+  document.getElementById("winner").style.display ="block";
+  winner.innerHTML = "Ganó: " + player;
+  document.getElementById("timer").style.display="none";
+  document.getElementById("turn").style.display="none";
+  document.getElementById("container-clubs").style.marginBottom = "75px";
+  
 }
 
 function findClickedFigure(x, y) {
