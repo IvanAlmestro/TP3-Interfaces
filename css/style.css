@@ -492,7 +492,7 @@ form input[type="submit"] {
 }
 #play-again{
     position: absolute;
-    top: 500px;
+    top: 580px;
     width: 180px;
     font-weight: bolder;
     height: 100px ;
@@ -517,7 +517,7 @@ form input[type="submit"] {
     background-size: cover;
 
     width: 1655px;
-    height: 1080px;
+    height: 980px;
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 20px;
     align-items: center;
@@ -778,7 +778,7 @@ p{
     position: absolute;
     right: 300px;
     left: 1670px;
-    top: 1180px;
+    top: 1080px;
     z-index: 9999;
     width: 40px;
     padding: 3px 12px;
@@ -789,7 +789,7 @@ p{
     position: absolute;
 
     left: 185px;
-    top: 1180px;
+    top: 1080px;
     width: 600px;
     border-radius: 10px;
 }

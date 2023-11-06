@@ -156,7 +156,7 @@ let lastClickedFigure = null;
 let isMouseDown = false;
 
 function createGame() {
-  let cellSize = 85;
+  let cellSize = 75;
   let valor = tipoJuego.value;
   let rows = parseInt(valor) + 2;
   let cols = parseInt(valor) + 3;
