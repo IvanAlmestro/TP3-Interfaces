@@ -144,8 +144,6 @@ let disksB = [];
 //creo mi Game, board,players y diks tomando lo que me pase el user desde el DOM
 let board = new Board(6, 7, 90, 485, 50);//tablero por default
 let CANT_FIG = board.getSize();
-board.draw(ctx);
-
 let player1 = new Player("azul", disksA);
 let player2 = new Player("rojo", disksB);
 players.push(player1, player2);
@@ -231,19 +229,19 @@ function addCircle(team) {//agrego el circle dependiendo el equipo
   let circleRadius = 30;
   let posX, posY;
   let boardYmax = canvasHeight - board.getStartY() - circleRadius - 50;
-  let boardYmin = canvasHeight - board.getHeight() + board.getStartY() +10;
+  let boardYmin = canvasHeight - board.getHeight() + board.getStartY() + 10;
   let numRandom = getRandomNumber(boardYmax, boardYmin);
   if (team === 'blue') {
     var club = club1;
     posX = Math.round(Math.random() * (board.getStartX() - circleRadius - circleRadius) + circleRadius);//que aparezca en los containers
-    posY = canvasHeight - circleRadius - numRandom ;
+    posY = canvasHeight - circleRadius - numRandom;
     let circle = new Circle(posX, posY, circleRadius, team, ctx, club1);
     disksA.push(circle);
   } else if (team === 'red') {
     var club = club2;
     const maxX = (canvasWidth - circleRadius) - board.getStartX() - board.getWidth() - circleRadius;
     posX = Math.round(Math.random() * maxX + board.getStartX() + board.getWidth() + circleRadius);//que aparezca en los containers
-    posY = canvasHeight - circleRadius - numRandom ;
+    posY = canvasHeight - circleRadius - numRandom;
     let circle = new Circle(posX, posY, circleRadius, team, ctx, club2);
     disksB.push(circle);
   }
@@ -277,11 +275,11 @@ function onMouseUp(e) {
 
 
   if (disk != null && col != null) {//si hay un disk seleccionado y una columna lo dropeo
-    if(!board.isColumnFull(col)){
+    if (!board.isColumnFull(col)) {
       let player = game.getCurrentPlayer();
       player.dropDisk(col, disk, board, game);
       game.winGame();
-    }else{//si la columna esta llena lo devuelvo a la pos original
+    } else {//si la columna esta llena lo devuelvo a la pos original
       disk.posOriginal();
     }
   } if (disk != null && col === null) {//si no lo dropea en nunguna columna lo devuelvo a la pos original
@@ -315,10 +313,10 @@ playAgainButton.addEventListener('click', function () {
   resetGame();
   document.getElementById("canvas").style.display = "none";
   document.getElementById("turn").style.display = "none";
-  document.getElementById("winner").style.display ="none";
+  document.getElementById("winner").style.display = "none";
   document.getElementById("timer").style.display = "none";
-  
-  
+
+
 });
 
 
@@ -358,17 +356,20 @@ function resetGame() {
 
 playAgainButton.addEventListener('click', resetGame);
 
-function showWinner() {
-  
+function showWinner(empate) {
+  let winner = document.getElementById("winner");
+  if (empate !== undefined) {
+    winner.innerHTML = "EMPATE";
+  } else {
+    winner.innerHTML = "Ganó: " + player;
+  }
   playAgainButton.style.display = "block";
-  let winner =document.getElementById("winner");
   let player = game.getCurrentPlayer().getName();
-  document.getElementById("winner").style.display ="block";
-  winner.innerHTML = "Ganó: " + player;
-  document.getElementById("timer").style.display="none";
-  document.getElementById("turn").style.display="none";
+  document.getElementById("winner").style.display = "block";
+  document.getElementById("timer").style.display = "none";
+  document.getElementById("turn").style.display = "none";
   document.getElementById("container-clubs").style.marginBottom = "75px";
-  
+
 }
 
 function findClickedFigure(x, y) {

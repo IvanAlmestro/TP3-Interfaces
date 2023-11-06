@@ -6,7 +6,7 @@ class Game {
         this.players = players.slice(0, 2);//solo puedo tener 2 players
         this.currentTurn = 0; // Comienza con el primer jugador
 
-        this.startingMinutes = 1;
+        this.startingMinutes = 5;
         this.time = this.startingMinutes * 60;
         this.countDown = document.getElementById('timer');
         this.timerInterval = null;
@@ -16,18 +16,18 @@ class Game {
         document.getElementById("timer").style.display = "block";
         this.timerInterval = setInterval(() => {
             this.updateTimer(); // Actualiza el temporizador cada segundo
-            if (this.time <= 0) {
+            if (this.time === 0) {
+                console.log("quee");
+                this.endGame();
+                showWinner("empate");
+                this.stopTimer();
                 clearInterval(this.timerInterval);
-                this.switchTurn(); // Cambia de jugador cuando el tiempo llega a 00
                 update();
-                this.time = this.startingMinutes * 60; // Reinicia el tiempo
-                this.startTimer(); // Inicia el temporizador nuevamente
             }
         }, 1000);
     }
 
     updateTimer() {
-        console.log("reinicia");
         const minutes = Math.floor(this.time / 60);
         const seconds = this.time % 60;
         this.countDown.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
@@ -40,6 +40,9 @@ class Game {
         this.startTimer(); // Inicia el temporizador nuevamente
     }
 
+    stopTimer() {
+        clearInterval(this.timerInterval);
+    }
 
     winGame() {
         let cellsConnect = this.board.cellsConnect(this.connect);
@@ -49,7 +52,7 @@ class Game {
             console.log("Gano", this.getCurrentPlayer().getName());
             this.endGame();
             showWinner();
-     
+            this.stopTimer();
         }
     }
 
@@ -69,11 +72,8 @@ class Game {
     }
 
     switchTurn() {
-        this.resetTimer();
         this.currentTurn = (this.currentTurn + 1) % this.players.length;
     }
-
-
 
     getCurrentPlayer() {
         return this.players[this.currentTurn];
