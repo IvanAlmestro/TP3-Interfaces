@@ -173,13 +173,16 @@ function createGame() {
   //update();
 }
 selectClub1.addEventListener('change', function () {
-  imgClub1Select.src = document.getElementById('club1').value + ".png";
+  var selectedClub = document.getElementById('club1').value;
+  var imagePath = 'images/4enlinea/' + selectedClub + '.png';
+  imgClub1Select.src = imagePath;
 });
 
 selectClub2.addEventListener('change', function () {
-  imgClub2Select.src = document.getElementById('club2').value + ".png";
+  var selectedClub2 = document.getElementById('club2').value;
+  var imagePath = 'images/4enlinea/' + selectedClub2 + '.png';
+  imgClub2Select.src = imagePath;
 });
-
 
 formulario.addEventListener('submit', function (event) {//asigno los clubes que eligio el jugador
   event.preventDefault();

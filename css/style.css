@@ -512,7 +512,7 @@ form input[type="submit"] {
 .game-container{
     display: flex;
     flex-direction: column;
-    background-image: url(../estadio.avif);
+    background-image: url(../images/4enlinea/estadio.avif);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -540,7 +540,7 @@ form input[type="submit"] {
 #miFormulario{
     margin-top: 160px;
     margin-bottom: 60px;
-    background-image: url(../images/futbol.jpg);
+    background-image: url(../images/4enlinea/futbol.jpg);
     color: white;
     background-size: cover;
     background-position-x: 750px;

@@ -40,28 +40,28 @@ class Circle {
 
     setSrc() {
         if (this.club === 'boca') {
-            return 'boca.png';
+            return './images/4enlinea/boca.png';
         }
         if (this.club === 'racing') {
-            return 'racing.png';
+            return './images/4enlinea/racing.png';
         }
         if (this.club === 'barcelona') {
-            return 'barcelona.png';
+            return './images/4enlinea/barcelona.png';
         }
         if (this.club === 'brasil') {
-            return 'brasil.png';
+            return './images/4enlinea/brasil.png';
         }
         if (this.club === 'river') {
-            return 'river.png';
+            return './images/4enlinea/river.png';
         }
         if (this.club === 'independiente') {
-            return 'independiente.png';
+            return './images/4enlinea/independiente.png';
         }
         if (this.club === 'real madrid') {
-            return 'real madrid.png';
+            return './images/4enlinea/real madrid.png';
         }
         if (this.club === 'argentina') {
-            return 'argentina.png';
+            return './images/4enlinea/argentina.png';
         }
     }
 
