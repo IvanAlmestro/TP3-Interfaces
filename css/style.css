@@ -328,6 +328,9 @@ nav{
     height: 100px;
     z-index: 9999;
 }
+#img-4enlinea:hover{
+    cursor: pointer;
+}
 
 /* PAGINAS FORMULARIO LOGIN Y REGISTER */
 /* titulo de registrar y login*/
@@ -492,7 +495,7 @@ form input[type="submit"] {
 }
 #play-again{
     position: absolute;
-    top: 580px;
+    top: 680px;
     width: 180px;
     font-weight: bolder;
     height: 100px ;
@@ -538,6 +541,7 @@ form input[type="submit"] {
     letter-spacing: 3px;
 }
 #miFormulario{
+    
     margin-top: 160px;
     margin-bottom: 60px;
     background-image: url(../images/4enlinea/futbol.jpg);
@@ -547,6 +551,8 @@ form input[type="submit"] {
     width: 600px;
     border-radius: 10px;
     font-size: 20px;
+
+   
     text-align: inherit;
     padding: 50px;
     box-shadow: 6px  6px 10px rgba(0, 0, 0, 0.671);
@@ -635,10 +641,12 @@ form input[type="submit"] {
 #miFormulario h2, #playgame{
     text-align: center;
 }
-#miFormulario input{
-    width:96%;
-    
-   color: white;
+#miFormulario select{
+   
+
+   color: rgb(32, 31, 32);
+   border-radius: 10px;
+
 }
 main{
     margin-left: 132.5px;
@@ -682,7 +690,8 @@ p{
 #img-send{
     position: absolute;
     left: 1720px;
-    top: 2360px;
+    top: 2390px;
+    opacity: 0.8;
     
 }
 
@@ -757,17 +766,15 @@ p{
     margin-bottom: 10px;
     margin-top: 20px;
 }
-.img-how-play{
+.img-how-play, .img-how-play2{
     width: 30%;
-    margin-left: 78px;
     margin-bottom: 40px;
+    border-radius: 10px;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
-
+    margin-left: 78px;
 }
 .img-how-play2{
-    width: 30%;
-    margin-bottom: 40px;
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    margin-left: 0px;
 }
 .img-game{
     height: 739px;
@@ -783,15 +790,24 @@ p{
     width: 40px;
     padding: 3px 12px;
     border-radius: 20px;
-    background-color: rgba(32, 14, 89, 1);
+    background-color: rgb(78, 66, 117);
 }
 #instruction{
+
+align-items:  center;
     position: absolute;
 
     left: 185px;
     top: 1080px;
     width: 600px;
     border-radius: 10px;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#instruction img{
+    margin-right: 20px;
+    height: 50px;
 }
 #p-link{
     margin-left: 20%;
@@ -821,7 +837,7 @@ p{
 
 }
 #img-share:hover{
-    background-color: rgb(65, 50, 114);
+    background-color: rgb(133, 124, 161);
 }
 #btn-play{
     

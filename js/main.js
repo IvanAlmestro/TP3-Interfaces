@@ -113,7 +113,7 @@ document.getElementById("btn-play").addEventListener("click", function () {
   document.getElementById("turn").style.display = "block";
 
   document.getElementById("canvas").style.display = "block";
-  document.getElementById("instruction").style.display = "block";
+  document.getElementById("instruction").style.display = "flex";
   document.getElementById("img-share").style.display = "block";
   document.getElementById("container-clubs").style.marginBottom = "8px";
 

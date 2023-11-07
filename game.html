@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+   
         
         
     </head>
@@ -29,7 +30,7 @@
                 </div>
 
                 <div class="div-user-fav-menu">
-                    <a id="link-heart" href="#contenedor1">
+                    <a id="link-heart" href="index.html#contenedor1">
                         <div class="heart user-fav-shop" id="heart-header"></div>
                     </a>
                     <div><img src="images/shop.png" alt="shop" class="user-fav-shop"></div>
@@ -48,10 +49,10 @@
                 <p class="title-nav">Categorias:</p>
                 <ul id="category-list">
                     <li ><a href="index.html#contenedor1">Favoritos</a></li>
-                    <li ><a href="index.html#contenedor2">Deportes</li>
-                    <li ><a href="index.html#contenedor3">Carreras</li>
-                    <li ><a href="index.html#contenedor4">Estrategia</li>
-                    <li ><a href="index.html#contenedor5">Supervivencia</li>
+                    <li ><a href="index.html#contenedor2">Deportes</a></li>
+                    <li ><a href="index.html#contenedor3">Carreras</a></li>
+                    <li ><a href="index.html#contenedor4">Estrategia</a></li>
+                    <li ><a href="index.html#contenedor5">Supervivencia</a></li>
                 
                 </ul>
             </div>
@@ -135,8 +136,12 @@
                     <canvas id="canvas" width="1080" height="900" style="display: none;">
                         <!-- Contenido del juego -->
                     </canvas>
+                    <div id="instruction" style="display: none;" class="instruction">
+                        <img src="./images/mouse-click.png" alt="">
+                        <p>Manten click izquierdo para arrastrar tu ficha y sueltala en uno de los casilleros del tablero.</p>
+                       
+                    </div>
                     
-                    <img id="instruction" src="images/instruction.png" alt="game" style="display: none;">
                     
                     <div id="img-share" style="display: none;">
                         <button id="btn-share"></button>
@@ -146,9 +151,10 @@
                     
 
                 </div>
+                
             </div>
     
-            
+   
             
             <p id="p-link">Link de interés sobre la historia de este enfrentamiento: <a href="https://www.promiedos.com.ar/historial.php?equipo1=6&equipo2=18">https://www.promiedos.com.ar/historial.php?equipo1=6&equipo2=18</a></p>
             <div class="how-play" >
@@ -160,13 +166,13 @@
                 <div id="container-info-help">
                
                     <h4 class="title-info">Objetivo:</h4>
-                    <p class="p-margin">4 en línea de equipos: ganas al conectar cuatro fichas de tu equipo (ya sea Boca o River) en línea, ya sea vertical, horizontal o diagonal en el tablero.</p>
+                    <p class="p-margin"> 4,5,6,7 en línea de equipos(segun el tablero que elijas): ganas al conectar cuatro fichas de tu equipo en línea, ya sea vertical, horizontal o diagonal en el tablero.</p>
             
                     <h4 class="title-info">Turnos:</h4>
                     <p class="p-margin">Juegas contra otro jugador. Seleccionas una columna y tu ficha cae en el espacio más bajo disponible en esa columna.</p>
       
                     <h4 class="title-info">Ganar:</h4>
-                    <p class="p-margin">El primer jugador en formar una línea de cuatro fichas de su equipo gana. Puede ser vertical, horizontal o diagonal.</p>
+                    <p class="p-margin">El primer jugador en formar una línea de la cantidad de fichas del tablero que elegiste su equipo gana. Puede ser vertical, horizontal o diagonal.</p>
      
                 </div>
                 <div>
@@ -193,7 +199,7 @@
 
                     <div class="write-container" >
                         <p class="p-ask">¿Que te parecio el juego?...</p>
-                        <img id ="img-pencil" src="images/Pencil.png" alt="pencil">
+                
                         <img id="img-send"src="images/Send.png" alt="send">
                     </div>   
 
