@@ -137,7 +137,6 @@ class Circle {
             
             requestAnimationFrame(animate);
             this.ctx.closePath();
-            update();
         };
         animate();
         this.setResaltado(false);

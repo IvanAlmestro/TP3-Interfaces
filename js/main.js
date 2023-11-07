@@ -233,14 +233,14 @@ function addCircle(team) {//agrego el circle dependiendo el equipo
   let numRandom = getRandomNumber(boardYmax, boardYmin);
   if (team === 'blue') {
     var club = club1;
-    posX = Math.round(Math.random() * (board.getStartX() - circleRadius - circleRadius) + circleRadius);//que aparezca en los containers
+    posX = Math.round(Math.random() * (board.getStartX() - circleRadius - circleRadius) + circleRadius - 5);//que aparezca en los containers
     posY = canvasHeight - circleRadius - numRandom;
     let circle = new Circle(posX, posY, circleRadius, team, ctx, club1);
     disksA.push(circle);
   } else if (team === 'red') {
     var club = club2;
     const maxX = (canvasWidth - circleRadius) - board.getStartX() - board.getWidth() - circleRadius;
-    posX = Math.round(Math.random() * maxX + board.getStartX() + board.getWidth() + circleRadius);//que aparezca en los containers
+    posX = Math.round(Math.random() * maxX + board.getStartX() + board.getWidth() + circleRadius + 5);//que aparezca en los containers
     posY = canvasHeight - circleRadius - numRandom;
     let circle = new Circle(posX, posY, circleRadius, team, ctx, club2);
     disksB.push(circle);
