@@ -357,14 +357,14 @@ function resetGame() {
 playAgainButton.addEventListener('click', resetGame);
 
 function showWinner(empate) {
+  let player = game.getCurrentPlayer().getName();
   let winner = document.getElementById("winner");
-  if (empate !== undefined) {
+  if (empate === true) {
     winner.innerHTML = "EMPATE";
   } else {
     winner.innerHTML = "Ganó: " + player;
   }
   playAgainButton.style.display = "block";
-  let player = game.getCurrentPlayer().getName();
   document.getElementById("winner").style.display = "block";
   document.getElementById("timer").style.display = "none";
   document.getElementById("turn").style.display = "none";

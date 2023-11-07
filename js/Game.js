@@ -19,7 +19,7 @@ class Game {
             if (this.time === 0) {
                 console.log("quee");
                 this.endGame();
-                showWinner("empate");
+                showWinner(true);
                 this.stopTimer();
                 clearInterval(this.timerInterval);
                 update();
@@ -51,7 +51,7 @@ class Game {
             this.switchTurn();
             console.log("Gano", this.getCurrentPlayer().getName());
             this.endGame();
-            showWinner();
+            showWinner(false);
             this.stopTimer();
         }
     }
