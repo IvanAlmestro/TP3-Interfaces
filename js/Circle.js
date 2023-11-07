@@ -118,30 +118,32 @@ class Circle {
             this.setResaltado(false);
         }
     }
-    moveTo(cord) {
+    moveTo(cord) { //dada unas cordenadas mueve la ficha hacia ahi con una animacion
         const targetX = cord.x;
         const targetY = cord.y;
 
-        // Calcula las diferencias en las coordenadas X e Y
+        //calcula las diferencias en las coordenadas X e Y
         const dx = (targetX - this.posX) / 60;
         const dy = (targetY - this.posY) / 60;
 
         const animate = () => {
             update();
             this.ctx.beginPath()
-            // Verifica si el círculo ha llegado a la posición objetivo
+            update();
+            //verifica si el círculo ha llegado a la posición objetivo
             if (Math.abs(this.posX - targetX) < Math.abs(dx) || Math.abs(this.posY - targetY) < Math.abs(dy)) {
                 this.setPositionAnimacion(targetX, targetY);
                 this.draw();
                 return;
             }
-
-            // Mueve el círculo gradualmente
+            
+            //mueve el círculo de a poco
             this.setPositionAnimacion(this.posX + dx, this.posY + dy);
             this.draw();
-
+            
             requestAnimationFrame(animate);
             this.ctx.closePath();
+            update();
         };
         animate();
         this.setResaltado(false);
@@ -149,7 +151,7 @@ class Circle {
 
         setTimeout(function () {
             update();
-        }, 370);
+        }, 350);
     }
 
     getPosition() {
