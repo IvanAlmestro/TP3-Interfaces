@@ -58,17 +58,30 @@ class Board {
 
     }
 
-    drawContainer(ctx) {//dibula los contenedores al lado del tablero
-        const containerColor = 'rgb(34,5,50)';
-        ctx.strokeStyle = containerColor;
-        const grosorLinea = 5;
-        ctx.lineWidth = grosorLinea;
-        const containerWidth = this.startX;
-        ctx.strokeRect(0, 0, containerWidth - 10, this.getHeight());
 
+    drawContainer(ctx) {//dibuja los containers de los discos
+        const containerColor = 'rgba(0, 0, 0, 0.5)'; // Color negro transparente (ajusta la opacidad según tus preferencias)
+        const borderColor = 'black'; // Color de los bordes
+        const borderWidth = 2; // Grosor de los bordes
+        ctx.fillStyle = containerColor;
+        const containerWidth = this.startX;
+    
+        // Dibuja el contenedor izquierdo con bordes
+        ctx.fillRect(0, 0, containerWidth - 10, this.getHeight());
+        ctx.strokeStyle = borderColor;
+        ctx.lineWidth = borderWidth;
+        ctx.strokeRect(borderWidth / 2, borderWidth / 2, containerWidth - 10 - borderWidth, this.getHeight() - borderWidth);
+    
         const containerX = this.startX + this.getWidth() + 10;
-        ctx.strokeRect(containerX, 0, ctx.canvas.width - containerX, this.getHeight());
+    
+        // Dibuja el contenedor derecho con bordes
+        ctx.fillRect(containerX, 0, ctx.canvas.width - containerX, this.getHeight());
+        ctx.strokeStyle = borderColor;
+        ctx.lineWidth = borderWidth;
+        ctx.strokeRect(containerX + borderWidth / 2, borderWidth / 2, ctx.canvas.width - containerX - borderWidth, this.getHeight() - borderWidth);
     }
+    
+    
 
 
     coordCell(row, col) {//retorna las cordenada de unas celda dada
@@ -126,7 +139,7 @@ class Board {
         return connectedCells;
     }
 
-    connectHorizontal(connect) {
+    connectHorizontal(connect) {//chekea si ganaron horizontalmente
         const connectedCells = [];
         for (let row = 0; row < this.rows; row++) {
             for (let col = 0; col <= this.cols - connect; col++) {
@@ -151,7 +164,7 @@ class Board {
         return connectedCells;
     }
 
-    connectVertical(connect) {
+    connectVertical(connect) {//chekea si ganaron verticalmente
         const connectedCells = [];
         for (let row = 0; row <= this.rows - connect; row++) {
             for (let col = 0; col < this.cols; col++) {
@@ -176,7 +189,7 @@ class Board {
         return connectedCells;
     }
 
-    connectDiagonal(connect) {
+    connectDiagonal(connect) {//chekea si ganaron diagonalmente
         const connectedCells = [];
     
         // Diagonal de izquierda a derecha

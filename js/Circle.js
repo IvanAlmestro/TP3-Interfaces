@@ -21,13 +21,11 @@ class Circle {
         this.posOriginalY = posY;
     }
 
-    draw() {
-        //this.ctx.drawImage(this.image, this.posX - this.radius, this.posY - this.radius, this.radius * 2, this.radius * 2);
+    draw() {//dibuja el disco
 
         this.ctx.fillStyle = this.team;
         this.ctx.beginPath()
         this.ctx.arc(this.posX, this.posY, this.radius, 0, 2 * Math.PI);
-        //this.ctx.fill()
 
         if (this.resaltado === true) {
             this.ctx.strokeStyle = this.resaltadoEstilo;
@@ -38,7 +36,7 @@ class Circle {
         this.drawImageAboveCircle();
     }
 
-    setSrc() {
+    setSrc() {//asigno la imagen al disco
         if (this.club === 'boca') {
             return './images/4enlinea/boca.png';
         }
@@ -65,30 +63,26 @@ class Circle {
         }
     }
 
-    drawImageAboveCircle() {
+    drawImageAboveCircle() {//dibuja la imagen arriba del disco
         if (this.image) {
-            // Calcula la posición de la imagen en relación al círculo
-            const imageX = this.posX - this.radius; // Alinea la imagen con el borde izquierdo del círculo
-            const imageY = this.posY - this.radius; // Alinea la imagen con la parte superior del círculo
-            const imageWidth = this.radius * 2; // El ancho de la imagen es igual al diámetro del círculo
-            const imageHeight = this.radius * 2; // La altura de la imagen es igual al diámetro del círculo
-
-            // Dibuja la imagen encima del círculo
+            const imageX = this.posX - this.radius; 
+            const imageY = this.posY - this.radius; 
+            const imageWidth = this.radius * 2;
+            const imageHeight = this.radius * 2;
             this.ctx.drawImage(this.image, imageX, imageY, imageWidth, imageHeight);
         }
     }
 
-    posOriginal() {
+    posOriginal() {//devuelve la pos donde se creo el disco
         const cord = { x: this.posOriginalX, y: this.posOriginalY };
         this.returnTo(cord);
-
     }
 
-    compareTo(c2) {
+    compareTo(c2) {//se compara con otro disco
         return this.getTeam() === c2.getTeam();
     }
 
-    returnTo(cord) {
+    returnTo(cord) {//vuelve el circulo a su pos original
         if (!this.movido) {
             const targetX = cord.x;
             const targetY = cord.y;
@@ -173,7 +167,7 @@ class Circle {
         return this.radius;
     }
 
-    isPointInside(x, y) {
+    isPointInside(x, y) {//calcula si el mouse esta adentro
         let _x = this.posX - x;
         let _y = this.posY - y;
         return Math.sqrt(_x * _x + _y * _y) < this.radius;

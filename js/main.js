@@ -153,7 +153,7 @@ let game = new Game(players, board, figures, 4);
 let lastClickedFigure = null;
 let isMouseDown = false;
 
-function createGame() {
+function createGame() {//crea el juego dependiendo de los parametros elegidos por el usuario
   let cellSize = 70;
   let valor = tipoJuego.value;
   let rows = parseInt(valor) + 2;
@@ -170,13 +170,13 @@ function createGame() {
   game.startTimer();
   //update();
 }
-selectClub1.addEventListener('change', function () {
+selectClub1.addEventListener('change', function () {//se fija que club eligio el usuario
   var selectedClub = document.getElementById('club1').value;
   var imagePath = 'images/4enlinea/' + selectedClub + '.png';
   imgClub1Select.src = imagePath;
 });
 
-selectClub2.addEventListener('change', function () {
+selectClub2.addEventListener('change', function () {//se fija que club eligio el usuario
   var selectedClub2 = document.getElementById('club2').value;
   var imagePath = 'images/4enlinea/' + selectedClub2 + '.png';
   imgClub2Select.src = imagePath;
@@ -221,7 +221,7 @@ function update(c) {//actualizo el canvas
   }
 }
 
-function getRandomNumber(min, max) {
+function getRandomNumber(min, max) {//genera un numero random
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
@@ -250,7 +250,7 @@ function addCircle(team) {//agrego el circle dependiendo el equipo
   figures.push(circle);
 }
 
-function onMouseDown(e) {
+function onMouseDown(e) {//si hay una figura en el mouse la selecciona
   isMouseDown = true;
 
   if (lastClickedFigure != null && !lastClickedFigure.getMovido()) {
@@ -266,7 +266,7 @@ function onMouseDown(e) {
   update();
 }
 
-function onMouseUp(e) {
+function onMouseUp(e) {//si hay una ficha en una columna y la suelta la dropea ahi
   isMouseDown = false;
   disk = lastClickedFigure;
   if (disk != null) {
@@ -289,45 +289,42 @@ function onMouseUp(e) {
 
 }
 
-function onMouseMove(e) {
+function onMouseMove(e) {//si hay una figura la va moviendo
   if (isMouseDown && lastClickedFigure != null) {
     lastClickedFigure.setPosition(e.offsetX, e.offsetY);
     let col = board.getCol(lastClickedFigure);
-    update(col);
+    update(col);//si hay una figura en una columna, resalta esa columna
   }
 }
 
-function clearCanvas() {
+function clearCanvas() {//borra el canvas
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 }
 
 
-function addFigures() {
+function addFigures() {//agrega las figuras dependiendo de la cantidad que son
   addFigure();
   if (figures.length < CANT_FIG) {
     setTimeout(addFigures, 33);
   }
 }
 
-playAgainButton.addEventListener('click', function () {
+playAgainButton.addEventListener('click', function () {//el boton para jugar de vuelta
   resetGame();
   document.getElementById("canvas").style.display = "none";
   document.getElementById("turn").style.display = "none";
   document.getElementById("winner").style.display = "none";
   document.getElementById("timer").style.display = "none";
-
-
 });
 
 
-function resetGame() {
-  // Restablece los valores iniciales del juego
+function resetGame() {//restablece los valores iniciales del juego
   players = [];
   figures = [];
   disksA = [];
   disksB = [];
 
-  board = new Board(6, 7, 90, 485, 50); // Tablero por defecto
+  board = new Board(6, 7, 90, 485, 50); //tablero por defecto
   CANT_FIG = board.getSize();
   board.draw(ctx);
 
@@ -335,17 +332,17 @@ function resetGame() {
   player2 = new Player("rojo", disksB);
   players.push(player1, player2);
 
-  game = new Game(players, board, figures, 4); // Capaz el 4 está de más
+  game = new Game(players, board, figures, 4);
 
   lastClickedFigure = null;
   isMouseDown = false;
   currentColor = 'blue';
 
-  // Limpia el canvas
+  //limpia el canvas
   clearCanvas();
   update();
 
-  // Oculta el botón "Jugar de Nuevo"
+  //oculta el botón "Jugar de Nuevo"
   playAgainButton.style.display = "none";
   document.getElementById("turn").style.display = "none";
   document.getElementById("timer").style.display = "none";
@@ -356,7 +353,7 @@ function resetGame() {
 
 playAgainButton.addEventListener('click', resetGame);
 
-function showWinner(empate) {
+function showWinner(empate) {//muestra el ganador o un empate
   let player = game.getCurrentPlayer().getName();
   let winner = document.getElementById("winner");
   if (empate === true) {
@@ -372,7 +369,7 @@ function showWinner(empate) {
 
 }
 
-function findClickedFigure(x, y) {
+function findClickedFigure(x, y) {//se fija si hay una figura en el mouse
   for (let i = 0; i < figures.length; i++) {
     const element = figures[i];
     if (element.isPointInside(x, y)) {
